@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TechProcessSupportSys.Data;
 
@@ -11,9 +12,11 @@ using TechProcessSupportSys.Data;
 namespace TechProcessSupportSys.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250419214212_UniqueKeys")]
+    partial class UniqueKeys
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -51,13 +54,13 @@ namespace TechProcessSupportSys.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "840fab2b-ab4a-4f39-821e-c3da0f05babb",
+                            Id = "a4993abd-cf12-4de5-adb0-8fac67dc2912",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "4981766a-ee28-450a-a6e4-fcd240f1cc19",
+                            Id = "39771aad-2bb2-4a5b-89c7-052dab6baea6",
                             Name = "User",
                             NormalizedName = "USER"
                         });

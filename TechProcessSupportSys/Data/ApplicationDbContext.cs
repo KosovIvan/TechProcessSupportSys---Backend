@@ -22,6 +22,9 @@ namespace TechProcessSupportSys.Data
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            builder.Entity<Operation>().HasAlternateKey(o => o.StepOrder);
+            builder.Entity<Transition>().HasAlternateKey(t => t.StepOrder);
+
             base.OnModelCreating(builder);
 
             List<IdentityRole> roles = new List<IdentityRole>
