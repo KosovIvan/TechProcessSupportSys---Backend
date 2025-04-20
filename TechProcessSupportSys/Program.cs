@@ -5,6 +5,7 @@ using Microsoft.IdentityModel.Tokens;
 using TechProcessSupportSys.Data;
 using TechProcessSupportSys.Interfaces;
 using TechProcessSupportSys.Models;
+using TechProcessSupportSys.Repository;
 using TechProcessSupportSys.Service;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -50,6 +51,7 @@ builder.Services.AddAuthentication(options =>
 });
 
 builder.Services.AddScoped<ITokenService, TokenService>();
+builder.Services.AddScoped<IToolRepository, ToolRepository>();
     
 var app = builder.Build();
 

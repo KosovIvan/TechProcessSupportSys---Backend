@@ -7,7 +7,7 @@ namespace TechProcessSupportSys.Models
     {
         public int Id { get; set; }
         public string Name { get; set; } = "";
-        public string? Description { get; set; }
+        public string Description { get; set; } = "";
         public int StepOrder { get; set; }
         public int ProcessId { get; set; }
         public TechProcess Process { get; set; } = null!;
