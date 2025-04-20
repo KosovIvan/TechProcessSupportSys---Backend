@@ -58,7 +58,7 @@ namespace TechProcessSupportSys.Repository
             existingTool.Material = tool.Material;
             await context.SaveChangesAsync();
 
-            return tool;
+            return existingTool;
         }
     }
 }

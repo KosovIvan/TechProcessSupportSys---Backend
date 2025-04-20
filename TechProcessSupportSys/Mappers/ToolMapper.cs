@@ -27,5 +27,16 @@ namespace TechProcessSupportSys.Mappers
                 Material = createToolDto.Material
             };
         }
+
+        public static Tool FromUpdateToolDto(this UpdateToolDto updateToolDto)
+        {
+            return new Tool
+            {
+                Name = updateToolDto.Name,
+                Description = updateToolDto.Description,
+                Type = updateToolDto.Type,
+                Material = updateToolDto.Material
+            };
+        }
     }
 }

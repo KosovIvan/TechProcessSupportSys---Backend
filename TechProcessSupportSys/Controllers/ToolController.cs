@@ -52,5 +52,32 @@ namespace TechProcessSupportSys.Controllers
 
             return CreatedAtAction(nameof(GetById), new { id = tool.Id }, tool.ToToolDto());
         }
+
+        [HttpPut("{id:int}")]
+        public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpdateToolDto updateToolDto)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest("Дал мне говно");
+            }
+
+            var tool = updateToolDto.FromUpdateToolDto();
+
+            var updated = await toolRepo.UpdateAsync(id, tool);
+
+            if (updated == null) return NotFound();
+
+            return Ok(updated.ToToolDto());
+        }
+
+        [HttpDelete("{id:int}")]
+        public async Task<IActionResult> Delete([FromRoute] int id)
+        {
+            var deleted = await toolRepo.DeleteAsync(id);
+
+            if (deleted == null) return NotFound();
+
+            return NoContent();
+        }
     }
 }
