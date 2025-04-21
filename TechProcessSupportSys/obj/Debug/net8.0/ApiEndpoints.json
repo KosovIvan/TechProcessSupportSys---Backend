@@ -79,6 +79,85 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "TechProcessSupportSys.Controllers.FixtureController",
+    "Method": "GetAll",
+    "RelativePath": "api/Fixture",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TechProcessSupportSys.Controllers.FixtureController",
+    "Method": "Create",
+    "RelativePath": "api/Fixture",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createFixtureDto",
+        "Type": "TechProcessSupportSys.Dtos.Fixture.CreateFixtureDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TechProcessSupportSys.Controllers.FixtureController",
+    "Method": "GetById",
+    "RelativePath": "api/Fixture/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TechProcessSupportSys.Controllers.FixtureController",
+    "Method": "Update",
+    "RelativePath": "api/Fixture/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateFixtureDto",
+        "Type": "TechProcessSupportSys.Dtos.Fixture.UpdateFixtureDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TechProcessSupportSys.Controllers.FixtureController",
+    "Method": "Delete",
+    "RelativePath": "api/Fixture/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "TechProcessSupportSys.Controllers.ToolController",
     "Method": "GetAll",
     "RelativePath": "App/Tool",
