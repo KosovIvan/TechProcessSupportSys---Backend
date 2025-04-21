@@ -52,6 +52,7 @@ builder.Services.AddAuthentication(options =>
 
 builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddScoped<IToolRepository, ToolRepository>();
+builder.Services.AddScoped<IEquipmentRepository, EquipmentRepository>();
     
 var app = builder.Build();
 

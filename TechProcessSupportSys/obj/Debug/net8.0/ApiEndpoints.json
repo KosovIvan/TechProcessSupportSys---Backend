@@ -1,5 +1,84 @@
 [
   {
+    "ContainingType": "TechProcessSupportSys.Controllers.EquipmentController",
+    "Method": "GetAll",
+    "RelativePath": "api/Equipment",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TechProcessSupportSys.Controllers.EquipmentController",
+    "Method": "Create",
+    "RelativePath": "api/Equipment",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createEquipmentDto",
+        "Type": "TechProcessSupportSys.Dtos.Equipment.CreateEquipmentDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TechProcessSupportSys.Controllers.EquipmentController",
+    "Method": "GetById",
+    "RelativePath": "api/Equipment/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TechProcessSupportSys.Controllers.EquipmentController",
+    "Method": "Update",
+    "RelativePath": "api/Equipment/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateEquipmentDto",
+        "Type": "TechProcessSupportSys.Dtos.Equipment.UpdateEquipmentDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TechProcessSupportSys.Controllers.EquipmentController",
+    "Method": "Delete",
+    "RelativePath": "api/Equipment/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "TechProcessSupportSys.Controllers.ToolController",
     "Method": "GetAll",
     "RelativePath": "App/Tool",

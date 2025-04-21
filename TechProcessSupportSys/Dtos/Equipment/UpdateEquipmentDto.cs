@@ -1,19 +1,15 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace TechProcessSupportSys.Dtos.Tool
+namespace TechProcessSupportSys.Dtos.Equipment
 {
-    public class UpdateToolDto
+    public class UpdateEquipmentDto
     {
         [Required]
         [MaxLength(35)]
         public string Name { get; set; } = "";
         [MaxLength(250)]
         public string Description { get; set; } = "";
-        [Required]
         [MaxLength(35)]
-        public string Type { get; set; } = "";
-        [Required]
-        [MaxLength(35)]
-        public string Material { get; set; } = "";
+        public string Model { get; set; } = "";
     }
 }
