@@ -1,4 +1,5 @@
 ﻿using Azure.Core;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TechProcessSupportSys.Dtos.Tool;
 using TechProcessSupportSys.Interfaces;
@@ -20,6 +21,7 @@ namespace TechProcessSupportSys.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles="Admin")]
         public async Task<IActionResult> GetAll([FromQuery] ToolQueryObject query)
         {
             var tools = await toolRepo.GetAllAsync(query);
@@ -30,6 +32,7 @@ namespace TechProcessSupportSys.Controllers
         }
 
         [HttpGet("{id:int}")]
+        [Authorize]
         public async Task<IActionResult> GetById([FromRoute] int id)
         {
             var tool = await toolRepo.GetByIdAsync(id);
@@ -40,6 +43,7 @@ namespace TechProcessSupportSys.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> Create([FromBody] CreateToolDto createToolDto)
         {
             if (!ModelState.IsValid)
@@ -55,6 +59,7 @@ namespace TechProcessSupportSys.Controllers
         }
 
         [HttpPut("{id:int}")]
+        [Authorize]
         public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpdateToolDto updateToolDto)
         {
             if (!ModelState.IsValid)
@@ -72,6 +77,7 @@ namespace TechProcessSupportSys.Controllers
         }
 
         [HttpDelete("{id:int}")]
+        [Authorize]
         public async Task<IActionResult> Delete([FromRoute] int id)
         {
             var deleted = await toolRepo.DeleteAsync(id);
