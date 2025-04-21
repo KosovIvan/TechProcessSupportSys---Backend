@@ -1,5 +1,6 @@
 ﻿using TechProcessSupportSys.Data;
 using TechProcessSupportSys.Models;
+using TechProcessSupportSys.QueryObjects;
 
 namespace TechProcessSupportSys.Interfaces
 {
@@ -9,7 +10,7 @@ namespace TechProcessSupportSys.Interfaces
 
         Task<Tool?> DeleteAsync(int id);
 
-        Task<List<Tool>> GetAllAsync();
+        Task<List<Tool>> GetAllAsync(ToolQueryObject query);
 
         Task<Tool?> GetByIdAsync(int id);
 

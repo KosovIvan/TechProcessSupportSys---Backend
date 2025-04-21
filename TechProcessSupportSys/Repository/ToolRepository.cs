@@ -2,6 +2,7 @@
 using TechProcessSupportSys.Data;
 using TechProcessSupportSys.Interfaces;
 using TechProcessSupportSys.Models;
+using TechProcessSupportSys.QueryObjects;
 
 namespace TechProcessSupportSys.Repository
 {
@@ -33,9 +34,34 @@ namespace TechProcessSupportSys.Repository
             return tool;
         }
 
-        public async Task<List<Tool>> GetAllAsync()
+        public async Task<List<Tool>> GetAllAsync(ToolQueryObject query)
         {
-            return await context.Tools.ToListAsync();
+            var tools = context.Tools.AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(query.Name)) tools = tools.Where(t => t.Name.Contains(query.Name));
+
+            if (!string.IsNullOrWhiteSpace(query.Type)) tools = tools.Where(t => t.Type.Contains(query.Type));
+
+            if (!string.IsNullOrWhiteSpace(query.Material)) tools = tools.Where(t => t.Material.Contains(query.Material));
+
+            if (!string.IsNullOrWhiteSpace(query.SortBy)) {
+                if (query.SortBy.Equals("Name"))
+                {
+                    tools = query.IsDescending ? tools.OrderByDescending(t => t.Name) : tools.OrderBy(t => t.Name);
+                }
+                if (query.SortBy.Equals("Type"))
+                {
+                    tools = query.IsDescending ? tools.OrderByDescending(t => t.Type) : tools.OrderBy(t => t.Type);
+                }
+                if (query.SortBy.Equals("Material"))
+                {
+                    tools = query.IsDescending ? tools.OrderByDescending(t => t.Material) : tools.OrderBy(t => t.Material);
+                }
+            }
+
+            var skipNumber = (query.PageNumber - 1) * query.PageSize;
+
+            return await tools.Skip(skipNumber).Take(query.PageSize).ToListAsync();
         }
 
         public async Task<Tool?> GetByIdAsync(int id)

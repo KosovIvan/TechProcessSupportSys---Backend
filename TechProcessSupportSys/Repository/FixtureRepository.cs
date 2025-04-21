@@ -2,6 +2,7 @@
 using TechProcessSupportSys.Data;
 using TechProcessSupportSys.Interfaces;
 using TechProcessSupportSys.Models;
+using TechProcessSupportSys.QueryObjects;
 
 namespace TechProcessSupportSys.Repository
 {
@@ -33,9 +34,29 @@ namespace TechProcessSupportSys.Repository
             return fixture;
         }
 
-        public async Task<List<Fixture>> GetAllAsync()
+        public async Task<List<Fixture>> GetAllAsync(FixtureQueryObject query)
         {
-            return await context.Fixtures.ToListAsync();
+            var fixtures = context.Fixtures.AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(query.Name)) fixtures = fixtures.Where(t => t.Name.Contains(query.Name));
+
+            if (!string.IsNullOrWhiteSpace(query.Type)) fixtures = fixtures.Where(t => t.Type.Contains(query.Type));
+
+            if (!string.IsNullOrWhiteSpace(query.SortBy))
+            {
+                if (query.SortBy.Equals("Name"))
+                {
+                    fixtures = query.IsDescending ? fixtures.OrderByDescending(t => t.Name) : fixtures.OrderBy(t => t.Name);
+                }
+                if (query.SortBy.Equals("Type"))
+                {
+                    fixtures = query.IsDescending ? fixtures.OrderByDescending(t => t.Type) : fixtures.OrderBy(t => t.Type);
+                }
+            }
+
+            var skipNumber = (query.PageNumber - 1) * query.PageSize;
+
+            return await fixtures.Skip(skipNumber).Take(query.PageSize).ToListAsync();
         }
 
         public async Task<Fixture?> GetByIdAsync(int id)

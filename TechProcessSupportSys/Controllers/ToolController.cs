@@ -4,6 +4,7 @@ using TechProcessSupportSys.Dtos.Tool;
 using TechProcessSupportSys.Interfaces;
 using TechProcessSupportSys.Mappers;
 using TechProcessSupportSys.Models;
+using TechProcessSupportSys.QueryObjects;
 
 namespace TechProcessSupportSys.Controllers
 {
@@ -19,9 +20,9 @@ namespace TechProcessSupportSys.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAll([FromQuery] ToolQueryObject query)
         {
-            var tools = await toolRepo.GetAllAsync();
+            var tools = await toolRepo.GetAllAsync(query);
 
             var toolsDto = tools.Select(t => t.ToToolDto()).ToList();
 

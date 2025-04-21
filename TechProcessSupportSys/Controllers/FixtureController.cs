@@ -4,6 +4,7 @@ using TechProcessSupportSys.Dtos.Equipment;
 using TechProcessSupportSys.Dtos.Fixture;
 using TechProcessSupportSys.Interfaces;
 using TechProcessSupportSys.Mappers;
+using TechProcessSupportSys.QueryObjects;
 
 namespace TechProcessSupportSys.Controllers
 {
@@ -19,9 +20,9 @@ namespace TechProcessSupportSys.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAll([FromQuery] FixtureQueryObject query)
         {
-            var fixture = await fixtureRepo.GetAllAsync();
+            var fixture = await fixtureRepo.GetAllAsync(query);
 
             var fixtureDto = fixture.Select(e => e.ToFixtureDto()).ToList();
 

@@ -2,6 +2,7 @@
 using TechProcessSupportSys.Data;
 using TechProcessSupportSys.Interfaces;
 using TechProcessSupportSys.Models;
+using TechProcessSupportSys.QueryObjects;
 
 namespace TechProcessSupportSys.Repository
 {
@@ -34,9 +35,30 @@ namespace TechProcessSupportSys.Repository
             return equip;
         }
 
-        public async Task<List<Equipment>> GetAllAsync()
+        public async Task<List<Equipment>> GetAllAsync(EquipmentQueryObject query)
         {
-            return await context.Equipment.ToListAsync();
+            var equip = context.Equipment.AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(query.Name)) equip = equip.Where(e => e.Name.Contains(query.Name));
+
+            if (!string.IsNullOrWhiteSpace(query.Model)) equip = equip.Where(e => e.Model.Contains(query.Model));
+
+            if (!string.IsNullOrWhiteSpace(query.SortBy))
+            {
+                if (query.SortBy.Equals("Name"))
+                {
+                    equip = query.IsDescending ? equip.OrderByDescending(e => e.Name) : equip.OrderBy(e => e.Name);
+                }
+                if (query.SortBy.Equals("Model"))
+                {
+                    equip = query.IsDescending ? equip.OrderByDescending(e => e.Model) : equip.OrderBy(e => e.Model);
+                }
+            }
+
+            var skipNumber = (query.PageNumber - 1) * query.PageSize;
+
+            return await equip.Skip(skipNumber).Take(query.PageSize).ToListAsync();
+
         }
 
         public async Task<Equipment?> GetByIdAsync(int id)

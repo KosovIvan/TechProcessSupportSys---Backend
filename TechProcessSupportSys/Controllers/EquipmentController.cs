@@ -4,6 +4,7 @@ using TechProcessSupportSys.Dtos.Equipment;
 using TechProcessSupportSys.Dtos.Tool;
 using TechProcessSupportSys.Interfaces;
 using TechProcessSupportSys.Mappers;
+using TechProcessSupportSys.QueryObjects;
 
 namespace TechProcessSupportSys.Controllers
 {
@@ -19,9 +20,9 @@ namespace TechProcessSupportSys.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAll([FromQuery] EquipmentQueryObject query)
         {
-            var equip = await equipRepo.GetAllAsync();
+            var equip = await equipRepo.GetAllAsync(query);
 
             var equipDto = equip.Select(e => e.ToEquipmentDto()).ToList();
 

@@ -1,4 +1,5 @@
 ﻿using TechProcessSupportSys.Models;
+using TechProcessSupportSys.QueryObjects;
 
 namespace TechProcessSupportSys.Interfaces
 {
@@ -8,7 +9,7 @@ namespace TechProcessSupportSys.Interfaces
 
         Task<Fixture?> DeleteAsync(int id);
 
-        Task<List<Fixture>> GetAllAsync();
+        Task<List<Fixture>> GetAllAsync(FixtureQueryObject query);
 
         Task<Fixture?> GetByIdAsync(int id);
 
