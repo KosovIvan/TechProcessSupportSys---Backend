@@ -35,11 +35,11 @@ namespace TechProcessSupportSys.Repository
             return tool;
         }
 
-        public async Task<List<Tool>> GetAllAsync(string? id, ToolQueryObject query)
+        public async Task<List<Tool>> GetAllAsync(string? userId, ToolQueryObject query)
         {
             var tools = context.Tools.AsQueryable();
 
-            if (id != null) tools = tools.Where(t => t.UserId == id);
+            if (userId != null) tools = tools.Where(t => t.UserId == userId);
 
             if (!string.IsNullOrWhiteSpace(query.Name)) tools = tools.Where(t => t.Name.Contains(query.Name));
 

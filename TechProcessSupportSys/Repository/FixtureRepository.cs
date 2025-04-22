@@ -22,11 +22,12 @@ namespace TechProcessSupportSys.Repository
             return fixture;
         }
 
-        public async Task<Fixture?> DeleteAsync(int id)
+        public async Task<Fixture?> DeleteAsync(string? userId, int id)
         {
             var fixture = await context.Fixtures.FirstOrDefaultAsync(f => f.Id == id);
 
             if (fixture == null) return null;
+            if (userId != null && fixture.UserId != userId) return null;
 
             context.Fixtures.Remove(fixture);
             await context.SaveChangesAsync();
@@ -34,23 +35,25 @@ namespace TechProcessSupportSys.Repository
             return fixture;
         }
 
-        public async Task<List<Fixture>> GetAllAsync(FixtureQueryObject query)
+        public async Task<List<Fixture>> GetAllAsync(string? userId, FixtureQueryObject query)
         {
             var fixtures = context.Fixtures.AsQueryable();
 
-            if (!string.IsNullOrWhiteSpace(query.Name)) fixtures = fixtures.Where(t => t.Name.Contains(query.Name));
+            if (userId != null) fixtures = fixtures.Where(f => f.UserId == userId);
 
-            if (!string.IsNullOrWhiteSpace(query.Type)) fixtures = fixtures.Where(t => t.Type.Contains(query.Type));
+            if (!string.IsNullOrWhiteSpace(query.Name)) fixtures = fixtures.Where(f => f.Name.Contains(query.Name));
+
+            if (!string.IsNullOrWhiteSpace(query.Type)) fixtures = fixtures.Where(f => f.Type.Contains(query.Type));
 
             if (!string.IsNullOrWhiteSpace(query.SortBy))
             {
                 if (query.SortBy.Equals("Name"))
                 {
-                    fixtures = query.IsDescending ? fixtures.OrderByDescending(t => t.Name) : fixtures.OrderBy(t => t.Name);
+                    fixtures = query.IsDescending ? fixtures.OrderByDescending(f => f.Name) : fixtures.OrderBy(f => f.Name);
                 }
                 if (query.SortBy.Equals("Type"))
                 {
-                    fixtures = query.IsDescending ? fixtures.OrderByDescending(t => t.Type) : fixtures.OrderBy(t => t.Type);
+                    fixtures = query.IsDescending ? fixtures.OrderByDescending(f => f.Type) : fixtures.OrderBy(f => f.Type);
                 }
             }
 
@@ -59,19 +62,22 @@ namespace TechProcessSupportSys.Repository
             return await fixtures.Skip(skipNumber).Take(query.PageSize).ToListAsync();
         }
 
-        public async Task<Fixture?> GetByIdAsync(int id)
+        public async Task<Fixture?> GetByIdAsync(string? userId, int id)
         {
-            return await context.Fixtures.FirstOrDefaultAsync(f => f.Id == id);
+            var fixture = await context.Fixtures.FirstOrDefaultAsync(f => f.Id == id);
+
+            if (fixture == null) return null;
+            if (userId != null && fixture.UserId != userId) return null;
+
+            return fixture;
         }
 
-        public async Task<Fixture?> UpdateAsync(int id, Fixture fixture)
+        public async Task<Fixture?> UpdateAsync(string? userId, int id, Fixture fixture)
         {
             var existingFixture = await context.Fixtures.FirstOrDefaultAsync(f => f.Id == id);
 
-            if (existingFixture == null)
-            {
-                return null;
-            }
+            if (existingFixture == null) return null;
+            if (userId != null && existingFixture.UserId != userId) return null;
 
             existingFixture.Name = fixture.Name;
             existingFixture.Description = fixture.Description;

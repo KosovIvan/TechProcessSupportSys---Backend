@@ -7,12 +7,12 @@ namespace TechProcessSupportSys.Interfaces
     {
         Task<Equipment> CreateAsync(Equipment equip);
 
-        Task<Equipment?> DeleteAsync(int id);
+        Task<Equipment?> DeleteAsync(string? userId, int id);
 
-        Task<List<Equipment>> GetAllAsync(EquipmentQueryObject query);
+        Task<List<Equipment>> GetAllAsync(string? userId, EquipmentQueryObject query);
 
-        Task<Equipment?> GetByIdAsync(int id);
+        Task<Equipment?> GetByIdAsync(string? userId, int id);
 
-        Task<Equipment?> UpdateAsync(int id, Equipment equip);
+        Task<Equipment?> UpdateAsync(string? userId, int id, Equipment equip);
     }
 }

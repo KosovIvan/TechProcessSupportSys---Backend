@@ -23,11 +23,12 @@ namespace TechProcessSupportSys.Repository
             return equip;
         }
 
-        public async Task<Equipment?> DeleteAsync(int id)
+        public async Task<Equipment?> DeleteAsync(string? userId, int id)
         {
             var equip = await context.Equipment.FirstOrDefaultAsync(e => e.Id == id);
 
             if (equip == null) return null;
+            if (userId != null && equip.UserId != userId) return null;
 
             context.Equipment.Remove(equip);
             await context.SaveChangesAsync();
@@ -35,9 +36,11 @@ namespace TechProcessSupportSys.Repository
             return equip;
         }
 
-        public async Task<List<Equipment>> GetAllAsync(EquipmentQueryObject query)
+        public async Task<List<Equipment>> GetAllAsync(string? userId, EquipmentQueryObject query)
         {
             var equip = context.Equipment.AsQueryable();
+
+            if (userId != null) equip = equip.Where(e => e.UserId == userId);
 
             if (!string.IsNullOrWhiteSpace(query.Name)) equip = equip.Where(e => e.Name.Contains(query.Name));
 
@@ -61,19 +64,22 @@ namespace TechProcessSupportSys.Repository
 
         }
 
-        public async Task<Equipment?> GetByIdAsync(int id)
+        public async Task<Equipment?> GetByIdAsync(string? userId, int id)
         {
-            return await context.Equipment.FirstOrDefaultAsync(e => e.Id == id);
+            var equip = await context.Equipment.FirstOrDefaultAsync(e => e.Id == id);
+
+            if (equip == null) return null;
+            if (userId != null && equip.UserId != userId) return null;
+
+            return equip;
         }
 
-        public async Task<Equipment?> UpdateAsync(int id, Equipment equip)
+        public async Task<Equipment?> UpdateAsync(string? userId, int id, Equipment equip)
         {
             var existingEquip = await context.Equipment.FirstOrDefaultAsync(e => e.Id == id);
 
-            if (existingEquip == null)
-            {
-                return null;
-            }
+            if (existingEquip == null) return null;
+            if (userId != null && existingEquip.UserId != userId) return null;
 
             existingEquip.Name = equip.Name;
             existingEquip.Description = equip.Description;

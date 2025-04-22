@@ -7,12 +7,12 @@ namespace TechProcessSupportSys.Interfaces
     {
         Task<Fixture> CreateAsync(Fixture fixture);
 
-        Task<Fixture?> DeleteAsync(int id);
+        Task<Fixture?> DeleteAsync(string? userId, int id);
 
-        Task<List<Fixture>> GetAllAsync(FixtureQueryObject query);
+        Task<List<Fixture>> GetAllAsync(string? userId, FixtureQueryObject query);
 
-        Task<Fixture?> GetByIdAsync(int id);
+        Task<Fixture?> GetByIdAsync(string? userId, int id);
 
-        Task<Fixture?> UpdateAsync(int id, Fixture fixture);
+        Task<Fixture?> UpdateAsync(string? userId, int id, Fixture fixture);
     }
 }
