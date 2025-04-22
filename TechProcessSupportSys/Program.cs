@@ -80,6 +80,9 @@ builder.Services.AddAuthentication(options =>
 });
 
 builder.Services.AddScoped<ITokenService, TokenService>();
+builder.Services.AddScoped<ITechProcessRepository, TechProcessRepository>();
+builder.Services.AddScoped<IOperationRepository, OperationRepository>();
+builder.Services.AddScoped<ITransitionRepository, TransitionRepository>();
 builder.Services.AddScoped<IToolRepository, ToolRepository>();
 builder.Services.AddScoped<IEquipmentRepository, EquipmentRepository>();
 builder.Services.AddScoped<IFixtureRepository, FixtureRepository>();
@@ -93,6 +96,12 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors(x => x
+     .AllowAnyMethod()
+     .AllowAnyHeader()
+     .AllowCredentials()
+     .WithOrigins("https://localhost:7091"));
 
 app.UseAuthentication();
 app.UseAuthorization();

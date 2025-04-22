@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using TechProcessSupportSys.Dtos.Equipment;
+using TechProcessSupportSys.Dtos.TechProcess;
 using TechProcessSupportSys.Dtos.Tool;
 using TechProcessSupportSys.Extentions;
 using TechProcessSupportSys.Interfaces;
@@ -14,30 +14,45 @@ namespace TechProcessSupportSys.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class EquipmentController : ControllerBase
+    public class TechProcessController : ControllerBase
     {
-        private readonly IEquipmentRepository equipRepo;
+        private readonly ITechProcessRepository techRepo;
         private readonly UserManager<User> userManager;
 
-        public EquipmentController(IEquipmentRepository equipRepo, UserManager<User> userManager)
+        public TechProcessController(ITechProcessRepository techRepo, UserManager<User> userManager)
         {
-            this.equipRepo = equipRepo;
+            this.techRepo = techRepo;
             this.userManager = userManager;
         }
 
-        [HttpGet]
+        [HttpGet("all")]
         [Authorize]
-        public async Task<IActionResult> GetAll([FromQuery] EquipmentQueryObject query)
+        public async Task<IActionResult> GetAll([FromQuery] AllQueryObject query)
         {
             var username = User.GetUsername();
             var user = await userManager.FindByNameAsync(username!);
             var id = User.IsInRole("Admin") ? null : user!.Id;
 
-            var equip = await equipRepo.GetAllAsync(id, query);
+            var processes = await techRepo.GetAllAsync(id, query);
 
-            var equipDto = equip.Select(e => e.ToEquipmentDto()).ToList();
+            var processesDto = processes.Select(p => p.ToAllDto()).ToList();
 
-            return Ok(equipDto);
+            return Ok(processesDto);
+        }
+
+        [HttpGet]
+        [Authorize]
+        public async Task<IActionResult> GetProcesses([FromQuery] TechProcessQueryObject query)
+        {
+            var username = User.GetUsername();
+            var user = await userManager.FindByNameAsync(username!);
+            var id = User.IsInRole("Admin") ? null : user!.Id;
+
+            var processes = await techRepo.GetProcessesAsync(id, query);
+
+            var processesDto = processes.Select(p => p.ToTechProcessDto()).ToList();
+
+            return Ok(processesDto);
         }
 
         [HttpGet("{id:int}")]
@@ -48,16 +63,16 @@ namespace TechProcessSupportSys.Controllers
             var user = await userManager.FindByNameAsync(username!);
             var userId = User.IsInRole("Admin") ? null : user!.Id;
 
-            var equip = await equipRepo.GetByIdAsync(userId, id);
+            var process = await techRepo.GetByIdAsync(userId, id);
 
-            if (equip == null) return NotFound();
+            if (process == null) return NotFound();
 
-            return Ok(equip.ToEquipmentDto());
+            return Ok(process.ToTechProcessDto());
         }
 
         [HttpPost]
         [Authorize]
-        public async Task<IActionResult> Create([FromBody] CreateEquipmentDto createEquipmentDto)
+        public async Task<IActionResult> Create([FromBody] CreateTechProcessDto createTechProcessDto)
         {
             if (!ModelState.IsValid)
             {
@@ -67,17 +82,17 @@ namespace TechProcessSupportSys.Controllers
             var username = User.GetUsername();
             var user = await userManager.FindByNameAsync(username!);
 
-            var equip = createEquipmentDto.FromCreateEquipmentDto();
-            equip.UserId = user!.Id;
+            var process = createTechProcessDto.FromCreateTechProcessDto();
+            process.UserId = user!.Id;
 
-            await equipRepo.CreateAsync(equip);
+            await techRepo.CreateAsync(process);
 
-            return CreatedAtAction(nameof(GetById), new { id = equip.Id }, equip.ToEquipmentDto());
+            return CreatedAtAction(nameof(GetById), new { id = process.Id }, process.ToTechProcessDto());
         }
 
         [HttpPut("{id:int}")]
         [Authorize]
-        public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpdateEquipmentDto updateEquipmentDto)
+        public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpdateTechProcessDto updateTechProcessDto)
         {
             if (!ModelState.IsValid)
             {
@@ -88,13 +103,13 @@ namespace TechProcessSupportSys.Controllers
             var user = await userManager.FindByNameAsync(username!);
             var userId = User.IsInRole("Admin") ? null : user!.Id;
 
-            var equip = updateEquipmentDto.FromUpdateEquipmentDto();
+            var process = updateTechProcessDto.FromUpdateTechProcessDto();
 
-            var updated = await equipRepo.UpdateAsync(userId, id, equip);
+            var updated = await techRepo.UpdateAsync(userId, id, process);
 
             if (updated == null) return NotFound();
 
-            return Ok(updated.ToEquipmentDto());
+            return Ok(updated.ToTechProcessDto());
         }
 
         [HttpDelete("{id:int}")]
@@ -105,7 +120,7 @@ namespace TechProcessSupportSys.Controllers
             var user = await userManager.FindByNameAsync(username!);
             var userId = User.IsInRole("Admin") ? null : user!.Id;
 
-            var deleted = await equipRepo.DeleteAsync(userId, id);
+            var deleted = await techRepo.DeleteAsync(userId, id);
 
             if (deleted == null) return NotFound();
 

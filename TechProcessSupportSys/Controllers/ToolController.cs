@@ -29,7 +29,7 @@ namespace TechProcessSupportSys.Controllers
         public async Task<IActionResult> GetAll([FromQuery] ToolQueryObject query)
         {
             var username = User.GetUsername();
-            var user = await userManager.FindByNameAsync(username);
+            var user = await userManager.FindByNameAsync(username!);
             var id = User.IsInRole("Admin") ? null : user!.Id;
 
             var tools = await toolRepo.GetAllAsync(id, query);
@@ -44,7 +44,7 @@ namespace TechProcessSupportSys.Controllers
         public async Task<IActionResult> GetById([FromRoute] int id)
         {
             var username = User.GetUsername();
-            var user = await userManager.FindByNameAsync(username);
+            var user = await userManager.FindByNameAsync(username!);
             var userId = User.IsInRole("Admin") ? null : user!.Id;
 
             var tool = await toolRepo.GetByIdAsync(userId, id);
@@ -60,11 +60,11 @@ namespace TechProcessSupportSys.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return BadRequest("Дал мне говно");
+                return BadRequest(ModelState);
             }
 
             var username = User.GetUsername();
-            var user = await userManager.FindByNameAsync(username);
+            var user = await userManager.FindByNameAsync(username!);
 
             var tool = createToolDto.FromCreateToolDto();
             tool.UserId = user!.Id;
@@ -80,11 +80,11 @@ namespace TechProcessSupportSys.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return BadRequest("Дал мне говно");
+                return BadRequest(ModelState);
             }
 
             var username = User.GetUsername();
-            var user = await userManager.FindByNameAsync(username);
+            var user = await userManager.FindByNameAsync(username!);
             var userId = User.IsInRole("Admin") ? null : user!.Id;
 
             var tool = updateToolDto.FromUpdateToolDto();
@@ -101,7 +101,7 @@ namespace TechProcessSupportSys.Controllers
         public async Task<IActionResult> Delete([FromRoute] int id)
         {
             var username = User.GetUsername();
-            var user = await userManager.FindByNameAsync(username);
+            var user = await userManager.FindByNameAsync(username!);
             var userId = User.IsInRole("Admin") ? null : user!.Id;
 
             var deleted = await toolRepo.DeleteAsync(userId, id);

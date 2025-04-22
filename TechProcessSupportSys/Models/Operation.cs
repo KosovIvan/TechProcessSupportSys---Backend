@@ -11,6 +11,6 @@ namespace TechProcessSupportSys.Models
         public int StepOrder { get; set; }
         public int ProcessId { get; set; }
         public TechProcess Process { get; set; } = null!;
-        public List<Transition> Transition { get; set; } = new List<Transition>();
+        public List<Transition> Transitions { get; set; } = new List<Transition>();
     }
 }
