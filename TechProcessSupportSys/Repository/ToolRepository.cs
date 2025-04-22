@@ -22,11 +22,12 @@ namespace TechProcessSupportSys.Repository
             return tool;
         }
 
-        public async Task<Tool?> DeleteAsync(int id)
+        public async Task<Tool?> DeleteAsync(string? userId, int id)
         {
             var tool = await context.Tools.FirstOrDefaultAsync(t => t.Id == id);
 
             if (tool == null) return null;
+            if (userId != null && tool.UserId != userId) return null;
 
             context.Tools.Remove(tool);
             await context.SaveChangesAsync();
@@ -34,9 +35,11 @@ namespace TechProcessSupportSys.Repository
             return tool;
         }
 
-        public async Task<List<Tool>> GetAllAsync(ToolQueryObject query)
+        public async Task<List<Tool>> GetAllAsync(string? id, ToolQueryObject query)
         {
             var tools = context.Tools.AsQueryable();
+
+            if (id != null) tools = tools.Where(t => t.UserId == id);
 
             if (!string.IsNullOrWhiteSpace(query.Name)) tools = tools.Where(t => t.Name.Contains(query.Name));
 
@@ -64,19 +67,23 @@ namespace TechProcessSupportSys.Repository
             return await tools.Skip(skipNumber).Take(query.PageSize).ToListAsync();
         }
 
-        public async Task<Tool?> GetByIdAsync(int id)
+        public async Task<Tool?> GetByIdAsync(string? userId, int id)
         {
-            return await context.Tools.FirstOrDefaultAsync(t => t.Id == id);
+            var tool = await context.Tools.FirstOrDefaultAsync(t => t.Id == id);
+
+            if (tool == null) return null;
+            if (userId != null && tool.UserId != userId) return null;
+
+            return tool;
         }
 
-        public async Task<Tool?> UpdateAsync(int id, Tool tool)
+        public async Task<Tool?> UpdateAsync(string? userId, int id, Tool tool)
         {
+
             var existingTool = await context.Tools.FirstOrDefaultAsync(t => t.Id == id);
 
-            if (existingTool == null)
-            {
-                return null;
-            }
+            if (existingTool == null) return null;
+            if (userId != null && existingTool.UserId != userId) return null;
 
             existingTool.Name = tool.Name;
             existingTool.Description = tool.Description;

@@ -1,7 +1,9 @@
 ﻿using Azure.Core;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using TechProcessSupportSys.Dtos.Tool;
+using TechProcessSupportSys.Extentions;
 using TechProcessSupportSys.Interfaces;
 using TechProcessSupportSys.Mappers;
 using TechProcessSupportSys.Models;
@@ -14,17 +16,23 @@ namespace TechProcessSupportSys.Controllers
     public class ToolController : ControllerBase
     {
         private readonly IToolRepository toolRepo;
+        private readonly UserManager<User> userManager;
 
-        public ToolController(IToolRepository toolRepo)
+        public ToolController(IToolRepository toolRepo, UserManager<User> userManager)
         {
             this.toolRepo = toolRepo;
+            this.userManager = userManager;
         }
 
         [HttpGet]
-        [Authorize(Roles="Admin")]
+        [Authorize]
         public async Task<IActionResult> GetAll([FromQuery] ToolQueryObject query)
         {
-            var tools = await toolRepo.GetAllAsync(query);
+            var username = User.GetUsername();
+            var user = await userManager.FindByNameAsync(username);
+            var id = User.IsInRole("Admin") ? null : user!.Id;
+
+            var tools = await toolRepo.GetAllAsync(id, query);
 
             var toolsDto = tools.Select(t => t.ToToolDto()).ToList();
 
@@ -35,7 +43,11 @@ namespace TechProcessSupportSys.Controllers
         [Authorize]
         public async Task<IActionResult> GetById([FromRoute] int id)
         {
-            var tool = await toolRepo.GetByIdAsync(id);
+            var username = User.GetUsername();
+            var user = await userManager.FindByNameAsync(username);
+            var userId = User.IsInRole("Admin") ? null : user!.Id;
+
+            var tool = await toolRepo.GetByIdAsync(userId, id);
 
             if (tool == null) return NotFound();
 
@@ -51,7 +63,11 @@ namespace TechProcessSupportSys.Controllers
                 return BadRequest("Дал мне говно");
             }
 
+            var username = User.GetUsername();
+            var user = await userManager.FindByNameAsync(username);
+
             var tool = createToolDto.FromCreateToolDto();
+            tool.UserId = user!.Id;
 
             await toolRepo.CreateAsync(tool);
 
@@ -67,9 +83,13 @@ namespace TechProcessSupportSys.Controllers
                 return BadRequest("Дал мне говно");
             }
 
+            var username = User.GetUsername();
+            var user = await userManager.FindByNameAsync(username);
+            var userId = User.IsInRole("Admin") ? null : user!.Id;
+
             var tool = updateToolDto.FromUpdateToolDto();
 
-            var updated = await toolRepo.UpdateAsync(id, tool);
+            var updated = await toolRepo.UpdateAsync(userId, id, tool);
 
             if (updated == null) return NotFound();
 
@@ -80,7 +100,11 @@ namespace TechProcessSupportSys.Controllers
         [Authorize]
         public async Task<IActionResult> Delete([FromRoute] int id)
         {
-            var deleted = await toolRepo.DeleteAsync(id);
+            var username = User.GetUsername();
+            var user = await userManager.FindByNameAsync(username);
+            var userId = User.IsInRole("Admin") ? null : user!.Id;
+
+            var deleted = await toolRepo.DeleteAsync(userId, id);
 
             if (deleted == null) return NotFound();
 
