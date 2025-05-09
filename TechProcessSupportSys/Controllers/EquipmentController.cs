@@ -6,7 +6,6 @@ using TechProcessSupportSys.Dtos.Equipment;
 using TechProcessSupportSys.Dtos.Tool;
 using TechProcessSupportSys.Extentions;
 using TechProcessSupportSys.Interfaces;
-using TechProcessSupportSys.Mappers;
 using TechProcessSupportSys.Models;
 using TechProcessSupportSys.QueryObjects;
 
@@ -16,11 +15,13 @@ namespace TechProcessSupportSys.Controllers
     [ApiController]
     public class EquipmentController : ControllerBase
     {
+        private readonly IAutomapper automapper;
         private readonly IEquipmentRepository equipRepo;
         private readonly UserManager<User> userManager;
 
-        public EquipmentController(IEquipmentRepository equipRepo, UserManager<User> userManager)
+        public EquipmentController(IAutomapper automapper, IEquipmentRepository equipRepo, UserManager<User> userManager)
         {
+            this.automapper = automapper;
             this.equipRepo = equipRepo;
             this.userManager = userManager;
         }
@@ -35,7 +36,7 @@ namespace TechProcessSupportSys.Controllers
 
             var equip = await equipRepo.GetAllAsync(id, query);
 
-            var equipDto = equip.Select(e => e.ToEquipmentDto()).ToList();
+            var equipDto = equip.Select(e => automapper.Map<EquipmentDto, Equipment>(e)).ToList();
 
             return Ok(equipDto);
         }
@@ -52,7 +53,7 @@ namespace TechProcessSupportSys.Controllers
 
             if (equip == null) return NotFound();
 
-            return Ok(equip.ToEquipmentDto());
+            return Ok(automapper.Map<EquipmentDto, Equipment>(equip));
         }
 
         [HttpPost]
@@ -67,12 +68,12 @@ namespace TechProcessSupportSys.Controllers
             var username = User.GetUsername();
             var user = await userManager.FindByNameAsync(username!);
 
-            var equip = createEquipmentDto.FromCreateEquipmentDto();
+            var equip = automapper.Map<Equipment, CreateEquipmentDto>(createEquipmentDto);
             equip.UserId = user!.Id;
 
             await equipRepo.CreateAsync(equip);
 
-            return CreatedAtAction(nameof(GetById), new { id = equip.Id }, equip.ToEquipmentDto());
+            return CreatedAtAction(nameof(GetById), new { id = equip.Id }, automapper.Map<EquipmentDto, Equipment>(equip));
         }
 
         [HttpPut("{id:int}")]
@@ -88,13 +89,13 @@ namespace TechProcessSupportSys.Controllers
             var user = await userManager.FindByNameAsync(username!);
             var userId = User.IsInRole("Admin") ? null : user!.Id;
 
-            var equip = updateEquipmentDto.FromUpdateEquipmentDto();
+            var equip = automapper.Map<Equipment, UpdateEquipmentDto>(updateEquipmentDto);
 
             var updated = await equipRepo.UpdateAsync(userId, id, equip);
 
             if (updated == null) return NotFound();
 
-            return Ok(updated.ToEquipmentDto());
+            return Ok(automapper.Map<EquipmentDto, Equipment>(updated));
         }
 
         [HttpDelete("{id:int}")]

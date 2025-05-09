@@ -5,7 +5,6 @@ using TechProcessSupportSys.Dtos.Equipment;
 using TechProcessSupportSys.Dtos.Fixture;
 using TechProcessSupportSys.Extentions;
 using TechProcessSupportSys.Interfaces;
-using TechProcessSupportSys.Mappers;
 using TechProcessSupportSys.Models;
 using TechProcessSupportSys.QueryObjects;
 
@@ -15,11 +14,13 @@ namespace TechProcessSupportSys.Controllers
     [ApiController]
     public class FixtureController : ControllerBase
     {
+        private readonly IAutomapper automapper;
         private readonly IFixtureRepository fixtureRepo;
         private readonly UserManager<User> userManager;
 
-        public FixtureController(IFixtureRepository fixtureRepo, UserManager<User> userManager)
+        public FixtureController(IAutomapper automapper, IFixtureRepository fixtureRepo, UserManager<User> userManager)
         {
+            this.automapper = automapper;
             this.fixtureRepo = fixtureRepo;
             this.userManager = userManager;
         }
@@ -33,7 +34,7 @@ namespace TechProcessSupportSys.Controllers
 
             var fixture = await fixtureRepo.GetAllAsync(id, query);
 
-            var fixtureDto = fixture.Select(e => e.ToFixtureDto()).ToList();
+            var fixtureDto = fixture.Select(e => automapper.Map<FixtureDto, Fixture>(e)).ToList();
 
             return Ok(fixtureDto);
         }
@@ -49,7 +50,7 @@ namespace TechProcessSupportSys.Controllers
 
             if (fixture == null) return NotFound();
 
-            return Ok(fixture.ToFixtureDto());
+            return Ok(automapper.Map<FixtureDto, Fixture>(fixture));
         }
 
         [HttpPost]
@@ -63,12 +64,12 @@ namespace TechProcessSupportSys.Controllers
             var username = User.GetUsername();
             var user = await userManager.FindByNameAsync(username!);
 
-            var fixture = createFixtureDto.FromCreateFixtureDto();
+            var fixture = automapper.Map<Fixture, CreateFixtureDto>(createFixtureDto);
             fixture.UserId = user!.Id;
 
             await fixtureRepo.CreateAsync(fixture);
 
-            return CreatedAtAction(nameof(GetById), new { id = fixture.Id }, fixture.ToFixtureDto());
+            return CreatedAtAction(nameof(GetById), new { id = fixture.Id }, automapper.Map<FixtureDto, Fixture>(fixture));
         }
 
         [HttpPut("{id:int}")]
@@ -83,13 +84,13 @@ namespace TechProcessSupportSys.Controllers
             var user = await userManager.FindByNameAsync(username!);
             var userId = User.IsInRole("Admin") ? null : user!.Id;
 
-            var fixture = updateFixtureDto.FromUpdateFixtureDto();
+            var fixture = automapper.Map<Fixture, UpdateFixtureDto>(updateFixtureDto);
 
             var updated = await fixtureRepo.UpdateAsync(userId, id, fixture);
 
             if (updated == null) return NotFound();
 
-            return Ok(updated.ToFixtureDto());
+            return Ok(automapper.Map<FixtureDto, Fixture>(updated));
         }
 
         [HttpDelete("{id:int}")]

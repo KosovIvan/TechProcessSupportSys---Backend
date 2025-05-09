@@ -6,7 +6,6 @@ using TechProcessSupportSys.Dtos.Operation;
 using TechProcessSupportSys.Dtos.TechProcess;
 using TechProcessSupportSys.Extentions;
 using TechProcessSupportSys.Interfaces;
-using TechProcessSupportSys.Mappers;
 using TechProcessSupportSys.Models;
 using TechProcessSupportSys.QueryObjects;
 
@@ -16,11 +15,13 @@ namespace TechProcessSupportSys.Controllers
     [ApiController]
     public class OperationController : ControllerBase
     {
+        private readonly IAutomapper automapper;
         private readonly IOperationRepository operationRepo;
         private readonly UserManager<User> userManager;
 
-        public OperationController(IOperationRepository operationRepo, UserManager<User> userManager)
+        public OperationController(IAutomapper automapper, IOperationRepository operationRepo, UserManager<User> userManager)
         {
+            this.automapper = automapper;
             this.operationRepo = operationRepo;
             this.userManager = userManager;
         }
@@ -35,7 +36,7 @@ namespace TechProcessSupportSys.Controllers
 
             var operations = await operationRepo.GetAllAsync(id, query);
 
-            var operationsDto = operations.Select(o => o.ToOperationDto()).ToList();
+            var operationsDto = operations.Select(o => automapper.Map<OperationDto, Operation>(o)).ToList();
 
             return Ok(operationsDto);
         }
@@ -52,7 +53,7 @@ namespace TechProcessSupportSys.Controllers
 
             if (operation == null) return NotFound();
 
-            return Ok(operation.ToOperationDto());
+            return Ok(automapper.Map<OperationDto, Operation>(operation));
         }
 
         [HttpPost("{id:int}")]
@@ -66,12 +67,12 @@ namespace TechProcessSupportSys.Controllers
                     return BadRequest(ModelState);
                 }
 
-                var operation = createOperationDto.FromCreateOperationDto();
+                var operation = automapper.Map<Operation, CreateOperationDto>(createOperationDto);
                 operation.ProcessId = id;
 
                 await operationRepo.CreateAsync(operation);
 
-                return CreatedAtAction(nameof(GetById), new { id = operation.Id }, operation.ToOperationDto());
+                return CreatedAtAction(nameof(GetById), new { id = operation.Id }, automapper.Map<OperationDto, Operation>(operation));
 
             }
             catch (Exception ex)
@@ -95,13 +96,13 @@ namespace TechProcessSupportSys.Controllers
                 var user = await userManager.FindByNameAsync(username!);
                 var userId = User.IsInRole("Admin") ? null : user!.Id;
 
-                var operation = updateOperationDto.FromUpdateOperationDto();
+                var operation = automapper.Map<Operation, UpdateOperationDto>(updateOperationDto);
 
                 var updated = await operationRepo.UpdateAsync(userId, id, operation);
 
                 if (updated == null) return NotFound();
                 
-                 return Ok(updated.ToOperationDto());
+                 return Ok(automapper.Map<OperationDto, Operation>(updated));
             }
             catch (Exception ex)
             {

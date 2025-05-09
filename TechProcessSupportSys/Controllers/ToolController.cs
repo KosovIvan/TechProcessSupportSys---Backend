@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.Mvc;
 using TechProcessSupportSys.Dtos.Tool;
 using TechProcessSupportSys.Extentions;
 using TechProcessSupportSys.Interfaces;
-using TechProcessSupportSys.Mappers;
 using TechProcessSupportSys.Models;
 using TechProcessSupportSys.QueryObjects;
 
@@ -15,11 +14,13 @@ namespace TechProcessSupportSys.Controllers
     [Route("App/[controller]")]
     public class ToolController : ControllerBase
     {
+        private readonly IAutomapper automapper;
         private readonly IToolRepository toolRepo;
         private readonly UserManager<User> userManager;
 
-        public ToolController(IToolRepository toolRepo, UserManager<User> userManager)
+        public ToolController(IAutomapper automapper, IToolRepository toolRepo, UserManager<User> userManager)
         {
+            this.automapper = automapper;
             this.toolRepo = toolRepo;
             this.userManager = userManager;
         }
@@ -34,7 +35,7 @@ namespace TechProcessSupportSys.Controllers
 
             var tools = await toolRepo.GetAllAsync(id, query);
 
-            var toolsDto = tools.Select(t => t.ToToolDto()).ToList();
+            var toolsDto = tools.Select(t => automapper.Map<ToolDto, Tool>(t)).ToList();
 
             return Ok(toolsDto);
         }
@@ -51,7 +52,7 @@ namespace TechProcessSupportSys.Controllers
 
             if (tool == null) return NotFound();
 
-            return Ok(tool.ToToolDto());
+            return Ok(automapper.Map<ToolDto, Tool>(tool));
         }
 
         [HttpPost]
@@ -66,12 +67,12 @@ namespace TechProcessSupportSys.Controllers
             var username = User.GetUsername();
             var user = await userManager.FindByNameAsync(username!);
 
-            var tool = createToolDto.FromCreateToolDto();
+            var tool = automapper.Map<Tool, CreateToolDto>(createToolDto);
             tool.UserId = user!.Id;
 
             await toolRepo.CreateAsync(tool);
 
-            return CreatedAtAction(nameof(GetById), new { id = tool.Id }, tool.ToToolDto());
+            return CreatedAtAction(nameof(GetById), new { id = tool.Id }, automapper.Map<ToolDto, Tool>(tool));
         }
 
         [HttpPut("{id:int}")]
@@ -87,13 +88,13 @@ namespace TechProcessSupportSys.Controllers
             var user = await userManager.FindByNameAsync(username!);
             var userId = User.IsInRole("Admin") ? null : user!.Id;
 
-            var tool = updateToolDto.FromUpdateToolDto();
+            var tool = automapper.Map<Tool, UpdateToolDto>(updateToolDto);
 
             var updated = await toolRepo.UpdateAsync(userId, id, tool);
 
             if (updated == null) return NotFound();
 
-            return Ok(updated.ToToolDto());
+            return Ok(automapper.Map<ToolDto, Tool>(updated));
         }
 
         [HttpDelete("{id:int}")]

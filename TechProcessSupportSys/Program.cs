@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using TechProcessSupportSys.Data;
+using TechProcessSupportSys.Dtos.Tool;
 using TechProcessSupportSys.Interfaces;
 using TechProcessSupportSys.Models;
 using TechProcessSupportSys.Repository;
@@ -79,6 +80,7 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
+builder.Services.AddSingleton<IAutomapper, CustomAutomapper>();
 builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddScoped<ITechProcessRepository, TechProcessRepository>();
 builder.Services.AddScoped<IOperationRepository, OperationRepository>();

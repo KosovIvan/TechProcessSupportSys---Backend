@@ -6,7 +6,6 @@ using TechProcessSupportSys.Dtos.TechProcess;
 using TechProcessSupportSys.Dtos.Tool;
 using TechProcessSupportSys.Extentions;
 using TechProcessSupportSys.Interfaces;
-using TechProcessSupportSys.Mappers;
 using TechProcessSupportSys.Models;
 using TechProcessSupportSys.QueryObjects;
 
@@ -16,11 +15,13 @@ namespace TechProcessSupportSys.Controllers
     [ApiController]
     public class TechProcessController : ControllerBase
     {
+        private readonly IAutomapper automapper;
         private readonly ITechProcessRepository techRepo;
         private readonly UserManager<User> userManager;
 
-        public TechProcessController(ITechProcessRepository techRepo, UserManager<User> userManager)
+        public TechProcessController(IAutomapper automapper, ITechProcessRepository techRepo, UserManager<User> userManager)
         {
+            this.automapper = automapper;
             this.techRepo = techRepo;
             this.userManager = userManager;
         }
@@ -35,7 +36,7 @@ namespace TechProcessSupportSys.Controllers
 
             var processes = await techRepo.GetAllAsync(id, query);
 
-            var processesDto = processes.Select(p => p.ToAllDto()).ToList();
+            var processesDto = processes.Select(p => automapper.Map<AllDto,CreateAllDto>(p)).ToList();
 
             return Ok(processesDto);
         }
@@ -50,7 +51,7 @@ namespace TechProcessSupportSys.Controllers
 
             var processes = await techRepo.GetProcessesAsync(id, query);
 
-            var processesDto = processes.Select(p => p.ToTechProcessDto()).ToList();
+            var processesDto = processes.Select(p => automapper.Map<TechProcessDto, TechProcess>(p)).ToList();
 
             return Ok(processesDto);
         }
@@ -67,7 +68,7 @@ namespace TechProcessSupportSys.Controllers
 
             if (process == null) return NotFound();
 
-            return Ok(process.ToTechProcessDto());
+            return Ok(automapper.Map<TechProcessDto, TechProcess>(process));
         }
 
         [HttpPost]
@@ -82,12 +83,12 @@ namespace TechProcessSupportSys.Controllers
             var username = User.GetUsername();
             var user = await userManager.FindByNameAsync(username!);
 
-            var process = createTechProcessDto.FromCreateTechProcessDto();
+            var process = automapper.Map<TechProcess, CreateTechProcessDto>(createTechProcessDto);
             process.UserId = user!.Id;
 
             await techRepo.CreateAsync(process);
 
-            return CreatedAtAction(nameof(GetById), new { id = process.Id }, process.ToTechProcessDto());
+            return CreatedAtAction(nameof(GetById), new { id = process.Id }, automapper.Map<TechProcessDto, TechProcess> (process));
         }
 
         [HttpPut("{id:int}")]
@@ -103,13 +104,13 @@ namespace TechProcessSupportSys.Controllers
             var user = await userManager.FindByNameAsync(username!);
             var userId = User.IsInRole("Admin") ? null : user!.Id;
 
-            var process = updateTechProcessDto.FromUpdateTechProcessDto();
+            var process = automapper.Map<TechProcess, UpdateTechProcessDto>(updateTechProcessDto);
 
             var updated = await techRepo.UpdateAsync(userId, id, process);
 
             if (updated == null) return NotFound();
 
-            return Ok(updated.ToTechProcessDto());
+            return Ok(automapper.Map<TechProcessDto, TechProcess>(updated));
         }
 
         [HttpDelete("{id:int}")]
