@@ -22,6 +22,8 @@ namespace TechProcessSupportSys.Data
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            builder.Entity<TechProcess>().HasAlternateKey(t => t.Code);
+            builder.Entity<Operation>().HasAlternateKey(o => o.Code);
             builder.Entity<Operation>().HasAlternateKey(o => o.StepOrder);
             builder.Entity<Transition>().HasAlternateKey(t => t.StepOrder);
 

@@ -2,6 +2,9 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using System.Text;
+using System.Text.RegularExpressions;
 using TechProcessSupportSys.Dtos.Operation;
 using TechProcessSupportSys.Dtos.TechProcess;
 using TechProcessSupportSys.Extentions;
@@ -75,6 +78,22 @@ namespace TechProcessSupportSys.Controllers
                 return CreatedAtAction(nameof(GetById), new { id = operation.Id }, automapper.Map<OperationDto, Operation>(operation));
 
             }
+            /*catch (AggregateException ex)
+            {
+                StringBuilder  sb = new StringBuilder();
+                //return BadRequest(ex.InnerException.Message);
+                foreach (var err in ex.InnerExceptions)
+                {
+                    sb.Append(err.Message.ToString() + ";\n");
+                }
+                return BadRequest(sb.ToString());
+            }*/
+            catch (DbUpdateException ex)
+            {
+                var uniqueEx = ex.IsUniqueKeyException();
+                if (uniqueEx is not null) return uniqueEx;
+                return StatusCode(500, ex);
+            }
             catch (Exception ex)
             {
                 return StatusCode(500, ex);
@@ -103,6 +122,12 @@ namespace TechProcessSupportSys.Controllers
                 if (updated == null) return NotFound();
                 
                  return Ok(automapper.Map<OperationDto, Operation>(updated));
+            }
+            catch (DbUpdateException ex)
+            {
+                var uniqueEx = ex.IsUniqueKeyException();
+                if (uniqueEx is not null) return uniqueEx;
+                return StatusCode(500, ex);
             }
             catch (Exception ex)
             {

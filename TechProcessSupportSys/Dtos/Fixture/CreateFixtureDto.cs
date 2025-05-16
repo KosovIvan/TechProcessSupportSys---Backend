@@ -12,5 +12,7 @@ namespace TechProcessSupportSys.Dtos.Fixture
         [Required]
         [MaxLength(35)]
         public string Type { get; set; } = "";
+        [MaxLength(15)]
+        public string GOST { get; set; } = "";
     }
 }

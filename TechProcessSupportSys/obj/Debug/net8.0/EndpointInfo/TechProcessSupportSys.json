@@ -1111,6 +1111,11 @@
             "maxLength": 35,
             "type": "string",
             "nullable": true
+          },
+          "gost": {
+            "maxLength": 15,
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1136,12 +1141,19 @@
             "maxLength": 35,
             "minLength": 1,
             "type": "string"
+          },
+          "gost": {
+            "maxLength": 15,
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
       },
       "CreateOperationDto": {
         "required": [
+          "code",
+          "duration",
           "name",
           "stepOrder"
         ],
@@ -1152,10 +1164,22 @@
             "minLength": 1,
             "type": "string"
           },
+          "code": {
+            "maximum": 99999,
+            "minimum": 1,
+            "type": "integer",
+            "format": "int32"
+          },
           "description": {
             "maxLength": 250,
             "type": "string",
             "nullable": true
+          },
+          "duration": {
+            "maximum": 120,
+            "minimum": 1,
+            "type": "integer",
+            "format": "int32"
           },
           "stepOrder": {
             "maximum": 50,
@@ -1168,11 +1192,23 @@
       },
       "CreateTechProcessDto": {
         "required": [
-          "name"
+          "code",
+          "name",
+          "productName"
         ],
         "type": "object",
         "properties": {
           "name": {
+            "maxLength": 35,
+            "minLength": 1,
+            "type": "string"
+          },
+          "code": {
+            "maxLength": 10,
+            "minLength": 1,
+            "type": "string"
+          },
+          "productName": {
             "maxLength": 35,
             "minLength": 1,
             "type": "string"
@@ -1212,6 +1248,11 @@
             "maxLength": 35,
             "minLength": 1,
             "type": "string"
+          },
+          "gost": {
+            "maxLength": 15,
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1278,6 +1319,11 @@
             "maxLength": 35,
             "type": "string",
             "nullable": true
+          },
+          "gost": {
+            "maxLength": 15,
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1303,12 +1349,19 @@
             "maxLength": 35,
             "minLength": 1,
             "type": "string"
+          },
+          "gost": {
+            "maxLength": 15,
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
       },
       "UpdateOperationDto": {
         "required": [
+          "code",
+          "duration",
           "name",
           "stepOrder"
         ],
@@ -1319,10 +1372,22 @@
             "minLength": 1,
             "type": "string"
           },
+          "code": {
+            "maximum": 99999,
+            "minimum": 1,
+            "type": "integer",
+            "format": "int32"
+          },
           "description": {
             "maxLength": 250,
             "type": "string",
             "nullable": true
+          },
+          "duration": {
+            "maximum": 120,
+            "minimum": 1,
+            "type": "integer",
+            "format": "int32"
           },
           "stepOrder": {
             "maximum": 50,
@@ -1335,11 +1400,23 @@
       },
       "UpdateTechProcessDto": {
         "required": [
-          "name"
+          "code",
+          "name",
+          "productName"
         ],
         "type": "object",
         "properties": {
           "name": {
+            "maxLength": 35,
+            "minLength": 1,
+            "type": "string"
+          },
+          "code": {
+            "maxLength": 10,
+            "minLength": 1,
+            "type": "string"
+          },
+          "productName": {
             "maxLength": 35,
             "minLength": 1,
             "type": "string"
@@ -1379,6 +1456,11 @@
             "maxLength": 35,
             "minLength": 1,
             "type": "string"
+          },
+          "gost": {
+            "maxLength": 15,
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

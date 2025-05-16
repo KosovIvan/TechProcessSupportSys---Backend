@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TechProcessSupportSys.Data;
 
@@ -11,9 +12,11 @@ using TechProcessSupportSys.Data;
 namespace TechProcessSupportSys.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250514174832_HereWeGoAgain")]
+    partial class HereWeGoAgain
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -51,13 +54,13 @@ namespace TechProcessSupportSys.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "39d2ffe5-5838-4c61-8f31-aa8dfd61615f",
+                            Id = "9d9ff81c-5aed-4598-9568-d264064a3d4e",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "ae666854-2cc7-4731-98f6-0fcffe4e8918",
+                            Id = "69878783-ce85-4046-b6da-54aff2456166",
                             Name = "User",
                             NormalizedName = "USER"
                         });

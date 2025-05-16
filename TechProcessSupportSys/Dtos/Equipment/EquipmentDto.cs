@@ -1,4 +1,6 @@
-﻿namespace TechProcessSupportSys.Dtos.Equipment
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace TechProcessSupportSys.Dtos.Equipment
 {
     public class EquipmentDto
     {
@@ -6,5 +8,6 @@
         public string Name { get; set; } = "";
         public string Description { get; set; } = "";
         public string Model { get; set; } = "";
+        public string GOST { get; set; } = "";
     }
 }

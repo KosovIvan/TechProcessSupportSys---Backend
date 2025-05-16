@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using TechProcessSupportSys.Dtos.TechProcess;
 using TechProcessSupportSys.Dtos.Tool;
 using TechProcessSupportSys.Extentions;
@@ -75,42 +76,68 @@ namespace TechProcessSupportSys.Controllers
         [Authorize]
         public async Task<IActionResult> Create([FromBody] CreateTechProcessDto createTechProcessDto)
         {
-            if (!ModelState.IsValid)
+            try
             {
-                return BadRequest(ModelState);
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest(ModelState);
+                }
+
+                var username = User.GetUsername();
+                var user = await userManager.FindByNameAsync(username!);
+
+                var process = automapper.Map<TechProcess, CreateTechProcessDto>(createTechProcessDto);
+                process.UserId = user!.Id;
+
+                await techRepo.CreateAsync(process);
+
+                return CreatedAtAction(nameof(GetById), new { id = process.Id }, automapper.Map<TechProcessDto, TechProcess>(process));
             }
-
-            var username = User.GetUsername();
-            var user = await userManager.FindByNameAsync(username!);
-
-            var process = automapper.Map<TechProcess, CreateTechProcessDto>(createTechProcessDto);
-            process.UserId = user!.Id;
-
-            await techRepo.CreateAsync(process);
-
-            return CreatedAtAction(nameof(GetById), new { id = process.Id }, automapper.Map<TechProcessDto, TechProcess> (process));
+            catch (DbUpdateException ex)
+            {
+                var uniqueEx = ex.IsUniqueKeyException();
+                if (uniqueEx is not null) return uniqueEx;
+                return StatusCode(500, ex);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex);
+            }
         }
 
         [HttpPut("{id:int}")]
         [Authorize]
         public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpdateTechProcessDto updateTechProcessDto)
         {
-            if (!ModelState.IsValid)
+            try
             {
-                return BadRequest(ModelState);
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest(ModelState);
+                }
+
+                var username = User.GetUsername();
+                var user = await userManager.FindByNameAsync(username!);
+                var userId = User.IsInRole("Admin") ? null : user!.Id;
+
+                var process = automapper.Map<TechProcess, UpdateTechProcessDto>(updateTechProcessDto);
+
+                var updated = await techRepo.UpdateAsync(userId, id, process);
+
+                if (updated == null) return NotFound();
+
+                return Ok(automapper.Map<TechProcessDto, TechProcess>(updated));
             }
-
-            var username = User.GetUsername();
-            var user = await userManager.FindByNameAsync(username!);
-            var userId = User.IsInRole("Admin") ? null : user!.Id;
-
-            var process = automapper.Map<TechProcess, UpdateTechProcessDto>(updateTechProcessDto);
-
-            var updated = await techRepo.UpdateAsync(userId, id, process);
-
-            if (updated == null) return NotFound();
-
-            return Ok(automapper.Map<TechProcessDto, TechProcess>(updated));
+            catch (DbUpdateException ex)
+            {
+                var uniqueEx = ex.IsUniqueKeyException();
+                if (uniqueEx is not null) return uniqueEx;
+                return StatusCode(500, ex);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex);
+            }
         }
 
         [HttpDelete("{id:int}")]

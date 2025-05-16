@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TechProcessSupportSys.Data;
 
@@ -11,9 +12,11 @@ using TechProcessSupportSys.Data;
 namespace TechProcessSupportSys.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250514173435_GOSTsNSomeShit")]
+    partial class GOSTsNSomeShit
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -51,13 +54,13 @@ namespace TechProcessSupportSys.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "39d2ffe5-5838-4c61-8f31-aa8dfd61615f",
+                            Id = "4843b329-d1b1-4385-81e2-213710d23c44",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "ae666854-2cc7-4731-98f6-0fcffe4e8918",
+                            Id = "d1367646-c48d-4f88-9d0a-b6bdbd0dc294",
                             Name = "User",
                             NormalizedName = "USER"
                         });
@@ -269,8 +272,6 @@ namespace TechProcessSupportSys.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasAlternateKey("Code");
-
                     b.HasAlternateKey("StepOrder");
 
                     b.HasIndex("ProcessId");
@@ -288,7 +289,7 @@ namespace TechProcessSupportSys.Migrations
 
                     b.Property<string>("Code")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
@@ -310,8 +311,6 @@ namespace TechProcessSupportSys.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
-
-                    b.HasAlternateKey("Code");
 
                     b.HasIndex("UserId");
 

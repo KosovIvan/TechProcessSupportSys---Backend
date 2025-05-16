@@ -8,5 +8,6 @@
         public string Description { get; set; } = "";
         public string Type { get; set; } = "";
         public string Material { get; set; } = "";
+        public string GOST { get; set; } = "";
     }
 }

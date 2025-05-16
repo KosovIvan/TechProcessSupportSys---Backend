@@ -15,5 +15,7 @@ namespace TechProcessSupportSys.Dtos.Tool
         [Required]
         [MaxLength(35)]
         public string Material { get; set; } = "";
+        [MaxLength(15)]
+        public string GOST { get; set; } = "";
     }
 }

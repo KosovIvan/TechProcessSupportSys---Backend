@@ -11,5 +11,7 @@ namespace TechProcessSupportSys.Dtos.Equipment
         public string Description { get; set; } = "";
         [MaxLength(35)]
         public string Model { get; set; } = "";
+        [MaxLength(15)]
+        public string GOST { get; set; } = "";
     }
 }
