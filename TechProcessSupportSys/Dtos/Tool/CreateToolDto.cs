@@ -17,5 +17,6 @@ namespace TechProcessSupportSys.Dtos.Tool
         public string Material { get; set; } = "";
         [MaxLength(15)]
         public string GOST { get; set; } = "";
+        public bool IsPrivate { get; set; } = false;
     }
 }

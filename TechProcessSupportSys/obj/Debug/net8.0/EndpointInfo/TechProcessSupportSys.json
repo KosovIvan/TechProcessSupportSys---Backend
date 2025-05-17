@@ -392,8 +392,7 @@
             "name": "StepOrder",
             "in": "query",
             "schema": {
-              "type": "integer",
-              "format": "int32"
+              "type": "string"
             }
           },
           {
@@ -870,6 +869,20 @@
             }
           },
           {
+            "name": "IsGlobal",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "IsPrivate",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
             "name": "PageNumber",
             "in": "query",
             "schema": {
@@ -1116,6 +1129,9 @@
             "maxLength": 15,
             "type": "string",
             "nullable": true
+          },
+          "isPrivate": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -1146,13 +1162,15 @@
             "maxLength": 15,
             "type": "string",
             "nullable": true
+          },
+          "isPrivate": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
       },
       "CreateOperationDto": {
         "required": [
-          "code",
           "duration",
           "name",
           "stepOrder"
@@ -1163,12 +1181,6 @@
             "maxLength": 35,
             "minLength": 1,
             "type": "string"
-          },
-          "code": {
-            "maximum": 99999,
-            "minimum": 1,
-            "type": "integer",
-            "format": "int32"
           },
           "description": {
             "maxLength": 250,
@@ -1182,10 +1194,8 @@
             "format": "int32"
           },
           "stepOrder": {
-            "maximum": 50,
-            "minimum": 1,
-            "type": "integer",
-            "format": "int32"
+            "minLength": 1,
+            "type": "string"
           }
         },
         "additionalProperties": false
@@ -1217,6 +1227,9 @@
             "maxLength": 250,
             "type": "string",
             "nullable": true
+          },
+          "isPrivate": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -1253,6 +1266,9 @@
             "maxLength": 15,
             "type": "string",
             "nullable": true
+          },
+          "isPrivate": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -1324,6 +1340,9 @@
             "maxLength": 15,
             "type": "string",
             "nullable": true
+          },
+          "isPrivate": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -1354,13 +1373,15 @@
             "maxLength": 15,
             "type": "string",
             "nullable": true
+          },
+          "isPrivate": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
       },
       "UpdateOperationDto": {
         "required": [
-          "code",
           "duration",
           "name",
           "stepOrder"
@@ -1371,12 +1392,6 @@
             "maxLength": 35,
             "minLength": 1,
             "type": "string"
-          },
-          "code": {
-            "maximum": 99999,
-            "minimum": 1,
-            "type": "integer",
-            "format": "int32"
           },
           "description": {
             "maxLength": 250,
@@ -1390,10 +1405,8 @@
             "format": "int32"
           },
           "stepOrder": {
-            "maximum": 50,
-            "minimum": 1,
-            "type": "integer",
-            "format": "int32"
+            "minLength": 1,
+            "type": "string"
           }
         },
         "additionalProperties": false
@@ -1425,6 +1438,9 @@
             "maxLength": 250,
             "type": "string",
             "nullable": true
+          },
+          "isPrivate": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -1461,6 +1477,9 @@
             "maxLength": 15,
             "type": "string",
             "nullable": true
+          },
+          "isPrivate": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false

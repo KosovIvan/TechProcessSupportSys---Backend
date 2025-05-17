@@ -35,12 +35,25 @@ namespace TechProcessSupportSys.Repository
             return tool;
         }
 
-        public async Task<List<Tool>> GetAllAsync(string? userId, ToolQueryObject query)
+        public async Task<List<Tool>> GetAllAsync(bool isAdmin, string? userId, ToolQueryObject query)
         {
             var tools = context.Tools.AsQueryable();
 
-            if (userId != null) tools = tools.Where(t => t.UserId == userId);
+            if (query.IsPrivate) tools = tools.Where(t => t.IsPrivate == true);
 
+            if (!query.IsGlobal)
+            {
+                tools = tools.Where(t => (t.UserId == userId)&&(!string.IsNullOrWhiteSpace(userId)));
+            }
+            else
+            {
+                if (!isAdmin)
+                {
+                    tools = tools.Where(t => !((t.IsPrivate == true) && ((t.UserId != userId) || (userId == ""))));
+                }
+                else Console.WriteLine("Givno");
+            }
+            
             if (!string.IsNullOrWhiteSpace(query.Name)) tools = tools.Where(t => t.Name.Contains(query.Name));
 
             if (!string.IsNullOrWhiteSpace(query.Type)) tools = tools.Where(t => t.Type.Contains(query.Type));
@@ -67,12 +80,11 @@ namespace TechProcessSupportSys.Repository
             return await tools.Skip(skipNumber).Take(query.PageSize).ToListAsync();
         }
 
-        public async Task<Tool?> GetByIdAsync(string? userId, int id)
+        public async Task<Tool?> GetByIdAsync(bool isAdmin, string? userId, int id)
         {
-            var tool = await context.Tools.FirstOrDefaultAsync(t => t.Id == id);
+            var tool = await context.Tools.Where(t => !((t.IsPrivate == true) && ((t.UserId != userId)||(userId == "")))).FirstOrDefaultAsync(t => t.Id == id);
 
             if (tool == null) return null;
-            if (userId != null && tool.UserId != userId) return null;
 
             return tool;
         }

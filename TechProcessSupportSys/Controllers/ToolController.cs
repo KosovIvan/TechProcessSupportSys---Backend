@@ -26,14 +26,19 @@ namespace TechProcessSupportSys.Controllers
         }
 
         [HttpGet]
-        [Authorize]
         public async Task<IActionResult> GetAll([FromQuery] ToolQueryObject query)
         {
+            string userId = "";
+            bool isAdmin = false;
             var username = User.GetUsername();
-            var user = await userManager.FindByNameAsync(username!);
-            var id = User.IsInRole("Admin") ? null : user!.Id;
+            if (username != null)
+            {
+                var user = await userManager.FindByNameAsync(username);
+                userId = user!.Id;
+                isAdmin = User.IsInRole("Admin") ? true : false;
+            }
 
-            var tools = await toolRepo.GetAllAsync(id, query);
+            var tools = await toolRepo.GetAllAsync(isAdmin, userId, query);
 
             var toolsDto = tools.Select(t => automapper.Map<ToolDto, Tool>(t)).ToList();
 
@@ -41,14 +46,19 @@ namespace TechProcessSupportSys.Controllers
         }
 
         [HttpGet("{id:int}")]
-        [Authorize]
         public async Task<IActionResult> GetById([FromRoute] int id)
         {
+            string userId = "";
+            bool isAdmin = false;
             var username = User.GetUsername();
-            var user = await userManager.FindByNameAsync(username!);
-            var userId = User.IsInRole("Admin") ? null : user!.Id;
+            if (username != null)
+            {
+                var user = await userManager.FindByNameAsync(username);
+                userId = user!.Id;
+                isAdmin = User.IsInRole("Admin") ? true : false;
+            }
 
-            var tool = await toolRepo.GetByIdAsync(userId, id);
+            var tool = await toolRepo.GetByIdAsync(isAdmin, userId, id);
 
             if (tool == null) return NotFound();
 

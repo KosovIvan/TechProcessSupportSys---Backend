@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TechProcessSupportSys.Data;
 
@@ -11,9 +12,11 @@ using TechProcessSupportSys.Data;
 namespace TechProcessSupportSys.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250516193819_IsPrivateAdded")]
+    partial class IsPrivateAdded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -51,13 +54,13 @@ namespace TechProcessSupportSys.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "588cbfb2-62e8-4087-b09f-d0d2c8209c70",
+                            Id = "1362f878-4982-4138-beba-8e65b6358632",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "854f2d29-feea-4410-8396-8123466def7f",
+                            Id = "f936aa54-bf64-42d1-bda1-ae93e2e4a240",
                             Name = "User",
                             NormalizedName = "USER"
                         });
@@ -253,6 +256,9 @@ namespace TechProcessSupportSys.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int>("Code")
+                        .HasColumnType("int");
+
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -270,11 +276,14 @@ namespace TechProcessSupportSys.Migrations
                     b.Property<int>("ProcessId")
                         .HasColumnType("int");
 
-                    b.Property<string>("StepOrder")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("StepOrder")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasAlternateKey("Code");
+
+                    b.HasAlternateKey("StepOrder");
 
                     b.HasIndex("ProcessId");
 
@@ -404,6 +413,8 @@ namespace TechProcessSupportSys.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasAlternateKey("StepOrder");
 
                     b.HasIndex("EquipmentId");
 

@@ -45,6 +45,7 @@ namespace TechProcessSupportSys.Controllers
                 {
                     UserName = user.UserName,
                     Email = user.Email,
+                    Role = User.IsInRole("Admin") ? "Admin" : "User",
                     Token = await tokenService.CreateToken(user)
                 });
         }
@@ -76,6 +77,7 @@ namespace TechProcessSupportSys.Controllers
                         {
                             UserName = user.UserName,
                             Email = user.Email,
+                            Role = User.IsInRole("Admin") ? "Admin" : "User",
                             Token = await tokenService.CreateToken(user)
                         });
                     }

@@ -15,5 +15,6 @@ namespace TechProcessSupportSys.Dtos.TechProcess
         public string ProductName { get; set; } = "";
         [MaxLength(250)]
         public string Description { get; set; } = "";
+        public bool IsPrivate { get; set; } = false;
     }
 }

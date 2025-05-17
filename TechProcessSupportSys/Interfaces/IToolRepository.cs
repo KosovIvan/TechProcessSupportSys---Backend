@@ -10,9 +10,9 @@ namespace TechProcessSupportSys.Interfaces
 
         Task<Tool?> DeleteAsync(string? userId, int id);
 
-        Task<List<Tool>> GetAllAsync(string? userId, ToolQueryObject query);
+        Task<List<Tool>> GetAllAsync(bool isAdmin, string? userId, ToolQueryObject query);
 
-        Task<Tool?> GetByIdAsync(string? userId, int id);
+        Task<Tool?> GetByIdAsync(bool isAdmin, string? userId, int id);
 
         Task<Tool?> UpdateAsync(string? userId, int id, Tool tool);
     }

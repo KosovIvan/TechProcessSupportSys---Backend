@@ -11,6 +11,7 @@ namespace TechProcessSupportSys.Models
         public string Type { get; set; } = "";
         public string Material { get; set; } = "";
         public string GOST { get; set; } = "";
+        public bool IsPrivate { get; set; } = false;
         public string UserId { get; set; } = "";
         public User User { get; set; } = null!;
         public List<Transition> Transition { get; set; } = new List<Transition>();

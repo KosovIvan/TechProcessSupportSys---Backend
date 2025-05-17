@@ -9,5 +9,6 @@
         public string Type { get; set; } = "";
         public string Material { get; set; } = "";
         public string GOST { get; set; } = "";
+        public bool IsPrivate { get; set; } = false;
     }
 }

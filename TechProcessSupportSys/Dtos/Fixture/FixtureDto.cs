@@ -9,5 +9,6 @@ namespace TechProcessSupportSys.Dtos.Fixture
         public string Description { get; set; } = "";
         public string Type { get; set; } = "";
         public string GOST { get; set; } = "";
+        public bool IsPrivate { get; set; } = false;
     }
 }

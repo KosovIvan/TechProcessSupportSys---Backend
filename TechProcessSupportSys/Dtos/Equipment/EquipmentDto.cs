@@ -9,5 +9,6 @@ namespace TechProcessSupportSys.Dtos.Equipment
         public string Description { get; set; } = "";
         public string Model { get; set; } = "";
         public string GOST { get; set; } = "";
+        public bool IsPrivate { get; set; } = false;
     }
 }

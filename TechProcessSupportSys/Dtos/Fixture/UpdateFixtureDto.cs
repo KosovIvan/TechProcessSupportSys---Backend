@@ -14,5 +14,6 @@ namespace TechProcessSupportSys.Dtos.Fixture
         public string Type { get; set; } = "";
         [MaxLength(15)]
         public string GOST { get; set; } = "";
+        public bool IsPrivate { get; set; } = false;
     }
 }
