@@ -51,12 +51,13 @@ namespace TechProcessSupportSys.Repository
                 {
                     tools = tools.Where(t => !((t.IsPrivate == true) && ((t.UserId != userId) || (userId == ""))));
                 }
-                else Console.WriteLine("Givno");
             }
             
             if (!string.IsNullOrWhiteSpace(query.Name)) tools = tools.Where(t => t.Name.Contains(query.Name));
 
             if (!string.IsNullOrWhiteSpace(query.Type)) tools = tools.Where(t => t.Type.Contains(query.Type));
+
+            if (!string.IsNullOrWhiteSpace(query.GOST)) tools = tools.Where(t => t.GOST.Contains(query.GOST));
 
             if (!string.IsNullOrWhiteSpace(query.Material)) tools = tools.Where(t => t.Material.Contains(query.Material));
 
@@ -82,7 +83,9 @@ namespace TechProcessSupportSys.Repository
 
         public async Task<Tool?> GetByIdAsync(bool isAdmin, string? userId, int id)
         {
-            var tool = await context.Tools.Where(t => !((t.IsPrivate == true) && ((t.UserId != userId)||(userId == "")))).FirstOrDefaultAsync(t => t.Id == id);
+            var tools = context.Tools.AsQueryable();
+            if (!isAdmin) tools = tools.Where(t => !((t.IsPrivate == true) && ((t.UserId != userId) || (userId == ""))));
+            var tool = await tools.FirstOrDefaultAsync(t => t.Id == id);
 
             if (tool == null) return null;
 
@@ -101,6 +104,7 @@ namespace TechProcessSupportSys.Repository
             existingTool.Description = tool.Description;
             existingTool.Type = tool.Type;
             existingTool.Material = tool.Material;
+            existingTool.GOST = tool.GOST;
             await context.SaveChangesAsync();
 
             return existingTool;

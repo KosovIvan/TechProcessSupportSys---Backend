@@ -35,15 +35,29 @@ namespace TechProcessSupportSys.Repository
             return fixture;
         }
 
-        public async Task<List<Fixture>> GetAllAsync(string? userId, FixtureQueryObject query)
+        public async Task<List<Fixture>> GetAllAsync(bool isAdmin, string? userId, FixtureQueryObject query)
         {
             var fixtures = context.Fixtures.AsQueryable();
 
-            if (userId != null) fixtures = fixtures.Where(f => f.UserId == userId);
+            if (query.IsPrivate) fixtures = fixtures.Where(f => f.IsPrivate == true);
+
+            if (!query.IsGlobal)
+            {
+                fixtures = fixtures.Where(f => (f.UserId == userId) && (!string.IsNullOrWhiteSpace(userId)));
+            }
+            else
+            {
+                if (!isAdmin)
+                {
+                    fixtures = fixtures.Where(f => !((f.IsPrivate == true) && ((f.UserId != userId) || (userId == ""))));
+                }
+            }
 
             if (!string.IsNullOrWhiteSpace(query.Name)) fixtures = fixtures.Where(f => f.Name.Contains(query.Name));
 
             if (!string.IsNullOrWhiteSpace(query.Type)) fixtures = fixtures.Where(f => f.Type.Contains(query.Type));
+
+            if (!string.IsNullOrWhiteSpace(query.GOST)) fixtures = fixtures.Where(f => f.GOST.Contains(query.GOST));
 
             if (!string.IsNullOrWhiteSpace(query.SortBy))
             {
@@ -62,12 +76,13 @@ namespace TechProcessSupportSys.Repository
             return await fixtures.Skip(skipNumber).Take(query.PageSize).ToListAsync();
         }
 
-        public async Task<Fixture?> GetByIdAsync(string? userId, int id)
+        public async Task<Fixture?> GetByIdAsync(bool isAdmin, string? userId, int id)
         {
-            var fixture = await context.Fixtures.FirstOrDefaultAsync(f => f.Id == id);
+            var fixtures = context.Fixtures.AsQueryable();
+            if (!isAdmin) fixtures = fixtures.Where(f => !((f.IsPrivate == true) && ((f.UserId != userId) || (userId == ""))));
+            var fixture = await fixtures.FirstOrDefaultAsync(f => f.Id == id);
 
             if (fixture == null) return null;
-            if (userId != null && fixture.UserId != userId) return null;
 
             return fixture;
         }
@@ -82,6 +97,7 @@ namespace TechProcessSupportSys.Repository
             existingFixture.Name = fixture.Name;
             existingFixture.Description = fixture.Description;
             existingFixture.Type = fixture.Type;
+            existingFixture.GOST = fixture.GOST;
             await context.SaveChangesAsync();
 
             return existingFixture;

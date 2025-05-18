@@ -9,9 +9,9 @@ namespace TechProcessSupportSys.Interfaces
 
         Task<Equipment?> DeleteAsync(string? userId, int id);
 
-        Task<List<Equipment>> GetAllAsync(string? userId, EquipmentQueryObject query);
+        Task<List<Equipment>> GetAllAsync(bool isAdmin, string? userId, EquipmentQueryObject query);
 
-        Task<Equipment?> GetByIdAsync(string? userId, int id);
+        Task<Equipment?> GetByIdAsync(bool isAdmin, string? userId, int id);
 
         Task<Equipment?> UpdateAsync(string? userId, int id, Equipment equip);
     }

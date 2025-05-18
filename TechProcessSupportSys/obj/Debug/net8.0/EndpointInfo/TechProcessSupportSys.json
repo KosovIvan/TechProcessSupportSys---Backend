@@ -26,6 +26,13 @@
             }
           },
           {
+            "name": "GOST",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "SortBy",
             "in": "query",
             "schema": {
@@ -34,6 +41,20 @@
           },
           {
             "name": "IsDescending",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "IsGlobal",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "IsPrivate",
             "in": "query",
             "schema": {
               "type": "boolean"
@@ -207,6 +228,13 @@
             }
           },
           {
+            "name": "GOST",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "SortBy",
             "in": "query",
             "schema": {
@@ -215,6 +243,20 @@
           },
           {
             "name": "IsDescending",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "IsGlobal",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "IsPrivate",
             "in": "query",
             "schema": {
               "type": "boolean"
@@ -849,6 +891,13 @@
           },
           {
             "name": "Material",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "GOST",
             "in": "query",
             "schema": {
               "type": "string"

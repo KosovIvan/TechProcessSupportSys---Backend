@@ -88,12 +88,6 @@ namespace TechProcessSupportSys.Controllers
                 }
                 return BadRequest(sb.ToString());
             }*/
-            catch (DbUpdateException ex)
-            {
-                var uniqueEx = ex.IsUniqueKeyException();
-                if (uniqueEx is not null) return uniqueEx;
-                return StatusCode(500, ex);
-            }
             catch (Exception ex)
             {
                 return StatusCode(500, ex);
@@ -122,12 +116,6 @@ namespace TechProcessSupportSys.Controllers
                 if (updated == null) return NotFound();
                 
                  return Ok(automapper.Map<OperationDto, Operation>(updated));
-            }
-            catch (DbUpdateException ex)
-            {
-                var uniqueEx = ex.IsUniqueKeyException();
-                if (uniqueEx is not null) return uniqueEx;
-                return StatusCode(500, ex);
             }
             catch (Exception ex)
             {

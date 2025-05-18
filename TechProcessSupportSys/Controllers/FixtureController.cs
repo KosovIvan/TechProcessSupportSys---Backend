@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using TechProcessSupportSys.Dtos.Equipment;
@@ -28,11 +29,17 @@ namespace TechProcessSupportSys.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll([FromQuery] FixtureQueryObject query)
         {
+            string userId = "";
+            bool isAdmin = false;
             var username = User.GetUsername();
-            var user = await userManager.FindByNameAsync(username!);
-            var id = User.IsInRole("Admin") ? null : user!.Id;
+            if (username != null)
+            {
+                var user = await userManager.FindByNameAsync(username);
+                userId = user!.Id;
+                isAdmin = User.IsInRole("Admin") ? true : false;
+            }
 
-            var fixture = await fixtureRepo.GetAllAsync(id, query);
+            var fixture = await fixtureRepo.GetAllAsync(isAdmin, userId, query);
 
             var fixtureDto = fixture.Select(e => automapper.Map<FixtureDto, Fixture>(e)).ToList();
 
@@ -42,11 +49,17 @@ namespace TechProcessSupportSys.Controllers
         [HttpGet("{id:int}")]
         public async Task<IActionResult> GetById([FromRoute] int id)
         {
+            string userId = "";
+            bool isAdmin = false;
             var username = User.GetUsername();
-            var user = await userManager.FindByNameAsync(username!);
-            var userId = User.IsInRole("Admin") ? null : user!.Id;
+            if (username != null)
+            {
+                var user = await userManager.FindByNameAsync(username);
+                userId = user!.Id;
+                isAdmin = User.IsInRole("Admin") ? true : false;
+            }
 
-            var fixture = await fixtureRepo.GetByIdAsync(userId, id);
+            var fixture = await fixtureRepo.GetByIdAsync(isAdmin, userId, id);
 
             if (fixture == null) return NotFound();
 
@@ -54,6 +67,7 @@ namespace TechProcessSupportSys.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> Create([FromBody] CreateFixtureDto createFixtureDto)
         {
             if (!ModelState.IsValid)
@@ -73,6 +87,7 @@ namespace TechProcessSupportSys.Controllers
         }
 
         [HttpPut("{id:int}")]
+        [Authorize]
         public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpdateFixtureDto updateFixtureDto)
         {
             if (!ModelState.IsValid)
@@ -94,6 +109,7 @@ namespace TechProcessSupportSys.Controllers
         }
 
         [HttpDelete("{id:int}")]
+        [Authorize]
         public async Task<IActionResult> Delete([FromRoute] int id)
         {
             var username = User.GetUsername();

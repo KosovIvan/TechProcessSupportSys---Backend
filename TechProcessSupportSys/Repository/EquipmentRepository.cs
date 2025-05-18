@@ -36,15 +36,29 @@ namespace TechProcessSupportSys.Repository
             return equip;
         }
 
-        public async Task<List<Equipment>> GetAllAsync(string? userId, EquipmentQueryObject query)
+        public async Task<List<Equipment>> GetAllAsync(bool isAdmin, string? userId, EquipmentQueryObject query)
         {
             var equip = context.Equipment.AsQueryable();
 
-            if (userId != null) equip = equip.Where(e => e.UserId == userId);
+            if (query.IsPrivate) equip = equip.Where(e => e.IsPrivate == true);
+
+            if (!query.IsGlobal)
+            {
+                equip = equip.Where(e => (e.UserId == userId) && (!string.IsNullOrWhiteSpace(userId)));
+            }
+            else
+            {
+                if (!isAdmin)
+                {
+                    equip = equip.Where(e => !((e.IsPrivate == true) && ((e.UserId != userId) || (userId == ""))));
+                }
+            }
 
             if (!string.IsNullOrWhiteSpace(query.Name)) equip = equip.Where(e => e.Name.Contains(query.Name));
 
             if (!string.IsNullOrWhiteSpace(query.Model)) equip = equip.Where(e => e.Model.Contains(query.Model));
+
+            if (!string.IsNullOrWhiteSpace(query.GOST)) equip = equip.Where(e => e.GOST.Contains(query.GOST));
 
             if (!string.IsNullOrWhiteSpace(query.SortBy))
             {
@@ -64,12 +78,13 @@ namespace TechProcessSupportSys.Repository
 
         }
 
-        public async Task<Equipment?> GetByIdAsync(string? userId, int id)
+        public async Task<Equipment?> GetByIdAsync(bool isAdmin, string? userId, int id)
         {
-            var equip = await context.Equipment.FirstOrDefaultAsync(e => e.Id == id);
+            var equipQu = context.Equipment.AsQueryable();
+            if (!isAdmin) equipQu = equipQu.Where(e => !((e.IsPrivate == true) && ((e.UserId != userId) || (userId == ""))));
+            var equip = await equipQu.FirstOrDefaultAsync(e => e.Id == id);
 
             if (equip == null) return null;
-            if (userId != null && equip.UserId != userId) return null;
 
             return equip;
         }
@@ -84,6 +99,7 @@ namespace TechProcessSupportSys.Repository
             existingEquip.Name = equip.Name;
             existingEquip.Description = equip.Description;
             existingEquip.Model = equip.Model;
+            existingEquip.GOST = equip.GOST;
             await context.SaveChangesAsync();
 
             return existingEquip;

@@ -27,14 +27,19 @@ namespace TechProcessSupportSys.Controllers
         }
 
         [HttpGet]
-        [Authorize]
         public async Task<IActionResult> GetAll([FromQuery] EquipmentQueryObject query)
         {
+            string userId = "";
+            bool isAdmin = false;
             var username = User.GetUsername();
-            var user = await userManager.FindByNameAsync(username!);
-            var id = User.IsInRole("Admin") ? null : user!.Id;
+            if (username != null)
+            {
+                var user = await userManager.FindByNameAsync(username);
+                userId = user!.Id;
+                isAdmin = User.IsInRole("Admin") ? true : false;
+            }
 
-            var equip = await equipRepo.GetAllAsync(id, query);
+            var equip = await equipRepo.GetAllAsync(isAdmin, userId, query);
 
             var equipDto = equip.Select(e => automapper.Map<EquipmentDto, Equipment>(e)).ToList();
 
@@ -42,14 +47,19 @@ namespace TechProcessSupportSys.Controllers
         }
 
         [HttpGet("{id:int}")]
-        [Authorize]
         public async Task<IActionResult> GetById([FromRoute] int id)
         {
+            string userId = "";
+            bool isAdmin = false;
             var username = User.GetUsername();
-            var user = await userManager.FindByNameAsync(username!);
-            var userId = User.IsInRole("Admin") ? null : user!.Id;
+            if (username != null)
+            {
+                var user = await userManager.FindByNameAsync(username);
+                userId = user!.Id;
+                isAdmin = User.IsInRole("Admin") ? true : false;
+            }
 
-            var equip = await equipRepo.GetByIdAsync(userId, id);
+            var equip = await equipRepo.GetByIdAsync(isAdmin, userId, id);
 
             if (equip == null) return NotFound();
 
