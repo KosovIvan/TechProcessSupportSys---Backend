@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using System.Text.RegularExpressions;
 using TechProcessSupportSys.Dtos.Operation;
@@ -68,6 +69,15 @@ namespace TechProcessSupportSys.Controllers
                 if (!ModelState.IsValid)
                 {
                     return BadRequest(ModelState);
+                }
+                if (createOperationDto.StepOrder == "000") BadRequest("Номер операции не должен быть равен 000");
+                if (await operationRepo.IsStepOrderDublicate(createOperationDto.StepOrder)) BadRequest("Такой номер операции уже есть");
+
+                if (createOperationDto.StepOrder.IsNullOrEmpty())
+                {
+                    var result = operationRepo.CreateStepOrder(id);
+                    if (result == null) return BadRequest("Превышено максимальное количество операций(999)");
+                    createOperationDto.StepOrder = result;
                 }
 
                 var operation = automapper.Map<Operation, CreateOperationDto>(createOperationDto);

@@ -8,7 +8,7 @@ namespace TechProcessSupportSys.Dtos.TechProcess
         [MaxLength(35)]
         public string Name { get; set; } = "";
         [Required]
-        [MaxLength(10)]
+        [RegularExpression(@"ТП\.\d{4}\.\d{3}\.\d{2}")]
         public string Code { get; set; } = "";
         [Required]
         [MaxLength(35)]

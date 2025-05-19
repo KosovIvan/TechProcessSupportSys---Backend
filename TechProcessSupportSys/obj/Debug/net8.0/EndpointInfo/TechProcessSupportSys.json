@@ -1175,7 +1175,7 @@
             "nullable": true
           },
           "gost": {
-            "maxLength": 15,
+            "pattern": "(ГОСТ\\s\\d{1,5}(\\.\\d{1,4}){0,2}-(\\d{4}|\\d{2})|)",
             "type": "string",
             "nullable": true
           },
@@ -1208,7 +1208,7 @@
             "type": "string"
           },
           "gost": {
-            "maxLength": 15,
+            "pattern": "(ГОСТ\\s\\d{1,5}(\\.\\d{1,4}){0,2}-(\\d{4}|\\d{2})|)",
             "type": "string",
             "nullable": true
           },
@@ -1221,8 +1221,7 @@
       "CreateOperationDto": {
         "required": [
           "duration",
-          "name",
-          "stepOrder"
+          "name"
         ],
         "type": "object",
         "properties": {
@@ -1243,8 +1242,9 @@
             "format": "int32"
           },
           "stepOrder": {
-            "minLength": 1,
-            "type": "string"
+            "pattern": "\\d{3}",
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1263,8 +1263,8 @@
             "type": "string"
           },
           "code": {
-            "maxLength": 10,
             "minLength": 1,
+            "pattern": "ТП\\.\\d{4}\\.\\d{3}\\.\\d{2}",
             "type": "string"
           },
           "productName": {
@@ -1312,7 +1312,7 @@
             "type": "string"
           },
           "gost": {
-            "maxLength": 15,
+            "pattern": "(ГОСТ\\s\\d{1,5}(\\.\\d{1,4}){0,2}-(\\d{4}|\\d{2})|)",
             "type": "string",
             "nullable": true
           },
@@ -1386,7 +1386,7 @@
             "nullable": true
           },
           "gost": {
-            "maxLength": 15,
+            "pattern": "(ГОСТ\\s\\d{1,5}(\\.\\d{1,4}){0,2}-(\\d{4}|\\d{2})|)",
             "type": "string",
             "nullable": true
           },
@@ -1419,7 +1419,7 @@
             "type": "string"
           },
           "gost": {
-            "maxLength": 15,
+            "pattern": "(ГОСТ\\s\\d{1,5}(\\.\\d{1,4}){0,2}-(\\d{4}|\\d{2})|)",
             "type": "string",
             "nullable": true
           },
@@ -1455,6 +1455,7 @@
           },
           "stepOrder": {
             "minLength": 1,
+            "pattern": "\\d{3}",
             "type": "string"
           }
         },
@@ -1474,8 +1475,8 @@
             "type": "string"
           },
           "code": {
-            "maxLength": 10,
             "minLength": 1,
+            "pattern": "ТП\\.\\d{4}\\.\\d{3}\\.\\d{2}",
             "type": "string"
           },
           "productName": {
@@ -1523,7 +1524,7 @@
             "type": "string"
           },
           "gost": {
-            "maxLength": 15,
+            "pattern": "(ГОСТ\\s\\d{1,5}(\\.\\d{1,4}){0,2}-(\\d{4}|\\d{2})|)",
             "type": "string",
             "nullable": true
           },

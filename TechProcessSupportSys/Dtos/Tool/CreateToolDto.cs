@@ -15,7 +15,7 @@ namespace TechProcessSupportSys.Dtos.Tool
         [Required]
         [MaxLength(35)]
         public string Material { get; set; } = "";
-        [MaxLength(15)]
+        [RegularExpression(@"(ГОСТ\s\d{1,5}(\.\d{1,4}){0,2}-(\d{4}|\d{2})|)")]
         public string GOST { get; set; } = "";
         public bool IsPrivate { get; set; } = false;
     }

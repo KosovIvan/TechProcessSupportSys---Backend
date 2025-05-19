@@ -1,7 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Diagnostics;
 using System.Linq;
+using System.Threading.Tasks;
 using TechProcessSupportSys.Data;
 using TechProcessSupportSys.Interfaces;
 using TechProcessSupportSys.Models;
@@ -24,6 +26,56 @@ namespace TechProcessSupportSys.Repository
             await context.SaveChangesAsync();
 
             return operation;
+        }
+
+        public string? CreateStepOrder(int id)
+        {
+            int num = 0;
+            var numbers = context.Operations.Where(o => !string.IsNullOrWhiteSpace(o.StepOrder) && o.ProcessId == id).AsEnumerable().Select(o => int.Parse(o.StepOrder) / 10).Distinct().OrderBy(n => n).ToList();
+            if (numbers.Count == 0) num = 10;
+            else if (numbers.Count >= 99)
+            {
+                numbers = context.Operations.Where(o => !string.IsNullOrWhiteSpace(o.StepOrder) && o.ProcessId == id).AsEnumerable().Select(o => int.Parse(o.StepOrder)).OrderBy(n => n).ToList();
+                if (numbers.Count >= 999) return null;
+                numbers.Insert(0, 0);
+                for (int i = 0; i < numbers.Count; i++)
+                {
+                    if (i + 1 < numbers.Count)
+                    {
+                        if (numbers[i + 1] - numbers[i] > 1)
+                        {
+                            num = numbers[i] + 1;
+                            break;
+                        }
+                    }
+                }
+                numbers.Remove(0);
+                if (num == 0) num = numbers.Max(n => n) + 1;
+                switch (num)
+                {
+                    case >= 100: return num.ToString();
+                    case >= 10: return "0" + num.ToString();
+                    default: return "00" + num.ToString();
+                }
+            }
+            else
+            {
+                numbers.Insert(0, 0);
+                for (int i = 0; i < numbers.Count; i++)
+                {
+                    if (i + 1 < numbers.Count) {
+                        if (numbers[i + 1] - numbers[i] > 1)
+                        {
+                            num = (numbers[i] + 1) * 10;
+                            break;
+                        }
+                    }
+                }
+                numbers.Remove(0);
+                if (num == 0) num = (numbers.Max(n => n) + 1) * 10;
+            }
+
+            return num >= 100 ? num.ToString() : "0" + num.ToString();
         }
 
         public async Task<Operation?> DeleteAsync(string? userId, int id)
@@ -73,6 +125,11 @@ namespace TechProcessSupportSys.Repository
             if (userId != null && operation.Process.UserId != userId) return null;
 
             return operation;
+        }
+
+        public async Task<bool> IsStepOrderDublicate(string? stepOrder)
+        {
+            return (await context.Operations.AnyAsync(o => o.StepOrder == stepOrder));
         }
 
         public async Task<Operation?> UpdateAsync(string? userId, int id, Operation operation)

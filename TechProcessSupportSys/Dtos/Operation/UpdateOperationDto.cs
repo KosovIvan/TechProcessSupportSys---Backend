@@ -13,6 +13,7 @@ namespace TechProcessSupportSys.Dtos.Operation
         [Range(1, 120)]
         public int Duration { get; set; }
         [Required]
+        [RegularExpression(@"\d{3}")]
         public string StepOrder { get; set; } = "";
     }
 }
