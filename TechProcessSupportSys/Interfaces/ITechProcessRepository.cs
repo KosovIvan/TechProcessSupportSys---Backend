@@ -17,5 +17,6 @@ namespace TechProcessSupportSys.Interfaces
         Task<TechProcess?> GetByIdAsync(bool isAdmin, string? userId, int id);
 
         Task<TechProcess?> UpdateAsync(string? userId, int id, TechProcess process);
+        Task<bool> IsCodeDublicate(string code);
     }
 }

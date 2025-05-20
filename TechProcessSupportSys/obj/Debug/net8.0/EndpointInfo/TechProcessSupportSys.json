@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "Demo API",
+    "title": "TechProcessSupportSys API",
     "version": "v1"
   },
   "paths": {
@@ -436,22 +436,6 @@
             "in": "query",
             "schema": {
               "type": "boolean"
-            }
-          },
-          {
-            "name": "PageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "PageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
             }
           }
         ],
@@ -1095,6 +1079,179 @@
         }
       }
     },
+    "/api/Transition/{operationId}": {
+      "get": {
+        "tags": [
+          "Transition"
+        ],
+        "parameters": [
+          {
+            "name": "operationId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "IsGlobal",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "IsPrivate",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Transition/read-transition/{id}": {
+      "get": {
+        "tags": [
+          "Transition"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Transition/{id}": {
+      "post": {
+        "tags": [
+          "Transition"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateTransitionDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateTransitionDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateTransitionDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateTransitionDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Transition"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateTransitionDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateTransitionDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateTransitionDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateTransitionDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Transition"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/User/login": {
       "post": {
         "tags": [
@@ -1243,17 +1400,17 @@
         "type": "object",
         "properties": {
           "name": {
-            "maxLength": 35,
+            "maxLength": 50,
             "minLength": 1,
             "type": "string"
           },
           "description": {
-            "maxLength": 250,
+            "maxLength": 500,
             "type": "string",
             "nullable": true
           },
           "duration": {
-            "maximum": 120,
+            "maximum": 43200,
             "minimum": 1,
             "type": "integer",
             "format": "int32"
@@ -1278,7 +1435,7 @@
         "type": "object",
         "properties": {
           "name": {
-            "maxLength": 35,
+            "maxLength": 50,
             "minLength": 1,
             "type": "string"
           },
@@ -1288,12 +1445,12 @@
             "type": "string"
           },
           "productName": {
-            "maxLength": 35,
+            "maxLength": 40,
             "minLength": 1,
             "type": "string"
           },
           "description": {
-            "maxLength": 250,
+            "maxLength": 500,
             "type": "string",
             "nullable": true
           },
@@ -1334,6 +1491,41 @@
           "gost": {
             "pattern": "(ГОСТ\\s\\d{1,5}(\\.\\d{1,4}){0,2}-(\\d{4}|\\d{2})|)",
             "type": "string",
+            "nullable": true
+          },
+          "isPrivate": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateTransitionDto": {
+        "required": [
+          "duration",
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "maxLength": 50,
+            "minLength": 1,
+            "type": "string"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "duration": {
+            "maximum": 60,
+            "minimum": 1,
+            "type": "number",
+            "format": "double"
+          },
+          "stepOrder": {
+            "maximum": 50,
+            "minimum": 1,
+            "type": "integer",
+            "format": "int32",
             "nullable": true
           },
           "isPrivate": {
@@ -1386,6 +1578,7 @@
       },
       "UpdateEquipmentDto": {
         "required": [
+          "isPrivate",
           "name"
         ],
         "type": "object",
@@ -1418,6 +1611,7 @@
       },
       "UpdateFixtureDto": {
         "required": [
+          "isPrivate",
           "name",
           "type"
         ],
@@ -1452,31 +1646,31 @@
       "UpdateOperationDto": {
         "required": [
           "duration",
-          "name",
-          "stepOrder"
+          "isPrivate",
+          "name"
         ],
         "type": "object",
         "properties": {
           "name": {
-            "maxLength": 35,
+            "maxLength": 50,
             "minLength": 1,
             "type": "string"
           },
           "description": {
-            "maxLength": 250,
+            "maxLength": 500,
             "type": "string",
             "nullable": true
           },
           "duration": {
-            "maximum": 120,
+            "maximum": 43200,
             "minimum": 1,
             "type": "integer",
             "format": "int32"
           },
           "stepOrder": {
-            "minLength": 1,
             "pattern": "\\d{3}",
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "isPrivate": {
             "type": "boolean"
@@ -1487,13 +1681,14 @@
       "UpdateTechProcessDto": {
         "required": [
           "code",
+          "isPrivate",
           "name",
           "productName"
         ],
         "type": "object",
         "properties": {
           "name": {
-            "maxLength": 35,
+            "maxLength": 50,
             "minLength": 1,
             "type": "string"
           },
@@ -1503,12 +1698,12 @@
             "type": "string"
           },
           "productName": {
-            "maxLength": 35,
+            "maxLength": 40,
             "minLength": 1,
             "type": "string"
           },
           "description": {
-            "maxLength": 250,
+            "maxLength": 500,
             "type": "string",
             "nullable": true
           },
@@ -1520,6 +1715,7 @@
       },
       "UpdateToolDto": {
         "required": [
+          "isPrivate",
           "material",
           "name",
           "type"
@@ -1549,6 +1745,43 @@
           "gost": {
             "pattern": "(ГОСТ\\s\\d{1,5}(\\.\\d{1,4}){0,2}-(\\d{4}|\\d{2})|)",
             "type": "string",
+            "nullable": true
+          },
+          "isPrivate": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateTransitionDto": {
+        "required": [
+          "duration",
+          "isPrivate",
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "maxLength": 50,
+            "minLength": 1,
+            "type": "string"
+          },
+          "description": {
+            "maxLength": 500,
+            "type": "string",
+            "nullable": true
+          },
+          "duration": {
+            "maximum": 60,
+            "minimum": 1,
+            "type": "number",
+            "format": "double"
+          },
+          "stepOrder": {
+            "maximum": 50,
+            "minimum": 1,
+            "type": "integer",
+            "format": "int32",
             "nullable": true
           },
           "isPrivate": {

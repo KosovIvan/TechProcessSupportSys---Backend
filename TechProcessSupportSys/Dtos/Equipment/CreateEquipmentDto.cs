@@ -5,9 +5,9 @@ namespace TechProcessSupportSys.Dtos.Equipment
     public class CreateEquipmentDto
     {
         [Required]
-        [MaxLength(35)]
+        [MaxLength(50)]
         public string Name { get; set; } = "";
-        [MaxLength(250)]
+        [MaxLength(500)]
         public string Description { get; set; } = "";
         [MaxLength(35)]
         public string Model { get; set; } = "";

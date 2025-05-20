@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using TechProcessSupportSys.Dtos.Operation;
 using TechProcessSupportSys.Dtos.TechProcess;
 using TechProcessSupportSys.Dtos.Tool;
 using TechProcessSupportSys.Extentions;
@@ -92,6 +93,7 @@ namespace TechProcessSupportSys.Controllers
                 {
                     return BadRequest(ModelState);
                 }
+                if (await techRepo.IsCodeDublicate(createTechProcessDto.Code)) BadRequest("Такой код процесса уже есть");
 
                 var username = User.GetUsername();
                 var user = await userManager.FindByNameAsync(username!);

@@ -329,16 +329,6 @@
         "Name": "IsPrivate",
         "Type": "System.Boolean",
         "IsRequired": false
-      },
-      {
-        "Name": "PageNumber",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "PageSize",
-        "Type": "System.Int32",
-        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -541,6 +531,106 @@
         "Name": "PageSize",
         "Type": "System.Int32",
         "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TechProcessSupportSys.Controllers.TransitionController",
+    "Method": "Create",
+    "RelativePath": "api/Transition/{id}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "createTransitionDto",
+        "Type": "TechProcessSupportSys.Dtos.Transition.CreateTransitionDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TechProcessSupportSys.Controllers.TransitionController",
+    "Method": "Update",
+    "RelativePath": "api/Transition/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateTransitionDto",
+        "Type": "TechProcessSupportSys.Dtos.Transition.UpdateTransitionDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TechProcessSupportSys.Controllers.TransitionController",
+    "Method": "Delete",
+    "RelativePath": "api/Transition/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TechProcessSupportSys.Controllers.TransitionController",
+    "Method": "GetTransitions",
+    "RelativePath": "api/Transition/{operationId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "operationId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "IsGlobal",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsPrivate",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TechProcessSupportSys.Controllers.TransitionController",
+    "Method": "GetById",
+    "RelativePath": "api/Transition/read-transition/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

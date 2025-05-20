@@ -5,14 +5,15 @@ namespace TechProcessSupportSys.Dtos.Equipment
     public class UpdateEquipmentDto
     {
         [Required]
-        [MaxLength(35)]
+        [MaxLength(50)]
         public string Name { get; set; } = "";
-        [MaxLength(250)]
+        [MaxLength(500)]
         public string Description { get; set; } = "";
         [MaxLength(35)]
         public string Model { get; set; } = "";
         [RegularExpression(@"(ГОСТ\s\d{1,5}(\.\d{1,4}){0,2}-(\d{4}|\d{2})|)")]
         public string GOST { get; set; } = "";
-        public bool IsPrivate { get; set; } = false;
+        [Required]
+        public bool? IsPrivate { get; set; }
     }
 }

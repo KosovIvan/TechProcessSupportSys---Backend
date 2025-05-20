@@ -114,9 +114,7 @@ namespace TechProcessSupportSys.Repository
                     }
                 }
 
-                var skipNumber = (query.PageNumber - 1) * query.PageSize;
-
-                return await operations.Skip(skipNumber).Take(query.PageSize).OrderBy(o => o.StepOrder).ToListAsync();
+                return await operations.OrderBy(o => o.StepOrder).ToListAsync();
             }
 
             return null;
@@ -135,7 +133,7 @@ namespace TechProcessSupportSys.Repository
 
         public async Task<bool> IsStepOrderDublicate(string? stepOrder)
         {
-            return (await context.Operations.AnyAsync(o => o.StepOrder == stepOrder));
+            return await context.Operations.AnyAsync(o => o.StepOrder == stepOrder);
         }
 
         public async Task<Operation?> UpdateAsync(string? userId, int id, Operation operation)
@@ -144,10 +142,15 @@ namespace TechProcessSupportSys.Repository
 
             if (existingOperation == null) return null;
             if (userId != null && existingOperation.Process.UserId != userId) return null;
+            if (!((operation.StepOrder == existingOperation.StepOrder)||(string.IsNullOrEmpty(operation.StepOrder)))) {
+                if (await IsStepOrderDublicate(operation.StepOrder)) return null;
+                existingOperation.StepOrder = operation.StepOrder;
+            }
 
             existingOperation.Name = operation.Name;
+            existingOperation.Duration = operation.Duration;
             existingOperation.Description = operation.Description;
-            existingOperation.StepOrder = operation.StepOrder; 
+            existingOperation.IsPrivate = operation.IsPrivate;
             await context.SaveChangesAsync();
 
             return existingOperation;

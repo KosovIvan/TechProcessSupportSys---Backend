@@ -97,9 +97,16 @@ namespace TechProcessSupportSys.Repository
 
             if (existingProcess == null) return null;
             if (userId != null && existingProcess.UserId != userId) return null;
+            if (!((process.Code == existingProcess.Code) || (string.IsNullOrEmpty(process.Code))))
+            {
+                if (await IsCodeDublicate(process.Code)) return null;
+                existingProcess.Code = process.Code;
+            }
 
             existingProcess.Name = process.Name;
+            existingProcess.ProductName = process.ProductName;
             existingProcess.Description = process.Description;
+            existingProcess.IsPrivate = process.IsPrivate;
             await context.SaveChangesAsync();
 
             return existingProcess;
@@ -181,6 +188,11 @@ namespace TechProcessSupportSys.Repository
             var skipNumber = (query.PageNumber - 1) * query.PageSize;
 
             return await processes.Skip(skipNumber).Take(query.PageSize).ToListAsync();
+        }
+
+        public async Task<bool> IsCodeDublicate(string code)
+        {
+            return await context.Processes.AnyAsync(o => o.Code == code);
         }
     }
 }

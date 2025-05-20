@@ -5,16 +5,16 @@ namespace TechProcessSupportSys.Dtos.Operation
     public class UpdateOperationDto
     {
         [Required]
-        [MaxLength(35)]
+        [MaxLength(50)]
         public string Name { get; set; } = "";
-        [MaxLength(250)]
+        [MaxLength(500)]
         public string Description { get; set; } = "";
         [Required]
-        [Range(1, 120)]
+        [Range(1, 43200)]
         public int Duration { get; set; }
-        [Required]
         [RegularExpression(@"\d{3}")]
-        public string StepOrder { get; set; } = "";
-        public bool IsPrivate { get; set; } = false;
+        public string? StepOrder { get; set; } = "";
+        [Required]
+        public bool? IsPrivate { get; set; }
     }
 }

@@ -5,9 +5,9 @@ namespace TechProcessSupportSys.Dtos.Tool
     public class CreateToolDto
     {
         [Required]
-        [MaxLength(35)]
+        [MaxLength(50)]
         public string Name { get; set; } = "";
-        [MaxLength(250)]
+        [MaxLength(500)]
         public string Description { get; set; } = "";
         [Required]
         [MaxLength(35)]

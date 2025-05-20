@@ -1,6 +1,17 @@
-﻿namespace TechProcessSupportSys.Interfaces
+﻿using System.Transactions;
+using TechProcessSupportSys.Models;
+using TechProcessSupportSys.QueryObjects;
+
+namespace TechProcessSupportSys.Interfaces
 {
     public interface ITransitionRepository
     {
+        Task<Transition> CreateAsync(Transition operation);
+        int? CreateStepOrder(int id);
+        Task<Transition?> DeleteAsync(string? userId, int id);
+        Task<List<Transition>?> GetAllAsync(int processId, bool isAdmin, string? userId, TransitionQueryObject query);
+        Task<Transition?> GetByIdAsync(bool isAdmin, string? userId, int id);
+        Task<bool> IsStepOrderDublicate(int? stepOrder);
+        Task<Transition?> UpdateAsync(string? userId, int id, Transition operation);
     }
 }

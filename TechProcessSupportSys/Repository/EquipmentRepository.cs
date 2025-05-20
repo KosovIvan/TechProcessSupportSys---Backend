@@ -100,6 +100,7 @@ namespace TechProcessSupportSys.Repository
             existingEquip.Description = equip.Description;
             existingEquip.Model = equip.Model;
             existingEquip.GOST = equip.GOST;
+            existingEquip.IsPrivate = equip.IsPrivate;
             await context.SaveChangesAsync();
 
             return existingEquip;
