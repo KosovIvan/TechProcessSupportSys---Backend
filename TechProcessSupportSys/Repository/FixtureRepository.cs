@@ -49,7 +49,7 @@ namespace TechProcessSupportSys.Repository
             {
                 if (!isAdmin)
                 {
-                    fixtures = fixtures.Where(f => !((f.IsPrivate == true) && ((f.UserId != userId) || (userId == ""))));
+                    fixtures = fixtures.Where(f => !((f.IsPrivate == true) && ((f.UserId != userId) || (string.IsNullOrWhiteSpace(userId)))));
                 }
             }
 
@@ -79,7 +79,7 @@ namespace TechProcessSupportSys.Repository
         public async Task<Fixture?> GetByIdAsync(bool isAdmin, string? userId, int id)
         {
             var fixtures = context.Fixtures.AsQueryable();
-            if (!isAdmin) fixtures = fixtures.Where(f => !((f.IsPrivate == true) && ((f.UserId != userId) || (userId == ""))));
+            if (!isAdmin) fixtures = fixtures.Where(f => !((f.IsPrivate == true) && ((f.UserId != userId) || (string.IsNullOrWhiteSpace(userId)))));
             var fixture = await fixtures.FirstOrDefaultAsync(f => f.Id == id);
 
             if (fixture == null) return null;

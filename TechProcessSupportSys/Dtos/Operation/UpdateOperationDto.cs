@@ -15,5 +15,6 @@ namespace TechProcessSupportSys.Dtos.Operation
         [Required]
         [RegularExpression(@"\d{3}")]
         public string StepOrder { get; set; } = "";
+        public bool IsPrivate { get; set; } = false;
     }
 }

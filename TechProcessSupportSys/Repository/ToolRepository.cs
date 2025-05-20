@@ -49,7 +49,7 @@ namespace TechProcessSupportSys.Repository
             {
                 if (!isAdmin)
                 {
-                    tools = tools.Where(t => !((t.IsPrivate == true) && ((t.UserId != userId) || (userId == ""))));
+                    tools = tools.Where(t => !((t.IsPrivate == true) && ((t.UserId != userId) || (string.IsNullOrWhiteSpace(userId)))));
                 }
             }
             
@@ -84,7 +84,7 @@ namespace TechProcessSupportSys.Repository
         public async Task<Tool?> GetByIdAsync(bool isAdmin, string? userId, int id)
         {
             var tools = context.Tools.AsQueryable();
-            if (!isAdmin) tools = tools.Where(t => !((t.IsPrivate == true) && ((t.UserId != userId) || (userId == ""))));
+            if (!isAdmin) tools = tools.Where(t => !((t.IsPrivate == true) && ((t.UserId != userId) || (string.IsNullOrWhiteSpace(userId)))));
             var tool = await tools.FirstOrDefaultAsync(t => t.Id == id);
 
             if (tool == null) return null;

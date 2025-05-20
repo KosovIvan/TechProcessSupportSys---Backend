@@ -50,7 +50,7 @@ namespace TechProcessSupportSys.Repository
             {
                 if (!isAdmin)
                 {
-                    equip = equip.Where(e => !((e.IsPrivate == true) && ((e.UserId != userId) || (userId == ""))));
+                    equip = equip.Where(e => !((e.IsPrivate == true) && ((e.UserId != userId) || (string.IsNullOrWhiteSpace(userId)))));
                 }
             }
 
@@ -81,7 +81,7 @@ namespace TechProcessSupportSys.Repository
         public async Task<Equipment?> GetByIdAsync(bool isAdmin, string? userId, int id)
         {
             var equipQu = context.Equipment.AsQueryable();
-            if (!isAdmin) equipQu = equipQu.Where(e => !((e.IsPrivate == true) && ((e.UserId != userId) || (userId == ""))));
+            if (!isAdmin) equipQu = equipQu.Where(e => !((e.IsPrivate == true) && ((e.UserId != userId) || (string.IsNullOrWhiteSpace(userId)))));
             var equip = await equipQu.FirstOrDefaultAsync(e => e.Id == id);
 
             if (equip == null) return null;

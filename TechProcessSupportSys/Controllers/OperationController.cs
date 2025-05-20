@@ -30,30 +30,42 @@ namespace TechProcessSupportSys.Controllers
             this.userManager = userManager;
         }
 
-        [HttpGet]
-        [Authorize]
-        public async Task<IActionResult> GetOperation([FromQuery] OperationQueryObject query)
+        [HttpGet("{processId:int}")]
+        public async Task<IActionResult> GetOperations([FromRoute] int processId, [FromQuery] OperationQueryObject query)
         {
+            string userId = "";
+            bool isAdmin = false;
             var username = User.GetUsername();
-            var user = await userManager.FindByNameAsync(username!);
-            var id = User.IsInRole("Admin") ? null : user!.Id;
+            if (username != null)
+            {
+                var user = await userManager.FindByNameAsync(username);
+                userId = user!.Id;
+                isAdmin = User.IsInRole("Admin") ? true : false;
+            }
 
-            var operations = await operationRepo.GetAllAsync(id, query);
+            var operations = await operationRepo.GetAllAsync(processId, isAdmin, userId, query);
+
+            if (operations == null) return NotFound();
 
             var operationsDto = operations.Select(o => automapper.Map<OperationDto, Operation>(o)).ToList();
 
             return Ok(operationsDto);
         }
 
-        [HttpGet("{id:int}")]
-        [Authorize]
+        [HttpGet("read-operation/{id:int}")]
         public async Task<IActionResult> GetById([FromRoute] int id)
         {
+            string userId = "";
+            bool isAdmin = false;
             var username = User.GetUsername();
-            var user = await userManager.FindByNameAsync(username!);
-            var userId = User.IsInRole("Admin") ? null : user!.Id;
+            if (username != null)
+            {
+                var user = await userManager.FindByNameAsync(username);
+                userId = user!.Id;
+                isAdmin = User.IsInRole("Admin") ? true : false;
+            }
 
-            var operation = await operationRepo.GetByIdAsync(userId, id);
+            var operation = await operationRepo.GetByIdAsync(isAdmin, userId, id);
 
             if (operation == null) return NotFound();
 

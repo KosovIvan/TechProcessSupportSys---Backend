@@ -251,68 +251,6 @@
   },
   {
     "ContainingType": "TechProcessSupportSys.Controllers.OperationController",
-    "Method": "GetOperation",
-    "RelativePath": "api/Operation",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "ProcessId",
-        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
-      },
-      {
-        "Name": "Name",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "StepOrder",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "SortBy",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "IsDescending",
-        "Type": "System.Boolean",
-        "IsRequired": false
-      },
-      {
-        "Name": "PageNumber",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "PageSize",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "TechProcessSupportSys.Controllers.OperationController",
-    "Method": "GetById",
-    "RelativePath": "api/Operation/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "TechProcessSupportSys.Controllers.OperationController",
     "Method": "Create",
     "RelativePath": "api/Operation/{id}",
     "HttpMethod": "POST",
@@ -370,6 +308,58 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "TechProcessSupportSys.Controllers.OperationController",
+    "Method": "GetOperations",
+    "RelativePath": "api/Operation/{processId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "processId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "IsGlobal",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsPrivate",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TechProcessSupportSys.Controllers.OperationController",
+    "Method": "GetById",
+    "RelativePath": "api/Operation/read-operation/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "TechProcessSupportSys.Controllers.TechProcessController",
     "Method": "GetProcesses",
     "RelativePath": "api/TechProcess",
@@ -383,12 +373,32 @@
         "IsRequired": false
       },
       {
+        "Name": "Code",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
         "Name": "SortBy",
         "Type": "System.String",
         "IsRequired": false
       },
       {
         "Name": "IsDescending",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsGlobal",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsPrivate",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsExpanded",
         "Type": "System.Boolean",
         "IsRequired": false
       },

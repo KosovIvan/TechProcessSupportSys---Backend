@@ -43,14 +43,19 @@ namespace TechProcessSupportSys.Controllers
         }
 
         [HttpGet]
-        [Authorize]
         public async Task<IActionResult> GetProcesses([FromQuery] TechProcessQueryObject query)
         {
+            string userId = "";
+            bool isAdmin = false;
             var username = User.GetUsername();
-            var user = await userManager.FindByNameAsync(username!);
-            var id = User.IsInRole("Admin") ? null : user!.Id;
+            if (username != null)
+            {
+                var user = await userManager.FindByNameAsync(username);
+                userId = user!.Id;
+                isAdmin = User.IsInRole("Admin") ? true : false;
+            }
 
-            var processes = await techRepo.GetProcessesAsync(id, query);
+            var processes = await techRepo.GetProcessesAsync(isAdmin, userId, query);
 
             var processesDto = processes.Select(p => automapper.Map<TechProcessDto, TechProcess>(p)).ToList();
 
@@ -58,14 +63,19 @@ namespace TechProcessSupportSys.Controllers
         }
 
         [HttpGet("{id:int}")]
-        [Authorize]
         public async Task<IActionResult> GetById([FromRoute] int id)
         {
+            string userId = "";
+            bool isAdmin = false;
             var username = User.GetUsername();
-            var user = await userManager.FindByNameAsync(username!);
-            var userId = User.IsInRole("Admin") ? null : user!.Id;
+            if (username != null)
+            {
+                var user = await userManager.FindByNameAsync(username);
+                userId = user!.Id;
+                isAdmin = User.IsInRole("Admin") ? true : false;
+            }
 
-            var process = await techRepo.GetByIdAsync(userId, id);
+            var process = await techRepo.GetByIdAsync(isAdmin, userId, id);
 
             if (process == null) return NotFound();
 

@@ -12,9 +12,9 @@ namespace TechProcessSupportSys.Interfaces
 
         Task<List<CreateAllDto>> GetAllAsync(string? userId, AllQueryObject query);
 
-        Task<List<TechProcess>> GetProcessesAsync(string? userId, TechProcessQueryObject query);
+        Task<List<TechProcess>> GetProcessesAsync(bool isAdmin, string? userId, TechProcessQueryObject query);
 
-        Task<TechProcess?> GetByIdAsync(string? userId, int id);
+        Task<TechProcess?> GetByIdAsync(bool isAdmin, string? userId, int id);
 
         Task<TechProcess?> UpdateAsync(string? userId, int id, TechProcess process);
     }

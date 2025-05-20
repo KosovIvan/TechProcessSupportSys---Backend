@@ -90,39 +90,45 @@ namespace TechProcessSupportSys.Repository
             return operation;
         }
 
-        public async Task<List<Operation>> GetAllAsync(string? userId, OperationQueryObject query)
+        public async Task<List<Operation>?> GetAllAsync(int processId, bool isAdmin, string? userId, OperationQueryObject query)
         {
-            var operations = context.Operations.Include(o => o.Process).AsQueryable();
+            var process = await context.Processes.FirstOrDefaultAsync(p => p.Id == processId);
+            if (process == null) return null;
 
-            if (userId != null) operations = operations.Where(o => o.Process.UserId == userId);
+            var processUserId = process.UserId;
+            var processIsPrivate = process.IsPrivate;
 
-            if (query.ProcessId != null) operations = operations.Where(o => o.ProcessId == query.ProcessId);
-            if (!string.IsNullOrWhiteSpace(query.Name)) operations = operations.Where(o => o.Name.Contains(query.Name));
-            if (query.StepOrder != null) operations = operations.Where(o => o.StepOrder == query.StepOrder);
+            var operations = context.Operations.Include(o => o.Process).AsQueryable().Where(o => o.ProcessId == processId);
 
-            if (!string.IsNullOrWhiteSpace(query.SortBy))
+            if (!((processUserId != userId) && (processIsPrivate || query.IsPrivate))||(isAdmin))
             {
-                if (query.SortBy.Equals("Name"))
+                if (!query.IsGlobal)
                 {
-                    operations = query.IsDescending ? operations.OrderByDescending(o => o.Name) : operations.OrderBy(o => o.Name);
+                    operations = operations.Where(o => (processUserId == userId) && (!string.IsNullOrWhiteSpace(userId)));
                 }
-                if (query.SortBy.Equals("StepOrder"))
+                else
                 {
-                    operations = query.IsDescending ? operations.OrderByDescending(o => o.StepOrder) : operations.OrderBy(o => o.StepOrder);
+                    if (!isAdmin)
+                    {
+                        operations = operations.Where(o => !((o.IsPrivate == true) && ((processUserId != userId) || (string.IsNullOrWhiteSpace(userId)))));
+                    }
                 }
+
+                var skipNumber = (query.PageNumber - 1) * query.PageSize;
+
+                return await operations.Skip(skipNumber).Take(query.PageSize).OrderBy(o => o.StepOrder).ToListAsync();
             }
 
-            var skipNumber = (query.PageNumber - 1) * query.PageSize;
-
-            return await operations.Skip(skipNumber).Take(query.PageSize).ToListAsync();
+            return null;
         }
 
-        public async Task<Operation?> GetByIdAsync(string? userId, int id)
+        public async Task<Operation?> GetByIdAsync(bool isAdmin, string? userId, int id)
         {
-            var operation = await context.Operations.Include(o => o.Process).FirstOrDefaultAsync(o => o.Id == id);
+            var operations = context.Operations.Include(o => o.Process).AsQueryable();
+            if (!isAdmin) operations = operations.Where(o => !((o.IsPrivate == true) && ((o.Process.UserId != userId) || (string.IsNullOrWhiteSpace(userId)))));
+            var operation = await operations.FirstOrDefaultAsync(o => o.Id == id);
 
             if (operation == null) return null;
-            if (userId != null && operation.Process.UserId != userId) return null;
 
             return operation;
         }

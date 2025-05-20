@@ -409,43 +409,30 @@
         }
       }
     },
-    "/api/Operation": {
+    "/api/Operation/{processId}": {
       "get": {
         "tags": [
           "Operation"
         ],
         "parameters": [
           {
-            "name": "ProcessId",
-            "in": "query",
+            "name": "processId",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
             }
           },
           {
-            "name": "Name",
+            "name": "IsGlobal",
             "in": "query",
             "schema": {
-              "type": "string"
+              "type": "boolean"
             }
           },
           {
-            "name": "StepOrder",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "SortBy",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "IsDescending",
+            "name": "IsPrivate",
             "in": "query",
             "schema": {
               "type": "boolean"
@@ -475,7 +462,7 @@
         }
       }
     },
-    "/api/Operation/{id}": {
+    "/api/Operation/read-operation/{id}": {
       "get": {
         "tags": [
           "Operation"
@@ -496,7 +483,9 @@
             "description": "OK"
           }
         }
-      },
+      }
+    },
+    "/api/Operation/{id}": {
       "post": {
         "tags": [
           "Operation"
@@ -709,6 +698,13 @@
             }
           },
           {
+            "name": "Code",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "SortBy",
             "in": "query",
             "schema": {
@@ -717,6 +713,27 @@
           },
           {
             "name": "IsDescending",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "IsGlobal",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "IsPrivate",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "IsExpanded",
             "in": "query",
             "schema": {
               "type": "boolean"
@@ -1245,6 +1262,9 @@
             "pattern": "\\d{3}",
             "type": "string",
             "nullable": true
+          },
+          "isPrivate": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -1457,6 +1477,9 @@
             "minLength": 1,
             "pattern": "\\d{3}",
             "type": "string"
+          },
+          "isPrivate": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false

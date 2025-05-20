@@ -38,19 +38,40 @@ namespace TechProcessSupportSys.Repository
             return process;
         }
 
-        public async Task<List<TechProcess>> GetProcessesAsync(string? userId, TechProcessQueryObject query)
+        public async Task<List<TechProcess>> GetProcessesAsync(bool isAdmin, string? userId, TechProcessQueryObject query)
         {
             var processes = context.Processes.AsQueryable();
 
-            if (userId != null) processes = processes.Where(p => p.UserId == userId);
+            if (query.IsPrivate) processes = processes.Where(p => p.IsPrivate == true);
+
+            if (!query.IsGlobal)
+            {
+                processes = processes.Where(p => (p.UserId == userId) && (!string.IsNullOrWhiteSpace(userId)));
+            }
+            else
+            {
+                if (!isAdmin)
+                {
+                    processes = processes.Where(p => !((p.IsPrivate == true) && ((p.UserId != userId) || (string.IsNullOrWhiteSpace(userId)))));
+                }
+            }
 
             if (!string.IsNullOrWhiteSpace(query.Name)) processes = processes.Where(p => p.Name.Contains(query.Name));
+            if (!string.IsNullOrWhiteSpace(query.Code)) processes = processes.Where(p => p.Code.Contains(query.Code));
 
             if (!string.IsNullOrWhiteSpace(query.SortBy))
             {
                 if (query.SortBy.Equals("Name"))
                 {
                     processes = query.IsDescending ? processes.OrderByDescending(p => p.Name) : processes.OrderBy(p => p.Name);
+                }
+                if (query.SortBy.Equals("Code"))
+                {
+                    processes = query.IsDescending ? processes.OrderByDescending(p => p.Code) : processes.OrderBy(p => p.Code);
+                }
+                if (query.SortBy.Equals("ProductName"))
+                {
+                    processes = query.IsDescending ? processes.OrderByDescending(p => p.ProductName) : processes.OrderBy(p => p.ProductName);
                 }
             }
 
@@ -59,12 +80,13 @@ namespace TechProcessSupportSys.Repository
             return await processes.Skip(skipNumber).Take(query.PageSize).ToListAsync();
         }
 
-        public async Task<TechProcess?> GetByIdAsync(string? userId, int id)
+        public async Task<TechProcess?> GetByIdAsync(bool isAdmin, string? userId, int id)
         {
-            var process = await context.Processes.FirstOrDefaultAsync(p => p.Id == id);
+            var processes = context.Processes.AsQueryable();
+            if (!isAdmin) processes = processes.Where(p => !((p.IsPrivate == true) && ((p.UserId != userId) || (string.IsNullOrWhiteSpace(userId)))));
+            var process = await processes.FirstOrDefaultAsync(p => p.Id == id);
 
             if (process == null) return null;
-            if (userId != null && process.UserId != userId) return null;
 
             return process;
         }
