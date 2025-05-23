@@ -27,6 +27,7 @@ namespace TechProcessSupportSys.Service
 
             var claims = new List<Claim>() {
                 new Claim(JwtRegisteredClaimNames.GivenName, user.UserName),
+                new Claim(JwtRegisteredClaimNames.Name, user.Name),
                 new Claim(JwtRegisteredClaimNames.Email, user.Email),
                 new Claim(ClaimTypes.Role, role)
             };

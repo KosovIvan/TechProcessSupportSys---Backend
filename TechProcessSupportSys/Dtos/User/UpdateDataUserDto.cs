@@ -2,7 +2,7 @@
 
 namespace TechProcessSupportSys.Dtos.User
 {
-    public class RegisterDto
+    public class UpdateDataUserDto
     {
         [Required]
         public string Login { get; set; } = "";
@@ -11,8 +11,6 @@ namespace TechProcessSupportSys.Dtos.User
         public string Name { get; set; } = "";
         [Required]
         [EmailAddress]
-        public string Email {  get; set; } = "";
-        [Required]
-        public string Password { get; set; } = "";
+        public string Email { get; set; } = "";
     }
 }

@@ -5,8 +5,8 @@ namespace TechProcessSupportSys.Dtos.User
     public class LoginDto
     {
         [Required]
-        public string? Username { get; set; }
+        public string Login { get; set; } = "";
         [Required]
-        public string? Password { get; set; }
+        public string Password { get; set; } = "";
     }
 }

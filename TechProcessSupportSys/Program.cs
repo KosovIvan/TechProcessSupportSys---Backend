@@ -88,6 +88,7 @@ builder.Services.AddScoped<ITransitionRepository, TransitionRepository>();
 builder.Services.AddScoped<IToolRepository, ToolRepository>();
 builder.Services.AddScoped<IEquipmentRepository, EquipmentRepository>();
 builder.Services.AddScoped<IFixtureRepository, FixtureRepository>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
     
 var app = builder.Build();
 

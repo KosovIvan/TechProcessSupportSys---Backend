@@ -80,7 +80,7 @@ namespace TechProcessSupportSys.Repository
 
         public async Task<Operation?> DeleteAsync(string? userId, int id)
         {
-            var operation = await context.Operations.Include(o => o.Process).FirstOrDefaultAsync(o => o.Id == id);
+            var operation = await context.Operations.FirstOrDefaultAsync(o => o.Id == id);
             if (operation == null) return null;
             if (userId != null && operation.Process.UserId != userId) return null;
 
@@ -145,7 +145,7 @@ namespace TechProcessSupportSys.Repository
 
         public async Task<Operation?> UpdateAsync(string? userId, int id, Operation operation)
         {
-            var existingOperation = await context.Operations.Include(o => o.Process).FirstOrDefaultAsync(o => o.Id == id);
+            var existingOperation = await context.Operations.FirstOrDefaultAsync(o => o.Id == id);
 
             if (existingOperation == null) return null;
             if (userId != null && existingOperation.Process.UserId != userId) return null;

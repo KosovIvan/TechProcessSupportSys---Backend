@@ -52,7 +52,7 @@ namespace TechProcessSupportSys.Repository
 
         public async Task<Transition?> DeleteAsync(string? userId, int id)
         {
-            var transition = await context.Transitions.Include(t => t.Operation).ThenInclude(o => o.Process).FirstOrDefaultAsync(t => t.Id == id);
+            var transition = await context.Transitions.FirstOrDefaultAsync(t => t.Id == id);
             if (transition == null) return null;
             if (userId != null && transition.Operation.Process.UserId != userId) return null;
 
@@ -95,7 +95,7 @@ namespace TechProcessSupportSys.Repository
 
         public async Task<Transition?> GetByIdAsync(bool isAdmin, string? userId, int id)
         {
-            var transitions = context.Transitions.Include(t => t.Operation).ThenInclude(o => o.Process).AsQueryable();
+            var transitions = context.Transitions.AsQueryable();
             if (!isAdmin) transitions = transitions.Where(t => !((t.IsPrivate == true) && ((t.Operation.Process.UserId != userId) || (string.IsNullOrWhiteSpace(userId)))));
             var transition = await transitions.FirstOrDefaultAsync(t => t.Id == id);
 
@@ -118,7 +118,7 @@ namespace TechProcessSupportSys.Repository
 
         public async Task<Transition?> UpdateAsync(string? userId, int id, Transition transition)
         {
-            var existingTransition = await context.Transitions.Include(t => t.Operation).ThenInclude(o => o.Process).FirstOrDefaultAsync(o => o.Id == id);
+            var existingTransition = await context.Transitions.FirstOrDefaultAsync(o => o.Id == id);
 
             if (existingTransition == null) return null;
             if (userId != null && existingTransition.Operation.Process.UserId != userId) return null;
