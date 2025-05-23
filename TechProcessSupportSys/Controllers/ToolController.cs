@@ -35,7 +35,7 @@ namespace TechProcessSupportSys.Controllers
             {
                 var user = await userManager.FindByNameAsync(username);
                 userId = user!.Id;
-                isAdmin = User.IsInRole("Admin") ? true : false;
+                isAdmin = await userManager.IsInRoleAsync(user, "Admin");
             }
 
             var tools = await toolRepo.GetAllAsync(isAdmin, userId, query);
@@ -55,7 +55,7 @@ namespace TechProcessSupportSys.Controllers
             {
                 var user = await userManager.FindByNameAsync(username);
                 userId = user!.Id;
-                isAdmin = User.IsInRole("Admin") ? true : false;
+                isAdmin = await userManager.IsInRoleAsync(user, "Admin");
             }
 
             var tool = await toolRepo.GetByIdAsync(isAdmin, userId, id);
@@ -96,7 +96,7 @@ namespace TechProcessSupportSys.Controllers
 
             var username = User.GetUsername();
             var user = await userManager.FindByNameAsync(username!);
-            var userId = User.IsInRole("Admin") ? null : user!.Id;
+            var userId = await userManager.IsInRoleAsync(user, "Admin") ? null : user!.Id;
 
             var tool = automapper.Map<Tool, UpdateToolDto>(updateToolDto);
 
@@ -113,7 +113,7 @@ namespace TechProcessSupportSys.Controllers
         {
             var username = User.GetUsername();
             var user = await userManager.FindByNameAsync(username!);
-            var userId = User.IsInRole("Admin") ? null : user!.Id;
+            var userId = await userManager.IsInRoleAsync(user, "Admin") ? null : user!.Id;
 
             var deleted = await toolRepo.DeleteAsync(userId, id);
 

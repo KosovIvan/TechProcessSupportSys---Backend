@@ -17,5 +17,8 @@ namespace TechProcessSupportSys.Dtos.Transition
         public int? StepOrder { get; set; }
         [Required]
         public bool? IsPrivate { get; set; }
+        public int? ToolId { get; set; }
+        public int? EquipmentId { get; set; }
+        public int? FixtureId { get; set; }
     }
 }

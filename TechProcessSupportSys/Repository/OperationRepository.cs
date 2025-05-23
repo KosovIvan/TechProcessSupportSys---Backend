@@ -131,9 +131,16 @@ namespace TechProcessSupportSys.Repository
             return operation;
         }
 
-        public async Task<bool> IsStepOrderDublicate(string? stepOrder)
+        public async Task<bool> IsStepOrderDublicate(int id, string? stepOrder)
         {
-            return await context.Operations.AnyAsync(o => o.StepOrder == stepOrder);
+            return await context.Operations.Where(o => o.ProcessId == id).AnyAsync(o => o.StepOrder == stepOrder);
+        }
+
+        public async Task<bool> IsStepOrderDublicateByOperationId(int id, string? stepOrder)
+        {
+            var operation = await context.Operations.FirstOrDefaultAsync(o => o.Id == id);
+            if (operation == null) return false;
+            return await context.Operations.Where(o => o.ProcessId == operation.ProcessId).AnyAsync(o => o.StepOrder == stepOrder);
         }
 
         public async Task<Operation?> UpdateAsync(string? userId, int id, Operation operation)
@@ -142,10 +149,7 @@ namespace TechProcessSupportSys.Repository
 
             if (existingOperation == null) return null;
             if (userId != null && existingOperation.Process.UserId != userId) return null;
-            if (!((operation.StepOrder == existingOperation.StepOrder)||(string.IsNullOrEmpty(operation.StepOrder)))) {
-                if (await IsStepOrderDublicate(operation.StepOrder)) return null;
-                existingOperation.StepOrder = operation.StepOrder;
-            }
+            if (!((operation.StepOrder == existingOperation.StepOrder) || (string.IsNullOrEmpty(operation.StepOrder)))) existingOperation.StepOrder = operation.StepOrder;
 
             existingOperation.Name = operation.Name;
             existingOperation.Duration = operation.Duration;

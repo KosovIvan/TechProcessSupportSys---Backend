@@ -36,7 +36,7 @@ namespace TechProcessSupportSys.Controllers
             {
                 var user = await userManager.FindByNameAsync(username);
                 userId = user!.Id;
-                isAdmin = User.IsInRole("Admin") ? true : false;
+                isAdmin = await userManager.IsInRoleAsync(user, "Admin");
             }
 
             var fixture = await fixtureRepo.GetAllAsync(isAdmin, userId, query);
@@ -56,7 +56,7 @@ namespace TechProcessSupportSys.Controllers
             {
                 var user = await userManager.FindByNameAsync(username);
                 userId = user!.Id;
-                isAdmin = User.IsInRole("Admin") ? true : false;
+                isAdmin = await userManager.IsInRoleAsync(user, "Admin");
             }
 
             var fixture = await fixtureRepo.GetByIdAsync(isAdmin, userId, id);
@@ -97,7 +97,7 @@ namespace TechProcessSupportSys.Controllers
 
             var username = User.GetUsername();
             var user = await userManager.FindByNameAsync(username!);
-            var userId = User.IsInRole("Admin") ? null : user!.Id;
+            var userId = await userManager.IsInRoleAsync(user, "Admin") ? null : user!.Id;
 
             var fixture = automapper.Map<Fixture, UpdateFixtureDto>(updateFixtureDto);
 
@@ -114,7 +114,7 @@ namespace TechProcessSupportSys.Controllers
         {
             var username = User.GetUsername();
             var user = await userManager.FindByNameAsync(username!);
-            var userId = User.IsInRole("Admin") ? null : user!.Id;
+            var userId = await userManager.IsInRoleAsync(user, "Admin") ? null : user!.Id;
 
             var deleted = await fixtureRepo.DeleteAsync(userId, id);
 

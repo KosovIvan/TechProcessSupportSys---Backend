@@ -1,19 +1,12 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace TechProcessSupportSys.Dtos.Transition
+﻿namespace TechProcessSupportSys.Dtos.Transition
 {
-    public class CreateTransitionDto
+    public class TransitionOsnDto
     {
-        [Required]
-        [MaxLength(50)]
+        public int Id { get; set; }
         public string Name { get; set; } = "";
-        [MaxLength(500)]
         public string Description { get; set; } = "";
-        [Required]
-        [Range(1, 60)]
         public double Duration { get; set; }
-        [Range(1, 50)]
-        public int? StepOrder { get; set; }
+        public int StepOrder { get; set; }
         public bool IsPrivate { get; set; } = false;
         public int? ToolId { get; set; }
         public int? EquipmentId { get; set; }

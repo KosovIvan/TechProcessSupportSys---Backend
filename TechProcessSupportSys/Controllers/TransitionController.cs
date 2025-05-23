@@ -36,7 +36,7 @@ namespace TechProcessSupportSys.Controllers
             {
                 var user = await userManager.FindByNameAsync(username);
                 userId = user!.Id;
-                isAdmin = User.IsInRole("Admin") ? true : false;
+                isAdmin = await userManager.IsInRoleAsync(user, "Admin");
             }
 
             var transitions = await transitionRepo.GetAllAsync(operationId, isAdmin, userId, query);
@@ -58,14 +58,14 @@ namespace TechProcessSupportSys.Controllers
             {
                 var user = await userManager.FindByNameAsync(username);
                 userId = user!.Id;
-                isAdmin = User.IsInRole("Admin") ? true : false;
+                isAdmin = await userManager.IsInRoleAsync(user, "Admin");
             }
 
             var transition = await transitionRepo.GetByIdAsync(isAdmin, userId, id);
 
             if (transition == null) return NotFound();
 
-            return Ok(automapper.Map<TransitionDto, Transition>(transition));
+            return Ok(automapper.Map<TransitionOsnDto, Transition>(transition));
         }
 
         [HttpPost("{id:int}")]
@@ -78,7 +78,7 @@ namespace TechProcessSupportSys.Controllers
                 {
                     return BadRequest(ModelState);
                 }
-                if (await transitionRepo.IsStepOrderDublicate(createTransitionDto.StepOrder)) BadRequest("Такой номер перехода уже есть");
+                if (await transitionRepo.IsStepOrderDublicate(id, createTransitionDto.StepOrder)) return BadRequest("Такой номер перехода уже есть");
 
                 if (createTransitionDto.StepOrder == null)
                 {
@@ -92,7 +92,7 @@ namespace TechProcessSupportSys.Controllers
 
                 await transitionRepo.CreateAsync(transition);
 
-                return CreatedAtAction(nameof(GetById), new { id = transition.Id }, automapper.Map<TransitionDto, Transition>(transition));
+                return CreatedAtAction(nameof(GetById), new { id = transition.Id }, automapper.Map<TransitionOsnDto, Transition>(transition));
 
             }
             catch (Exception ex)
@@ -111,10 +111,11 @@ namespace TechProcessSupportSys.Controllers
                 {
                     return BadRequest(ModelState);
                 }
+                if (await transitionRepo.IsStepOrderDublicateByTransitionId(id, updateTransitionDto.StepOrder)) return BadRequest("Такой номер перехода уже есть");
 
                 var username = User.GetUsername();
                 var user = await userManager.FindByNameAsync(username!);
-                var userId = User.IsInRole("Admin") ? null : user!.Id;
+                var userId = await userManager.IsInRoleAsync(user, "Admin") ? null : user!.Id;
 
                 var transition = automapper.Map<Transition, UpdateTransitionDto>(updateTransitionDto);
 
@@ -122,7 +123,7 @@ namespace TechProcessSupportSys.Controllers
 
                 if (updated == null) return NotFound();
 
-                return Ok(automapper.Map<TransitionDto, Transition>(updated));
+                return Ok(automapper.Map<TransitionOsnDto, Transition>(updated));
             }
             catch (Exception ex)
             {
@@ -136,7 +137,7 @@ namespace TechProcessSupportSys.Controllers
         {
             var username = User.GetUsername();
             var user = await userManager.FindByNameAsync(username!);
-            var userId = User.IsInRole("Admin") ? null : user!.Id;
+            var userId = await userManager.IsInRoleAsync(user, "Admin") ? null : user!.Id;
 
             var deleted = await transitionRepo.DeleteAsync(userId, id);
 

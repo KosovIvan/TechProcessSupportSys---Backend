@@ -12,7 +12,8 @@ namespace TechProcessSupportSys.Interfaces
         Task<Operation?> DeleteAsync(string? userId, int id);
         Task<List<Operation>?> GetAllAsync(int processId, bool isAdmin, string? userId, OperationQueryObject query);
         Task<Operation?> GetByIdAsync(bool isAdmin, string? userId, int id);
-        Task<bool> IsStepOrderDublicate(string? stepOrder);
+        Task<bool> IsStepOrderDublicate(int id, string? stepOrder);
+        Task<bool> IsStepOrderDublicateByOperationId(int id, string? stepOrder);
         Task<Operation?> UpdateAsync(string? userId, int id, Operation operation);
     }
 }

@@ -36,7 +36,7 @@ namespace TechProcessSupportSys.Controllers
             {
                 var user = await userManager.FindByNameAsync(username);
                 userId = user!.Id;
-                isAdmin = User.IsInRole("Admin") ? true : false;
+                isAdmin = await userManager.IsInRoleAsync(user, "Admin");
             }
 
             var equip = await equipRepo.GetAllAsync(isAdmin, userId, query);
@@ -56,7 +56,7 @@ namespace TechProcessSupportSys.Controllers
             {
                 var user = await userManager.FindByNameAsync(username);
                 userId = user!.Id;
-                isAdmin = User.IsInRole("Admin") ? true : false;
+                isAdmin = await userManager.IsInRoleAsync(user, "Admin");
             }
 
             var equip = await equipRepo.GetByIdAsync(isAdmin, userId, id);
@@ -97,7 +97,7 @@ namespace TechProcessSupportSys.Controllers
 
             var username = User.GetUsername();
             var user = await userManager.FindByNameAsync(username!);
-            var userId = User.IsInRole("Admin") ? null : user!.Id;
+            var userId = await userManager.IsInRoleAsync(user, "Admin") ? null : user!.Id;
 
             var equip = automapper.Map<Equipment, UpdateEquipmentDto>(updateEquipmentDto);
 
@@ -114,7 +114,7 @@ namespace TechProcessSupportSys.Controllers
         {
             var username = User.GetUsername();
             var user = await userManager.FindByNameAsync(username!);
-            var userId = User.IsInRole("Admin") ? null : user!.Id;
+            var userId = await userManager.IsInRoleAsync(user, "Admin") ? null : user!.Id;
 
             var deleted = await equipRepo.DeleteAsync(userId, id);
 

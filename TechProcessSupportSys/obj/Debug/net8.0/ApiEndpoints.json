@@ -476,61 +476,16 @@
   },
   {
     "ContainingType": "TechProcessSupportSys.Controllers.TechProcessController",
-    "Method": "GetAll",
-    "RelativePath": "api/TechProcess/all",
-    "HttpMethod": "GET",
+    "Method": "Copy",
+    "RelativePath": "api/TechProcess/copy/{id}",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "ProcessName",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "OperationName",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "TransitionName",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "ToolName",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "EquipmentName",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "FixtureName",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "SortBy",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "IsDescending",
-        "Type": "System.Boolean",
-        "IsRequired": false
-      },
-      {
-        "Name": "PageNumber",
+        "Name": "id",
         "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "PageSize",
-        "Type": "System.Int32",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -633,6 +588,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TechProcessSupportSys.Controllers.UserController",
+    "Method": "GetAll",
+    "RelativePath": "api/User",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {

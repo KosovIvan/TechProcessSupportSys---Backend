@@ -582,92 +582,6 @@
         }
       }
     },
-    "/api/TechProcess/all": {
-      "get": {
-        "tags": [
-          "TechProcess"
-        ],
-        "parameters": [
-          {
-            "name": "ProcessName",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "OperationName",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "TransitionName",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "ToolName",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "EquipmentName",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "FixtureName",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "SortBy",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "IsDescending",
-            "in": "query",
-            "schema": {
-              "type": "boolean"
-            }
-          },
-          {
-            "name": "PageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "PageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
     "/api/TechProcess": {
       "get": {
         "tags": [
@@ -849,6 +763,29 @@
         }
       },
       "delete": {
+        "tags": [
+          "TechProcess"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TechProcess/copy/{id}": {
+      "post": {
         "tags": [
           "TechProcess"
         ],
@@ -1323,6 +1260,18 @@
           }
         }
       }
+    },
+    "/api/User": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {
@@ -1334,12 +1283,12 @@
         "type": "object",
         "properties": {
           "name": {
-            "maxLength": 35,
+            "maxLength": 50,
             "minLength": 1,
             "type": "string"
           },
           "description": {
-            "maxLength": 250,
+            "maxLength": 500,
             "type": "string",
             "nullable": true
           },
@@ -1367,12 +1316,12 @@
         "type": "object",
         "properties": {
           "name": {
-            "maxLength": 35,
+            "maxLength": 50,
             "minLength": 1,
             "type": "string"
           },
           "description": {
-            "maxLength": 250,
+            "maxLength": 500,
             "type": "string",
             "nullable": true
           },
@@ -1469,12 +1418,12 @@
         "type": "object",
         "properties": {
           "name": {
-            "maxLength": 35,
+            "maxLength": 50,
             "minLength": 1,
             "type": "string"
           },
           "description": {
-            "maxLength": 250,
+            "maxLength": 500,
             "type": "string",
             "nullable": true
           },
@@ -1512,6 +1461,7 @@
             "type": "string"
           },
           "description": {
+            "maxLength": 500,
             "type": "string",
             "nullable": true
           },
@@ -1530,6 +1480,21 @@
           },
           "isPrivate": {
             "type": "boolean"
+          },
+          "toolId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "equipmentId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "fixtureId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1584,12 +1549,12 @@
         "type": "object",
         "properties": {
           "name": {
-            "maxLength": 35,
+            "maxLength": 50,
             "minLength": 1,
             "type": "string"
           },
           "description": {
-            "maxLength": 250,
+            "maxLength": 500,
             "type": "string",
             "nullable": true
           },
@@ -1618,12 +1583,12 @@
         "type": "object",
         "properties": {
           "name": {
-            "maxLength": 35,
+            "maxLength": 50,
             "minLength": 1,
             "type": "string"
           },
           "description": {
-            "maxLength": 250,
+            "maxLength": 500,
             "type": "string",
             "nullable": true
           },
@@ -1723,12 +1688,12 @@
         "type": "object",
         "properties": {
           "name": {
-            "maxLength": 35,
+            "maxLength": 50,
             "minLength": 1,
             "type": "string"
           },
           "description": {
-            "maxLength": 250,
+            "maxLength": 500,
             "type": "string",
             "nullable": true
           },
@@ -1738,7 +1703,7 @@
             "type": "string"
           },
           "material": {
-            "maxLength": 35,
+            "maxLength": 45,
             "minLength": 1,
             "type": "string"
           },
@@ -1786,6 +1751,21 @@
           },
           "isPrivate": {
             "type": "boolean"
+          },
+          "toolId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "equipmentId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "fixtureId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
           }
         },
         "additionalProperties": false

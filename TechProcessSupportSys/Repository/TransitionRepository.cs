@@ -104,9 +104,16 @@ namespace TechProcessSupportSys.Repository
             return transition;
         }
 
-        public async Task<bool> IsStepOrderDublicate(int? stepOrder)
+        public async Task<bool> IsStepOrderDublicate(int id, int? stepOrder)
         {
-            return await context.Transitions.AnyAsync(o => o.StepOrder == stepOrder);
+            return await context.Transitions.Where(t => t.OperationId == id).AnyAsync(t => t.StepOrder == stepOrder);
+        }
+
+        public async Task<bool> IsStepOrderDublicateByTransitionId(int id, int? stepOrder)
+        {
+            var transition = await context.Transitions.FirstOrDefaultAsync(t => t.Id == id);
+            if (transition == null) return false;
+            return await context.Transitions.Where(t => t.OperationId == transition.OperationId).AnyAsync(t => t.StepOrder == stepOrder);
         }
 
         public async Task<Transition?> UpdateAsync(string? userId, int id, Transition transition)
@@ -115,16 +122,15 @@ namespace TechProcessSupportSys.Repository
 
             if (existingTransition == null) return null;
             if (userId != null && existingTransition.Operation.Process.UserId != userId) return null;
-            if (!((transition.StepOrder == existingTransition.StepOrder) || (transition.StepOrder == 0) || (transition.StepOrder == null)))
-            {
-                if (await IsStepOrderDublicate(transition.StepOrder)) return null;
-                existingTransition.StepOrder = transition.StepOrder;
-            }
+            if (!((transition.StepOrder == existingTransition.StepOrder) || (transition.StepOrder == 0) || (transition.StepOrder == null))) existingTransition.StepOrder = transition.StepOrder;
 
             existingTransition.Name = transition.Name;
             existingTransition.Duration = transition.Duration;
             existingTransition.Description = transition.Description;
             existingTransition.IsPrivate = transition.IsPrivate;
+            existingTransition.ToolId = transition.ToolId;
+            existingTransition.EquipmentId = transition.EquipmentId;
+            existingTransition.FixtureId = transition.FixtureId;
             await context.SaveChangesAsync();
 
             return existingTransition;

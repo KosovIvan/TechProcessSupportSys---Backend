@@ -40,7 +40,7 @@ namespace TechProcessSupportSys.Controllers
             {
                 var user = await userManager.FindByNameAsync(username);
                 userId = user!.Id;
-                isAdmin = User.IsInRole("Admin") ? true : false;
+                isAdmin = await userManager.IsInRoleAsync(user, "Admin");
             }
 
             var operations = await operationRepo.GetAllAsync(processId, isAdmin, userId, query);
@@ -62,7 +62,7 @@ namespace TechProcessSupportSys.Controllers
             {
                 var user = await userManager.FindByNameAsync(username);
                 userId = user!.Id;
-                isAdmin = User.IsInRole("Admin") ? true : false;
+                isAdmin = await userManager.IsInRoleAsync(user, "Admin");
             }
 
             var operation = await operationRepo.GetByIdAsync(isAdmin, userId, id);
@@ -82,8 +82,8 @@ namespace TechProcessSupportSys.Controllers
                 {
                     return BadRequest(ModelState);
                 }
-                if (createOperationDto.StepOrder == "000") BadRequest("Номер операции не должен быть равен 000");
-                if (await operationRepo.IsStepOrderDublicate(createOperationDto.StepOrder)) BadRequest("Такой номер операции уже есть");
+                if (createOperationDto.StepOrder == "000") return BadRequest("Номер операции не должен быть равен 000");
+                if (await operationRepo.IsStepOrderDublicate(id, createOperationDto.StepOrder)) return BadRequest("Такой номер операции уже есть");
 
                 if (createOperationDto.StepOrder.IsNullOrEmpty())
                 {
@@ -126,10 +126,12 @@ namespace TechProcessSupportSys.Controllers
                 {
                     return BadRequest(ModelState);
                 }
+                if (updateOperationDto.StepOrder == "000") return BadRequest("Номер операции не должен быть равен 000");
+                if (await operationRepo.IsStepOrderDublicateByOperationId(id, updateOperationDto.StepOrder)) return BadRequest("Такой номер операции уже есть");
 
                 var username = User.GetUsername();
                 var user = await userManager.FindByNameAsync(username!);
-                var userId = User.IsInRole("Admin") ? null : user!.Id;
+                var userId = await userManager.IsInRoleAsync(user, "Admin") ? null : user!.Id;
 
                 var operation = automapper.Map<Operation, UpdateOperationDto>(updateOperationDto);
 
@@ -151,7 +153,7 @@ namespace TechProcessSupportSys.Controllers
         {
             var username = User.GetUsername();
             var user = await userManager.FindByNameAsync(username!);
-            var userId = User.IsInRole("Admin") ? null : user!.Id;
+            var userId = await userManager.IsInRoleAsync(user, "Admin") ? null : user!.Id;
 
             var deleted = await operationRepo.DeleteAsync(userId, id);
 

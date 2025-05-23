@@ -5,6 +5,7 @@ using TechProcessSupportSys.Dtos.TechProcess;
 using TechProcessSupportSys.Interfaces;
 using TechProcessSupportSys.Models;
 using TechProcessSupportSys.QueryObjects;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace TechProcessSupportSys.Repository
 {
@@ -41,6 +42,15 @@ namespace TechProcessSupportSys.Repository
         public async Task<List<TechProcess>> GetProcessesAsync(bool isAdmin, string? userId, TechProcessQueryObject query)
         {
             var processes = context.Processes.AsQueryable();
+            if (query.IsExpanded) processes = processes.Include(p => p.Operations).
+                    ThenInclude(o => o.Transitions).
+                        ThenInclude(t => t.Tool).
+                    Include(p => p.Operations)
+                        .ThenInclude(o => o.Transitions)
+                            .ThenInclude(t => t.Equipment)
+                    .Include(p => p.Operations)
+                        .ThenInclude(o => o.Transitions)
+                            .ThenInclude(t => t.Fixture);
 
             if (query.IsPrivate) processes = processes.Where(p => p.IsPrivate == true);
 
@@ -112,87 +122,75 @@ namespace TechProcessSupportSys.Repository
             return existingProcess;
         }
 
-        public async Task<List<CreateAllDto>> GetAllAsync(string? userId, AllQueryObject query)
-        {
-            var processes = (from process in context.Processes
-
-                        join operation in context.Operations
-                            on process.Id equals operation.ProcessId into operations
-                        from operation in operations.DefaultIfEmpty()
-
-                        join transition in context.Transitions
-                            on operation.Id equals transition.OperationId into transitions
-                        from transition in transitions.DefaultIfEmpty()
-
-                        join tool in context.Tools
-                            on transition.ToolId equals tool.Id into tools
-                        from tool in tools.DefaultIfEmpty()
-
-                        join equip in context.Equipment
-                            on transition.EquipmentId equals equip.Id into equipment
-                        from equip in equipment.DefaultIfEmpty()
-
-                        join fixture in context.Fixtures
-                            on transition.FixtureId equals fixture.Id into fixtures
-                        from fixture in fixtures.DefaultIfEmpty()
-
-                        select new CreateAllDto
-                        {
-                            Id = process.Id,
-                            UserId = process.UserId,
-                            ProcessName = process.Name,
-                            OperationName = operation != null ? operation.Name : null,
-                            TransitionName = transition != null ? transition.Name : null,
-                            ToolName = tool != null ? tool.Name : null,
-                            EquipmentName = equip != null ? equip.Name : null,
-                            FixtureName = fixture != null ? fixture.Name : null
-                        }).AsQueryable();
-
-            if (userId != null) processes = processes.Where(p => p.UserId == userId);
-
-            if (!string.IsNullOrWhiteSpace(query.ProcessName)) processes = processes.Where(p => p.ProcessName.Contains(query.ProcessName));
-            if (!string.IsNullOrWhiteSpace(query.OperationName)) processes = processes.Where(p => p.OperationName.Contains(query.OperationName));
-            if (!string.IsNullOrWhiteSpace(query.TransitionName)) processes = processes.Where(p => p.TransitionName.Contains(query.TransitionName));
-            if (!string.IsNullOrWhiteSpace(query.ToolName)) processes = processes.Where(p => p.ToolName.Contains(query.ToolName));
-            if (!string.IsNullOrWhiteSpace(query.EquipmentName)) processes = processes.Where(p => p.EquipmentName.Contains(query.EquipmentName));
-            if (!string.IsNullOrWhiteSpace(query.FixtureName)) processes = processes.Where(p => p.FixtureName.Contains(query.FixtureName));
-
-            if (!string.IsNullOrWhiteSpace(query.SortBy))
-            {
-                if (query.SortBy.Equals("ProcessName"))
-                {
-                    processes = query.IsDescending ? processes.OrderByDescending(p => p.ProcessName) : processes.OrderBy(p => p.ProcessName);
-                }
-                if (query.SortBy.Equals("OperationName"))
-                {
-                    processes = query.IsDescending ? processes.OrderByDescending(p => p.OperationName) : processes.OrderBy(p => p.OperationName);
-                }
-                if (query.SortBy.Equals("TransitionName"))
-                {
-                    processes = query.IsDescending ? processes.OrderByDescending(p => p.TransitionName) : processes.OrderBy(p => p.TransitionName);
-                }
-                if (query.SortBy.Equals("ToolName"))
-                {
-                    processes = query.IsDescending ? processes.OrderByDescending(p => p.ToolName) : processes.OrderBy(p => p.ToolName);
-                }
-                if (query.SortBy.Equals("EquipmentName"))
-                {
-                    processes = query.IsDescending ? processes.OrderByDescending(p => p.EquipmentName) : processes.OrderBy(p => p.EquipmentName);
-                }
-                if (query.SortBy.Equals("FixtureName"))
-                {
-                    processes = query.IsDescending ? processes.OrderByDescending(p => p.FixtureName) : processes.OrderBy(p => p.FixtureName);
-                }
-            }
-
-            var skipNumber = (query.PageNumber - 1) * query.PageSize;
-
-            return await processes.Skip(skipNumber).Take(query.PageSize).ToListAsync();
-        }
-
         public async Task<bool> IsCodeDublicate(string code)
         {
             return await context.Processes.AnyAsync(o => o.Code == code);
+        }
+
+        public async Task<TechProcess?> CreateCopy(bool isAdmin, string userId, int id)
+        {
+            var processes = context.Processes.AsQueryable();
+            processes = processes.Include(p => p.Operations).
+                    ThenInclude(o => o.Transitions).
+                        ThenInclude(t => t.Tool).
+                    Include(p => p.Operations)
+                        .ThenInclude(o => o.Transitions)
+                            .ThenInclude(t => t.Equipment)
+                    .Include(p => p.Operations)
+                        .ThenInclude(o => o.Transitions)
+                            .ThenInclude(t => t.Fixture);
+            var process = await processes.FirstOrDefaultAsync(p => p.Id == id);
+
+            if (process == null || (process.UserId != userId && process.IsPrivate)) return null;
+
+            var copy = new TechProcess();
+
+            copy.Code = "";
+            copy.UserId = userId;
+            copy.Name = process.Name;
+            copy.ProductName = process.ProductName;
+            copy.Description = process.Description;
+            copy.IsPrivate = process.IsPrivate;
+
+            foreach (var operation in process.Operations)
+            {
+                if (isAdmin || !operation.IsPrivate || userId == copy.UserId)
+                {
+                    var copyOp = new Operation();
+
+                    copyOp.Name = operation.Name;
+                    copyOp.StepOrder = operation.StepOrder;
+                    copyOp.Duration = operation.Duration;
+                    copyOp.Description = operation.Description;
+                    copyOp.IsPrivate = operation.IsPrivate;
+
+                    copy.Operations.Add(copyOp);
+
+                    foreach (var transition in operation.Transitions)
+                    {
+                        if (isAdmin || !operation.IsPrivate || userId == copy.UserId)
+                        {
+                            var copyTr = new Transition();
+
+                            copyTr.Name = transition.Name;
+                            copyTr.StepOrder = transition.StepOrder;
+                            copyTr.Duration = transition.Duration;
+                            copyTr.Description = transition.Description;
+                            copyTr.IsPrivate = transition.IsPrivate;
+                            copyTr.ToolId = transition.ToolId;
+                            copyTr.EquipmentId = transition.EquipmentId;
+                            copyTr.FixtureId = transition.FixtureId;
+
+                            copyOp.Transitions.Add(copyTr);
+                        }
+                    }
+                }
+            }
+
+            await context.AddRangeAsync(copy);
+            await context.SaveChangesAsync();
+
+            return copy;
         }
     }
 }

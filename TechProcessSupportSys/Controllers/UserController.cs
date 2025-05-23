@@ -1,4 +1,5 @@
 ﻿using Azure.Identity;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -45,7 +46,7 @@ namespace TechProcessSupportSys.Controllers
                 {
                     UserName = user.UserName,
                     Email = user.Email,
-                    Role = User.IsInRole("Admin") ? "Admin" : "User",
+                    Role = await userManager.IsInRoleAsync(user, "Admin") ? "Admin" : "User",
                     Token = await tokenService.CreateToken(user)
                 });
         }
@@ -89,6 +90,13 @@ namespace TechProcessSupportSys.Controllers
             {
                 return StatusCode(500, ex.Message);
             }
+        }
+
+        [HttpGet]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> GetAll()
+        {
+            return Ok();
         }
     }
 }

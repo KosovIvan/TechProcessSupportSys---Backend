@@ -3,56 +3,192 @@
   "WorkspaceRootPath": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\controllers\\techprocesscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\controllers\\techprocesscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\controllers\\operationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\controllers\\operationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\controllers\\transitioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\controllers\\transitioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\interfaces\\ioperationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\interfaces\\ioperationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\repository\\operationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\repository\\operationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\repository\\transitionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\repository\\transitionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\interfaces\\itransitionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\interfaces\\itransitionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\dtos\\user\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\dtos\\user\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\dtos\\transition\\transitiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\dtos\\transition\\transitiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\dtos\\transition\\updatetransitiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\dtos\\transition\\updatetransitiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\dtos\\transition\\createtransitiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\dtos\\transition\\createtransitiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\repository\\techprocessrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\repository\\techprocessrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\dtos\\tool\\createtooldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\dtos\\tool\\createtooldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\controllers\\equipmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\controllers\\equipmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\dtos\\techprocess\\createtechprocessdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\dtos\\techprocess\\createtechprocessdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\controllers\\fixturecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\controllers\\fixturecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\dtos\\techprocess\\techprocessdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\dtos\\techprocess\\techprocessdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\controllers\\toolcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\controllers\\toolcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\dtos\\techprocess\\createalldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\dtos\\techprocess\\createalldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\repository\\toolrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\repository\\toolrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\dtos\\techprocess\\updatetechprocessdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\dtos\\techprocess\\updatetechprocessdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\interfaces\\itechprocessrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\interfaces\\itechprocessrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\dtos\\operation\\updateoperationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\dtos\\operation\\updateoperationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\repository\\fixturerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\repository\\fixturerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\dtos\\operation\\createoperationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\dtos\\operation\\createoperationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\queryobjects\\operationqueryobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\queryobjects\\operationqueryobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\dtos\\transition\\transitionexpandeddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\dtos\\transition\\transitionexpandeddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\dtos\\techprocess\\techprocessexpandeddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\dtos\\techprocess\\techprocessexpandeddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\queryobjects\\transitionqueryobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\queryobjects\\transitionqueryobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\dtos\\operation\\operationexpandeddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\dtos\\operation\\operationexpandeddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\repository\\equipmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\repository\\equipmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\dtos\\user\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\dtos\\user\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\migrations\\20250523002624_dropconstraint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\migrations\\20250523002624_dropconstraint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\models\\techprocess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\models\\techprocess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\dtos\\transition\\transitionosndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\dtos\\transition\\transitionosndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\queryobjects\\equipmentqueryobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\queryobjects\\equipmentqueryobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\models\\fixture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\models\\fixture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\service\\customautomapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\service\\customautomapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\service\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\service\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\models\\operation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\models\\operation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\models\\transition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\models\\transition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\dtos\\techprocess\\createtechprocessdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\dtos\\techprocess\\createtechprocessdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\dtos\\transition\\transitiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\dtos\\transition\\transitiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\dtos\\techprocess\\techprocessdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\dtos\\techprocess\\techprocessdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\dtos\\operation\\operationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\dtos\\operation\\operationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\dtos\\techprocess\\createalldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\dtos\\techprocess\\createalldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\queryobjects\\techprocessqueryobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\queryobjects\\techprocessqueryobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\dtos\\transition\\createtransitiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\dtos\\transition\\createtransitiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\interfaces\\iautomapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\interfaces\\iautomapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\dtos\\user\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\dtos\\user\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\dtos\\user\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\dtos\\user\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\dtos\\tool\\createtooldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\dtos\\tool\\createtooldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\dtos\\techprocess\\updatetechprocessdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\dtos\\techprocess\\updatetechprocessdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\dtos\\fixture\\createfixturedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -75,60 +211,8 @@
       "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\dtos\\tool\\updatetooldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\controllers\\toolcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\controllers\\toolcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\controllers\\transitioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\controllers\\transitioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\controllers\\equipmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\controllers\\equipmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\service\\customautomapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\service\\customautomapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\repository\\transitionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\repository\\transitionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\repository\\fixturerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\repository\\fixturerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\repository\\techprocessrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\repository\\techprocessrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\models\\techprocess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\models\\techprocess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\models\\operation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\models\\operation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\models\\fixture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\models\\fixture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\models\\transition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\models\\transition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\repository\\toolrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\repository\\toolrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\repository\\operationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\repository\\operationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\interfaces\\itoolrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -139,14 +223,6 @@
       "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\interfaces\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\interfaces\\itechprocessrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\interfaces\\itechprocessrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\interfaces\\ioperationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\interfaces\\ioperationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\interfaces\\iequipmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\interfaces\\iequipmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -155,64 +231,24 @@
       "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\interfaces\\ifixturerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\controllers\\operationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\controllers\\operationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\controllers\\techprocesscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\controllers\\techprocesscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\repository\\equipmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\repository\\equipmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\dtos\\operation\\operationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\dtos\\operation\\operationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\dtos\\fixture\\fixturedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\dtos\\fixture\\fixturedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\queryobjects\\operationqueryobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\queryobjects\\operationqueryobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\queryobjects\\transitionqueryobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\queryobjects\\transitionqueryobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\models\\tool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\models\\tool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\queryobjects\\techprocessqueryobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\queryobjects\\techprocessqueryobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\queryobjects\\toolqueryobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\queryobjects\\toolqueryobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\controllers\\fixturecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\controllers\\fixturecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\service\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\service\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\applicationdbcontext.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
       "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\applicationdbcontext.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -227,16 +263,8 @@
       "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\extentions\\claimsextentions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\dtos\\user\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\dtos\\user\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\dtos\\tool\\tooldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\dtos\\tool\\tooldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\dtos\\techprocess\\alldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\dtos\\techprocess\\alldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\dtos\\equipment\\equipmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -245,10 +273,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\models\\equipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\models\\equipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\queryobjects\\equipmentqueryobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\queryobjects\\equipmentqueryobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\queryobjects\\fixturequeryobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -263,16 +287,8 @@
       "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\extentions\\dbupdateexceptionextentions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\interfaces\\iautomapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\interfaces\\iautomapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\applicationdbcontext.dgml||{295A0962-5A59-4F4F-9E12-6BC670C15C3B}",
       "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\applicationdbcontext.dgml||{295A0962-5A59-4F4F-9E12-6BC670C15C3B}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\dtos\\user\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|solutionrelative:techprocesssupportsys\\dtos\\user\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3D170ED7-F8DF-496A-B14E-E411A7B98695}|TechProcessSupportSys\\TechProcessSupportSys.csproj|c:\\\u043C\u0430\u0438\\\u0434\u0438\u043F\u043B\u043E\u043C\\techprocesssupportsys\\techprocesssupportsys\\techprocesssupportsys.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
@@ -350,401 +366,180 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CreateToolDto.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Tool\\CreateToolDto.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Dtos\\Tool\\CreateToolDto.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Tool\\CreateToolDto.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Dtos\\Tool\\CreateToolDto.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T01:07:57.927Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "CreateTransitionDto.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Transition\\CreateTransitionDto.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Dtos\\Transition\\CreateTransitionDto.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Transition\\CreateTransitionDto.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Dtos\\Transition\\CreateTransitionDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAWAAAAAAAAAA==",
+              "Title": "OperationRepository.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Repository\\OperationRepository.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Repository\\OperationRepository.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Repository\\OperationRepository.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Repository\\OperationRepository.cs",
+              "ViewState": "AgIAAIYAAAAAAAAAAAAuwI4AAABcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T13:45:15.469Z",
+              "WhenOpened": "2025-04-22T02:21:57.438Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UpdateTransitionDto.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Transition\\UpdateTransitionDto.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Dtos\\Transition\\UpdateTransitionDto.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Transition\\UpdateTransitionDto.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Dtos\\Transition\\UpdateTransitionDto.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAxwBIAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T13:45:31.89Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TransitionDto.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Transition\\TransitionDto.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Dtos\\Transition\\TransitionDto.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Transition\\TransitionDto.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Dtos\\Transition\\TransitionDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T13:44:59.37Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LoginDto.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\User\\LoginDto.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Dtos\\User\\LoginDto.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\User\\LoginDto.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Dtos\\User\\LoginDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T18:36:56.964Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ITransitionRepository.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Interfaces\\ITransitionRepository.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Interfaces\\ITransitionRepository.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Interfaces\\ITransitionRepository.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Interfaces\\ITransitionRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T02:24:19.627Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Controllers\\UserController.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Controllers\\UserController.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAQwCYAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T18:14:19.004Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "CreateTechProcessDto.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\TechProcess\\CreateTechProcessDto.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Dtos\\TechProcess\\CreateTechProcessDto.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\TechProcess\\CreateTechProcessDto.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Dtos\\TechProcess\\CreateTechProcessDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T02:44:58.763Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "TechProcessDto.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\TechProcess\\TechProcessDto.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Dtos\\TechProcess\\TechProcessDto.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\TechProcess\\TechProcessDto.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Dtos\\TechProcess\\TechProcessDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T02:44:43.13Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "CreateAllDto.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\TechProcess\\CreateAllDto.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Dtos\\TechProcess\\CreateAllDto.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\TechProcess\\CreateAllDto.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Dtos\\TechProcess\\CreateAllDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T04:46:32.639Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "UpdateTechProcessDto.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\TechProcess\\UpdateTechProcessDto.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Dtos\\TechProcess\\UpdateTechProcessDto.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\TechProcess\\UpdateTechProcessDto.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Dtos\\TechProcess\\UpdateTechProcessDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T02:45:16.59Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "UpdateOperationDto.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Operation\\UpdateOperationDto.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Dtos\\Operation\\UpdateOperationDto.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Operation\\UpdateOperationDto.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Dtos\\Operation\\UpdateOperationDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T05:51:21.057Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "CreateOperationDto.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Operation\\CreateOperationDto.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Dtos\\Operation\\CreateOperationDto.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Operation\\CreateOperationDto.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Dtos\\Operation\\CreateOperationDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T05:51:07.007Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "CreateFixtureDto.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Fixture\\CreateFixtureDto.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Dtos\\Fixture\\CreateFixtureDto.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Fixture\\CreateFixtureDto.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Dtos\\Fixture\\CreateFixtureDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T08:19:20.966Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "CreateEquipmentDto.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Equipment\\CreateEquipmentDto.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Dtos\\Equipment\\CreateEquipmentDto.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Equipment\\CreateEquipmentDto.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Dtos\\Equipment\\CreateEquipmentDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T23:17:09.956Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "UpdateEquipmentDto.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Equipment\\UpdateEquipmentDto.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Dtos\\Equipment\\UpdateEquipmentDto.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Equipment\\UpdateEquipmentDto.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Dtos\\Equipment\\UpdateEquipmentDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T23:17:28.406Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "UpdateFixtureDto.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Fixture\\UpdateFixtureDto.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Dtos\\Fixture\\UpdateFixtureDto.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Fixture\\UpdateFixtureDto.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Dtos\\Fixture\\UpdateFixtureDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T08:19:38.225Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "UpdateToolDto.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Tool\\UpdateToolDto.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Dtos\\Tool\\UpdateToolDto.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Tool\\UpdateToolDto.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Dtos\\Tool\\UpdateToolDto.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAuwA0AAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T15:08:06.895Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "ToolController.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Controllers\\ToolController.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Controllers\\ToolController.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Controllers\\ToolController.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Controllers\\ToolController.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAgwBUAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T23:42:31.254Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "TransitionController.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Controllers\\TransitionController.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Controllers\\TransitionController.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Controllers\\TransitionController.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Controllers\\TransitionController.cs",
-              "ViewState": "AgIAAGgAAAAAAAAAAAAswDIAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T14:12:04.724Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "EquipmentController.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Controllers\\EquipmentController.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Controllers\\EquipmentController.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Controllers\\EquipmentController.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Controllers\\EquipmentController.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAYwCcAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T16:59:40.791Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Program.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Program.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Program.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T16:17:00.924Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "CustomAutomapper.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Service\\CustomAutomapper.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Service\\CustomAutomapper.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Service\\CustomAutomapper.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Service\\CustomAutomapper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T11:12:56.612Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 6,
               "Title": "TransitionRepository.cs",
               "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Repository\\TransitionRepository.cs",
               "RelativeDocumentMoniker": "TechProcessSupportSys\\Repository\\TransitionRepository.cs",
               "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Repository\\TransitionRepository.cs",
               "RelativeToolTip": "TechProcessSupportSys\\Repository\\TransitionRepository.cs",
-              "ViewState": "AgIAAGQAAAAAAAAAAAAwwC8AAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAF8AAAAAAAAAAAA9wHIAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-22T02:22:42.959Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "FixtureRepository.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Repository\\FixtureRepository.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Repository\\FixtureRepository.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Repository\\FixtureRepository.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Repository\\FixtureRepository.cs",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAowGQAAAA6AAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Controllers\\UserController.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGIAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T08:25:02.635Z",
+              "WhenOpened": "2025-04-21T18:14:19.004Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 1,
+              "Title": "OperationController.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Controllers\\OperationController.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Controllers\\OperationController.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Controllers\\OperationController.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Controllers\\OperationController.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAgwHsAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T05:58:21.046Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IOperationRepository.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Interfaces\\IOperationRepository.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Interfaces\\IOperationRepository.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Interfaces\\IOperationRepository.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Interfaces\\IOperationRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T02:23:48.071Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TechProcessController.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Controllers\\TechProcessController.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Controllers\\TechProcessController.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Controllers\\TechProcessController.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Controllers\\TechProcessController.cs",
+              "ViewState": "AgIAAFoAAAAAAAAAAADwv2MAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T02:18:32.575Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TransitionController.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Controllers\\TransitionController.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Controllers\\TransitionController.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Controllers\\TransitionController.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Controllers\\TransitionController.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAgwG8AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T14:12:04.724Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ITransitionRepository.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Interfaces\\ITransitionRepository.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Interfaces\\ITransitionRepository.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Interfaces\\ITransitionRepository.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Interfaces\\ITransitionRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T02:24:19.627Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UpdateTransitionDto.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Transition\\UpdateTransitionDto.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Dtos\\Transition\\UpdateTransitionDto.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Transition\\UpdateTransitionDto.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Dtos\\Transition\\UpdateTransitionDto.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T13:45:31.89Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "TechProcessRepository.cs",
               "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Repository\\TechProcessRepository.cs",
               "RelativeDocumentMoniker": "TechProcessSupportSys\\Repository\\TechProcessRepository.cs",
               "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Repository\\TechProcessRepository.cs",
               "RelativeToolTip": "TechProcessSupportSys\\Repository\\TechProcessRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAG0AAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAJ8AAAAAAAAAAAAuwDQAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-22T02:20:44.52Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "TechProcess.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Models\\TechProcess.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Models\\TechProcess.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Models\\TechProcess.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Models\\TechProcess.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAjAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "EquipmentController.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Controllers\\EquipmentController.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Controllers\\EquipmentController.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Controllers\\EquipmentController.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Controllers\\EquipmentController.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAgwGMAAABaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T16:36:29.014Z",
+              "WhenOpened": "2025-04-20T16:59:40.791Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "Operation.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Models\\Operation.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Models\\Operation.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Models\\Operation.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Models\\Operation.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAuwAoAAAApAAAAAAAAAA==",
+              "DocumentIndex": 11,
+              "Title": "FixtureController.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Controllers\\FixtureController.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Controllers\\FixtureController.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Controllers\\FixtureController.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Controllers\\FixtureController.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAgwHQAAABaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T16:40:25.499Z",
+              "WhenOpened": "2025-04-21T08:40:26.91Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "Fixture.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Models\\Fixture.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Models\\Fixture.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Models\\Fixture.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Models\\Fixture.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAWAAAAAAAAAA==",
+              "DocumentIndex": 12,
+              "Title": "ToolController.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Controllers\\ToolController.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Controllers\\ToolController.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Controllers\\ToolController.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Controllers\\ToolController.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAkwHMAAABaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T16:43:11.456Z",
+              "WhenOpened": "2025-04-19T23:42:31.254Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "Transition.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Models\\Transition.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Models\\Transition.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Models\\Transition.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Models\\Transition.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAuwBAAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T16:41:02.185Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 13,
               "Title": "ToolRepository.cs",
               "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Repository\\ToolRepository.cs",
               "RelativeDocumentMoniker": "TechProcessSupportSys\\Repository\\ToolRepository.cs",
@@ -757,176 +552,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "OperationRepository.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Repository\\OperationRepository.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Repository\\OperationRepository.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Repository\\OperationRepository.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Repository\\OperationRepository.cs",
-              "ViewState": "AgIAAFsAAAAAAAAAAAAkwJEAAABJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T02:21:57.438Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "IToolRepository.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Interfaces\\IToolRepository.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Interfaces\\IToolRepository.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Interfaces\\IToolRepository.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Interfaces\\IToolRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T00:06:51.998Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "ITokenService.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Interfaces\\ITokenService.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Interfaces\\ITokenService.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Interfaces\\ITokenService.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Interfaces\\ITokenService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T22:31:51.865Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 14,
               "Title": "ITechProcessRepository.cs",
               "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Interfaces\\ITechProcessRepository.cs",
               "RelativeDocumentMoniker": "TechProcessSupportSys\\Interfaces\\ITechProcessRepository.cs",
               "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Interfaces\\ITechProcessRepository.cs",
               "RelativeToolTip": "TechProcessSupportSys\\Interfaces\\ITechProcessRepository.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAAABAAAABOAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-22T02:20:56.113Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "IOperationRepository.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Interfaces\\IOperationRepository.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Interfaces\\IOperationRepository.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Interfaces\\IOperationRepository.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Interfaces\\IOperationRepository.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAuwAwAAAB0AAAAAAAAAA==",
+              "DocumentIndex": 15,
+              "Title": "UpdateOperationDto.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Operation\\UpdateOperationDto.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Dtos\\Operation\\UpdateOperationDto.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Operation\\UpdateOperationDto.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Dtos\\Operation\\UpdateOperationDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T02:23:48.071Z",
+              "WhenOpened": "2025-04-22T05:51:21.057Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "IEquipmentRepository.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Interfaces\\IEquipmentRepository.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Interfaces\\IEquipmentRepository.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Interfaces\\IEquipmentRepository.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Interfaces\\IEquipmentRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 16,
+              "Title": "FixtureRepository.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Repository\\FixtureRepository.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Repository\\FixtureRepository.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Repository\\FixtureRepository.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Repository\\FixtureRepository.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAowGQAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T17:02:11.511Z",
+              "WhenOpened": "2025-04-21T08:25:02.635Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "IFixtureRepository.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Interfaces\\IFixtureRepository.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Interfaces\\IFixtureRepository.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Interfaces\\IFixtureRepository.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Interfaces\\IFixtureRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 17,
+              "Title": "CreateOperationDto.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Operation\\CreateOperationDto.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Dtos\\Operation\\CreateOperationDto.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Operation\\CreateOperationDto.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Dtos\\Operation\\CreateOperationDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T08:22:25.263Z",
+              "WhenOpened": "2025-04-22T05:51:07.007Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "OperationController.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Controllers\\OperationController.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Controllers\\OperationController.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Controllers\\OperationController.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Controllers\\OperationController.cs",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAgwIEAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T05:58:21.046Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "TechProcessController.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Controllers\\TechProcessController.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Controllers\\TechProcessController.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Controllers\\TechProcessController.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Controllers\\TechProcessController.cs",
-              "ViewState": "AgIAAG0AAAAAAAAAAAAowGAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T02:18:32.575Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Models\\User.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Models\\User.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Models\\User.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T16:34:25.63Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "EquipmentRepository.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Repository\\EquipmentRepository.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Repository\\EquipmentRepository.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Repository\\EquipmentRepository.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Repository\\EquipmentRepository.cs",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAowGcAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T17:02:37.927Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "OperationDto.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Operation\\OperationDto.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Dtos\\Operation\\OperationDto.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Operation\\OperationDto.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Dtos\\Operation\\OperationDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T05:50:45.248Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "FixtureDto.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Fixture\\FixtureDto.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Dtos\\Fixture\\FixtureDto.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Fixture\\FixtureDto.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Dtos\\Fixture\\FixtureDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T08:19:02.391Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 18,
               "Title": "OperationQueryObject.cs",
               "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\QueryObjects\\OperationQueryObject.cs",
               "RelativeDocumentMoniker": "TechProcessSupportSys\\QueryObjects\\OperationQueryObject.cs",
@@ -939,7 +617,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 19,
+              "Title": "TransitionExpandedDto.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Transition\\TransitionExpandedDto.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Dtos\\Transition\\TransitionExpandedDto.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Transition\\TransitionExpandedDto.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Dtos\\Transition\\TransitionExpandedDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T17:53:46.88Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "TechProcessExpandedDto.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\TechProcess\\TechProcessExpandedDto.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Dtos\\TechProcess\\TechProcessExpandedDto.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\TechProcess\\TechProcessExpandedDto.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Dtos\\TechProcess\\TechProcessExpandedDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T04:57:26.051Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
               "Title": "TransitionQueryObject.cs",
               "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\QueryObjects\\TransitionQueryObject.cs",
               "RelativeDocumentMoniker": "TechProcessSupportSys\\QueryObjects\\TransitionQueryObject.cs",
@@ -952,354 +656,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "Tool.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Models\\Tool.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Models\\Tool.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Models\\Tool.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Models\\Tool.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAuwA0AAAA0AAAAAAAAAA==",
+              "DocumentIndex": 22,
+              "Title": "OperationExpandedDto.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Operation\\OperationExpandedDto.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Dtos\\Operation\\OperationExpandedDto.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Operation\\OperationExpandedDto.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Dtos\\Operation\\OperationExpandedDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T16:41:17.782Z"
+              "WhenOpened": "2025-05-22T17:49:00.177Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "TechProcessQueryObject.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\QueryObjects\\TechProcessQueryObject.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\QueryObjects\\TechProcessQueryObject.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\QueryObjects\\TechProcessQueryObject.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\QueryObjects\\TechProcessQueryObject.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA1AAAAAAAAAA==",
+              "DocumentIndex": 23,
+              "Title": "EquipmentRepository.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Repository\\EquipmentRepository.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Repository\\EquipmentRepository.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Repository\\EquipmentRepository.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Repository\\EquipmentRepository.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAowGcAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T02:42:02.228Z"
+              "WhenOpened": "2025-04-20T17:02:37.927Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "ToolQueryObject.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\QueryObjects\\ToolQueryObject.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\QueryObjects\\ToolQueryObject.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\QueryObjects\\ToolQueryObject.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\QueryObjects\\ToolQueryObject.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T13:52:33.063Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "FixtureController.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Controllers\\FixtureController.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Controllers\\FixtureController.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Controllers\\FixtureController.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Controllers\\FixtureController.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAiwEIAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T08:40:26.91Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 50,
-              "Title": "TokenService.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Service\\TokenService.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Service\\TokenService.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Service\\TokenService.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Service\\TokenService.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAzwDQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T22:32:08.669Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 51,
-              "Title": "ApplicationDbContext.sql",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\ApplicationDbContext.sql",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\ApplicationDbContext.sql",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\ApplicationDbContext.sql",
-              "RelativeToolTip": "TechProcessSupportSys\\ApplicationDbContext.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-04-22T10:56:13.876Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 52,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABwAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T23:56:47.759Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 53,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\appsettings.json",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\appsettings.json",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\appsettings.json",
-              "RelativeToolTip": "TechProcessSupportSys\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-16T16:18:03.997Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 54,
-              "Title": "TechProcessSupportSys.csproj",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\TechProcessSupportSys.csproj",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\TechProcessSupportSys.csproj",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\TechProcessSupportSys.csproj",
-              "RelativeToolTip": "TechProcessSupportSys\\TechProcessSupportSys.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-16T16:22:33.439Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 55,
-              "Title": "ClaimsExtentions.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Extentions\\ClaimsExtentions.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Extentions\\ClaimsExtentions.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Extentions\\ClaimsExtentions.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Extentions\\ClaimsExtentions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T23:04:45.134Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 56,
-              "Title": "UserDto.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\User\\UserDto.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Dtos\\User\\UserDto.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\User\\UserDto.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Dtos\\User\\UserDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T19:08:44.928Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 57,
-              "Title": "ToolDto.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Tool\\ToolDto.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Dtos\\Tool\\ToolDto.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Tool\\ToolDto.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Dtos\\Tool\\ToolDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T00:46:47.794Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 58,
-              "Title": "AllDto.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\TechProcess\\AllDto.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Dtos\\TechProcess\\AllDto.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\TechProcess\\AllDto.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Dtos\\TechProcess\\AllDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T04:57:26.051Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 59,
-              "Title": "EquipmentDto.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Equipment\\EquipmentDto.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Dtos\\Equipment\\EquipmentDto.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Equipment\\EquipmentDto.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Dtos\\Equipment\\EquipmentDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T17:40:13.142Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 60,
-              "Title": "Equipment.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Models\\Equipment.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Models\\Equipment.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Models\\Equipment.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Models\\Equipment.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T16:41:34.68Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 62,
-              "Title": "FixtureQueryObject.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\QueryObjects\\FixtureQueryObject.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\QueryObjects\\FixtureQueryObject.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\QueryObjects\\FixtureQueryObject.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\QueryObjects\\FixtureQueryObject.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T16:40:33.426Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 61,
-              "Title": "EquipmentQueryObject.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\QueryObjects\\EquipmentQueryObject.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\QueryObjects\\EquipmentQueryObject.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\QueryObjects\\EquipmentQueryObject.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\QueryObjects\\EquipmentQueryObject.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T16:13:32.061Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 83,
-              "Title": "20250517001622_CodeChanged.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Migrations\\20250517001622_CodeChanged.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Migrations\\20250517001622_CodeChanged.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Migrations\\20250517001622_CodeChanged.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Migrations\\20250517001622_CodeChanged.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-17T00:16:22.61Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 63,
-              "Title": "AllQueryObject.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\QueryObjects\\AllQueryObject.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\QueryObjects\\AllQueryObject.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\QueryObjects\\AllQueryObject.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\QueryObjects\\AllQueryObject.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T04:01:03.86Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 84,
-              "Title": "20250516193819_IsPrivateAdded.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Migrations\\20250516193819_IsPrivateAdded.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Migrations\\20250516193819_IsPrivateAdded.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Migrations\\20250516193819_IsPrivateAdded.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Migrations\\20250516193819_IsPrivateAdded.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T19:38:19.801Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 64,
-              "Title": "DbUpdateExceptionExtentions.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Extentions\\DbUpdateExceptionExtentions.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Extentions\\DbUpdateExceptionExtentions.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Extentions\\DbUpdateExceptionExtentions.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Extentions\\DbUpdateExceptionExtentions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T23:08:09.819Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 79,
-              "Title": "20250514184003_AnnotationsTrouble.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Migrations\\20250514184003_AnnotationsTrouble.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Migrations\\20250514184003_AnnotationsTrouble.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Migrations\\20250514184003_AnnotationsTrouble.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Migrations\\20250514184003_AnnotationsTrouble.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T18:40:03.874Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 80,
-              "Title": "20250514173900_CodesUnique.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Migrations\\20250514173900_CodesUnique.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Migrations\\20250514173900_CodesUnique.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Migrations\\20250514173900_CodesUnique.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Migrations\\20250514173900_CodesUnique.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T17:39:00.941Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 81,
-              "Title": "20250514174832_HereWeGoAgain.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Migrations\\20250514174832_HereWeGoAgain.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Migrations\\20250514174832_HereWeGoAgain.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Migrations\\20250514174832_HereWeGoAgain.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Migrations\\20250514174832_HereWeGoAgain.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T17:48:32.513Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 82,
-              "Title": "20250514173435_GOSTsNSomeShit.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Migrations\\20250514173435_GOSTsNSomeShit.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Migrations\\20250514173435_GOSTsNSomeShit.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Migrations\\20250514173435_GOSTsNSomeShit.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Migrations\\20250514173435_GOSTsNSomeShit.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T17:34:35.988Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 65,
-              "Title": "IAutomapper.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Interfaces\\IAutomapper.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Interfaces\\IAutomapper.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Interfaces\\IAutomapper.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Interfaces\\IAutomapper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T11:12:33.101Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 66,
-              "Title": "ApplicationDbContext.dgml [Viewer]",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\ApplicationDbContext.dgml",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\ApplicationDbContext.dgml",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\ApplicationDbContext.dgml [Viewer]",
-              "RelativeToolTip": "TechProcessSupportSys\\ApplicationDbContext.dgml [Viewer]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000968|",
-              "WhenOpened": "2025-04-22T11:24:20.099Z",
-              "EditorCaption": " [Viewer]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 78,
-              "Title": "20250422025452_incorrectUserIdDetected.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Migrations\\20250422025452_incorrectUserIdDetected.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Migrations\\20250422025452_incorrectUserIdDetected.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Migrations\\20250422025452_incorrectUserIdDetected.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Migrations\\20250422025452_incorrectUserIdDetected.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T02:54:52.577Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 77,
-              "Title": "20250421235646_Rebuild.cs",
-              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Migrations\\20250421235646_Rebuild.cs",
-              "RelativeDocumentMoniker": "TechProcessSupportSys\\Migrations\\20250421235646_Rebuild.cs",
-              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Migrations\\20250421235646_Rebuild.cs",
-              "RelativeToolTip": "TechProcessSupportSys\\Migrations\\20250421235646_Rebuild.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T23:56:46.37Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 24,
               "Title": "RegisterDto.cs",
               "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\User\\RegisterDto.cs",
               "RelativeDocumentMoniker": "TechProcessSupportSys\\Dtos\\User\\RegisterDto.cs",
@@ -1311,7 +692,666 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 25,
+              "Title": "20250523002624_DropConstraint.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Migrations\\20250523002624_DropConstraint.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Migrations\\20250523002624_DropConstraint.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Migrations\\20250523002624_DropConstraint.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Migrations\\20250523002624_DropConstraint.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T00:26:25.23Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "TechProcess.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Models\\TechProcess.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Models\\TechProcess.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Models\\TechProcess.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Models\\TechProcess.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T16:36:29.014Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAgwBgAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T23:56:47.759Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "TransitionOsnDto.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Transition\\TransitionOsnDto.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Dtos\\Transition\\TransitionOsnDto.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Transition\\TransitionOsnDto.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Dtos\\Transition\\TransitionOsnDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T00:26:15.43Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "EquipmentQueryObject.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\QueryObjects\\EquipmentQueryObject.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\QueryObjects\\EquipmentQueryObject.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\QueryObjects\\EquipmentQueryObject.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\QueryObjects\\EquipmentQueryObject.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T16:13:32.061Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Fixture.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Models\\Fixture.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Models\\Fixture.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Models\\Fixture.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Models\\Fixture.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T16:43:11.456Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "CustomAutomapper.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Service\\CustomAutomapper.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Service\\CustomAutomapper.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Service\\CustomAutomapper.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Service\\CustomAutomapper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T11:12:56.612Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "TokenService.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Service\\TokenService.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Service\\TokenService.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Service\\TokenService.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Service\\TokenService.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBkAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-19T22:32:08.669Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Operation.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Models\\Operation.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Models\\Operation.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Models\\Operation.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Models\\Operation.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAuwAoAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T16:40:25.499Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Transition.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Models\\Transition.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Models\\Transition.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Models\\Transition.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Models\\Transition.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T16:41:02.185Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "CreateTechProcessDto.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\TechProcess\\CreateTechProcessDto.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Dtos\\TechProcess\\CreateTechProcessDto.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\TechProcess\\CreateTechProcessDto.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Dtos\\TechProcess\\CreateTechProcessDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T02:44:58.763Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "TransitionDto.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Transition\\TransitionDto.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Dtos\\Transition\\TransitionDto.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Transition\\TransitionDto.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Dtos\\Transition\\TransitionDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T13:44:59.37Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "TechProcessDto.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\TechProcess\\TechProcessDto.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Dtos\\TechProcess\\TechProcessDto.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\TechProcess\\TechProcessDto.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Dtos\\TechProcess\\TechProcessDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T02:44:43.13Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "OperationDto.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Operation\\OperationDto.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Dtos\\Operation\\OperationDto.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Operation\\OperationDto.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Dtos\\Operation\\OperationDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T05:50:45.248Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "CreateAllDto.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\TechProcess\\CreateAllDto.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Dtos\\TechProcess\\CreateAllDto.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\TechProcess\\CreateAllDto.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Dtos\\TechProcess\\CreateAllDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T04:46:32.639Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "TechProcessQueryObject.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\QueryObjects\\TechProcessQueryObject.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\QueryObjects\\TechProcessQueryObject.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\QueryObjects\\TechProcessQueryObject.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\QueryObjects\\TechProcessQueryObject.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T02:42:02.228Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "CreateTransitionDto.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Transition\\CreateTransitionDto.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Dtos\\Transition\\CreateTransitionDto.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Transition\\CreateTransitionDto.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Dtos\\Transition\\CreateTransitionDto.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T13:45:15.469Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "IAutomapper.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Interfaces\\IAutomapper.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Interfaces\\IAutomapper.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Interfaces\\IAutomapper.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Interfaces\\IAutomapper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T11:12:33.101Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\User\\UserDto.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Dtos\\User\\UserDto.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\User\\UserDto.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Dtos\\User\\UserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T19:08:44.928Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "LoginDto.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\User\\LoginDto.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Dtos\\User\\LoginDto.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\User\\LoginDto.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Dtos\\User\\LoginDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T18:36:56.964Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "CreateToolDto.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Tool\\CreateToolDto.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Dtos\\Tool\\CreateToolDto.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Tool\\CreateToolDto.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Dtos\\Tool\\CreateToolDto.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T01:07:57.927Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "UpdateTechProcessDto.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\TechProcess\\UpdateTechProcessDto.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Dtos\\TechProcess\\UpdateTechProcessDto.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\TechProcess\\UpdateTechProcessDto.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Dtos\\TechProcess\\UpdateTechProcessDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T02:45:16.59Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "CreateFixtureDto.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Fixture\\CreateFixtureDto.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Dtos\\Fixture\\CreateFixtureDto.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Fixture\\CreateFixtureDto.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Dtos\\Fixture\\CreateFixtureDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T08:19:20.966Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "CreateEquipmentDto.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Equipment\\CreateEquipmentDto.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Dtos\\Equipment\\CreateEquipmentDto.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Equipment\\CreateEquipmentDto.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Dtos\\Equipment\\CreateEquipmentDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T23:17:09.956Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "UpdateEquipmentDto.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Equipment\\UpdateEquipmentDto.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Dtos\\Equipment\\UpdateEquipmentDto.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Equipment\\UpdateEquipmentDto.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Dtos\\Equipment\\UpdateEquipmentDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T23:17:28.406Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "UpdateFixtureDto.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Fixture\\UpdateFixtureDto.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Dtos\\Fixture\\UpdateFixtureDto.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Fixture\\UpdateFixtureDto.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Dtos\\Fixture\\UpdateFixtureDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T08:19:38.225Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "UpdateToolDto.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Tool\\UpdateToolDto.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Dtos\\Tool\\UpdateToolDto.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Tool\\UpdateToolDto.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Dtos\\Tool\\UpdateToolDto.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAuwA0AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T15:08:06.895Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Program.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Program.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Program.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T16:17:00.924Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "IToolRepository.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Interfaces\\IToolRepository.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Interfaces\\IToolRepository.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Interfaces\\IToolRepository.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Interfaces\\IToolRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T00:06:51.998Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "ITokenService.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Interfaces\\ITokenService.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Interfaces\\ITokenService.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Interfaces\\ITokenService.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Interfaces\\ITokenService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-19T22:31:51.865Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "IEquipmentRepository.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Interfaces\\IEquipmentRepository.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Interfaces\\IEquipmentRepository.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Interfaces\\IEquipmentRepository.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Interfaces\\IEquipmentRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T17:02:11.511Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "IFixtureRepository.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Interfaces\\IFixtureRepository.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Interfaces\\IFixtureRepository.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Interfaces\\IFixtureRepository.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Interfaces\\IFixtureRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T08:22:25.263Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Models\\User.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Models\\User.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Models\\User.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T16:34:25.63Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "FixtureDto.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Fixture\\FixtureDto.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Dtos\\Fixture\\FixtureDto.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Fixture\\FixtureDto.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Dtos\\Fixture\\FixtureDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T08:19:02.391Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "Tool.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Models\\Tool.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Models\\Tool.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Models\\Tool.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Models\\Tool.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAuwA0AAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T16:41:17.782Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "ToolQueryObject.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\QueryObjects\\ToolQueryObject.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\QueryObjects\\ToolQueryObject.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\QueryObjects\\ToolQueryObject.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\QueryObjects\\ToolQueryObject.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T13:52:33.063Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "ApplicationDbContext.sql",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\ApplicationDbContext.sql",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\ApplicationDbContext.sql",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\ApplicationDbContext.sql",
+              "RelativeToolTip": "TechProcessSupportSys\\ApplicationDbContext.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-04-22T10:56:13.876Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\appsettings.json",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\appsettings.json",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\appsettings.json",
+              "RelativeToolTip": "TechProcessSupportSys\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-16T16:18:03.997Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "TechProcessSupportSys.csproj",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\TechProcessSupportSys.csproj",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\TechProcessSupportSys.csproj",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\TechProcessSupportSys.csproj",
+              "RelativeToolTip": "TechProcessSupportSys\\TechProcessSupportSys.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-16T16:22:33.439Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "ClaimsExtentions.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Extentions\\ClaimsExtentions.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Extentions\\ClaimsExtentions.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Extentions\\ClaimsExtentions.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Extentions\\ClaimsExtentions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T23:04:45.134Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "ToolDto.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Tool\\ToolDto.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Dtos\\Tool\\ToolDto.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Tool\\ToolDto.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Dtos\\Tool\\ToolDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T00:46:47.794Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "EquipmentDto.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Equipment\\EquipmentDto.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Dtos\\Equipment\\EquipmentDto.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Dtos\\Equipment\\EquipmentDto.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Dtos\\Equipment\\EquipmentDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T17:40:13.142Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "Equipment.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Models\\Equipment.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Models\\Equipment.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Models\\Equipment.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Models\\Equipment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T16:41:34.68Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "FixtureQueryObject.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\QueryObjects\\FixtureQueryObject.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\QueryObjects\\FixtureQueryObject.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\QueryObjects\\FixtureQueryObject.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\QueryObjects\\FixtureQueryObject.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T16:40:33.426Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 87,
+              "Title": "20250517001622_CodeChanged.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Migrations\\20250517001622_CodeChanged.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Migrations\\20250517001622_CodeChanged.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Migrations\\20250517001622_CodeChanged.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Migrations\\20250517001622_CodeChanged.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T00:16:22.61Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "AllQueryObject.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\QueryObjects\\AllQueryObject.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\QueryObjects\\AllQueryObject.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\QueryObjects\\AllQueryObject.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\QueryObjects\\AllQueryObject.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T04:01:03.86Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 88,
+              "Title": "20250516193819_IsPrivateAdded.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Migrations\\20250516193819_IsPrivateAdded.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Migrations\\20250516193819_IsPrivateAdded.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Migrations\\20250516193819_IsPrivateAdded.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Migrations\\20250516193819_IsPrivateAdded.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T19:38:19.801Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "DbUpdateExceptionExtentions.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Extentions\\DbUpdateExceptionExtentions.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Extentions\\DbUpdateExceptionExtentions.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Extentions\\DbUpdateExceptionExtentions.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Extentions\\DbUpdateExceptionExtentions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T23:08:09.819Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 83,
+              "Title": "20250514184003_AnnotationsTrouble.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Migrations\\20250514184003_AnnotationsTrouble.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Migrations\\20250514184003_AnnotationsTrouble.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Migrations\\20250514184003_AnnotationsTrouble.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Migrations\\20250514184003_AnnotationsTrouble.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T18:40:03.874Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 84,
+              "Title": "20250514173900_CodesUnique.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Migrations\\20250514173900_CodesUnique.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Migrations\\20250514173900_CodesUnique.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Migrations\\20250514173900_CodesUnique.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Migrations\\20250514173900_CodesUnique.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T17:39:00.941Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 85,
+              "Title": "20250514174832_HereWeGoAgain.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Migrations\\20250514174832_HereWeGoAgain.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Migrations\\20250514174832_HereWeGoAgain.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Migrations\\20250514174832_HereWeGoAgain.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Migrations\\20250514174832_HereWeGoAgain.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T17:48:32.513Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 86,
+              "Title": "20250514173435_GOSTsNSomeShit.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Migrations\\20250514173435_GOSTsNSomeShit.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Migrations\\20250514173435_GOSTsNSomeShit.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Migrations\\20250514173435_GOSTsNSomeShit.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Migrations\\20250514173435_GOSTsNSomeShit.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T17:34:35.988Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "ApplicationDbContext.dgml [Viewer]",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\ApplicationDbContext.dgml",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\ApplicationDbContext.dgml",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\ApplicationDbContext.dgml [Viewer]",
+              "RelativeToolTip": "TechProcessSupportSys\\ApplicationDbContext.dgml [Viewer]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000968|",
+              "WhenOpened": "2025-04-22T11:24:20.099Z",
+              "EditorCaption": " [Viewer]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 82,
+              "Title": "20250422025452_incorrectUserIdDetected.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Migrations\\20250422025452_incorrectUserIdDetected.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Migrations\\20250422025452_incorrectUserIdDetected.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Migrations\\20250422025452_incorrectUserIdDetected.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Migrations\\20250422025452_incorrectUserIdDetected.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T02:54:52.577Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 81,
+              "Title": "20250421235646_Rebuild.cs",
+              "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Migrations\\20250421235646_Rebuild.cs",
+              "RelativeDocumentMoniker": "TechProcessSupportSys\\Migrations\\20250421235646_Rebuild.cs",
+              "ToolTip": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Migrations\\20250421235646_Rebuild.cs",
+              "RelativeToolTip": "TechProcessSupportSys\\Migrations\\20250421235646_Rebuild.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T23:56:46.37Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 80,
               "Title": "20250421151455_UserDefendencyToToolsEtcAdded.cs",
               "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Migrations\\20250421151455_UserDefendencyToToolsEtcAdded.cs",
               "RelativeDocumentMoniker": "TechProcessSupportSys\\Migrations\\20250421151455_UserDefendencyToToolsEtcAdded.cs",
@@ -1323,7 +1363,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 79,
               "Title": "20250420235833_DurationAdded.cs",
               "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Migrations\\20250420235833_DurationAdded.cs",
               "RelativeDocumentMoniker": "TechProcessSupportSys\\Migrations\\20250420235833_DurationAdded.cs",
@@ -1335,7 +1375,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 77,
               "Title": "20250419233759_NaVsyakiy.cs",
               "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Migrations\\20250419233759_NaVsyakiy.cs",
               "RelativeDocumentMoniker": "TechProcessSupportSys\\Migrations\\20250419233759_NaVsyakiy.cs",
@@ -1347,7 +1387,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 78,
               "Title": "20250419214212_UniqueKeys.cs",
               "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Migrations\\20250419214212_UniqueKeys.cs",
               "RelativeDocumentMoniker": "TechProcessSupportSys\\Migrations\\20250419214212_UniqueKeys.cs",
@@ -1359,7 +1399,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 72,
               "Title": "TechProcessSupportSys.http",
               "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\TechProcessSupportSys.http",
               "RelativeDocumentMoniker": "TechProcessSupportSys\\TechProcessSupportSys.http",
@@ -1371,7 +1411,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 76,
               "Title": "20250417004528_InitialCreate.cs",
               "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Migrations\\20250417004528_InitialCreate.cs",
               "RelativeDocumentMoniker": "TechProcessSupportSys\\Migrations\\20250417004528_InitialCreate.cs",
@@ -1383,7 +1423,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 75,
               "Title": "20250417004803_InitialCreate2.cs",
               "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Migrations\\20250417004803_InitialCreate2.cs",
               "RelativeDocumentMoniker": "TechProcessSupportSys\\Migrations\\20250417004803_InitialCreate2.cs",
@@ -1395,7 +1435,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 73,
               "Title": "TechProcessSupportSys",
               "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\TechProcessSupportSys.csproj",
               "RelativeDocumentMoniker": "TechProcessSupportSys\\TechProcessSupportSys.csproj",
@@ -1406,7 +1446,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 74,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\\u041C\u0410\u0418\\\u0414\u0438\u043F\u043B\u043E\u043C\\TechProcessSupportSys\\TechProcessSupportSys\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "TechProcessSupportSys\\Properties\\launchSettings.json",

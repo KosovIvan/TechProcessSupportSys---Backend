@@ -22,7 +22,7 @@ namespace TechProcessSupportSys.Data
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder.Entity<TechProcess>().HasAlternateKey(t => t.Code);
+            //builder.Entity<TechProcess>().HasAlternateKey(t => t.Code);
 
             base.OnModelCreating(builder);
 

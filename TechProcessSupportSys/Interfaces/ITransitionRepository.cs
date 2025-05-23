@@ -11,7 +11,8 @@ namespace TechProcessSupportSys.Interfaces
         Task<Transition?> DeleteAsync(string? userId, int id);
         Task<List<Transition>?> GetAllAsync(int processId, bool isAdmin, string? userId, TransitionQueryObject query);
         Task<Transition?> GetByIdAsync(bool isAdmin, string? userId, int id);
-        Task<bool> IsStepOrderDublicate(int? stepOrder);
+        Task<bool> IsStepOrderDublicate(int id, int? stepOrder);
+        Task<bool> IsStepOrderDublicateByTransitionId(int id, int? stepOrder);
         Task<Transition?> UpdateAsync(string? userId, int id, Transition operation);
     }
 }
