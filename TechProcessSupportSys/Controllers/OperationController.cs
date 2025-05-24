@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using System.Text.RegularExpressions;
+using TechProcessSupportSys.Attributes;
 using TechProcessSupportSys.Dtos.Operation;
 using TechProcessSupportSys.Dtos.TechProcess;
 using TechProcessSupportSys.Extentions;
@@ -84,6 +85,13 @@ namespace TechProcessSupportSys.Controllers
                 }
                 if (createOperationDto.StepOrder == "000") return BadRequest("Номер операции не должен быть равен 000");
                 if (await operationRepo.IsStepOrderDublicate(id, createOperationDto.StepOrder)) return BadRequest("Такой номер операции уже есть");
+                
+                var username = User.GetUsername();
+                var user = await userManager.FindByNameAsync(username);
+
+                var userId = await operationRepo.GetUserId(id);
+                if (userId == null) return NotFound();
+                if (userId != user.Id) return Forbid();
 
                 if (createOperationDto.StepOrder.IsNullOrEmpty())
                 {

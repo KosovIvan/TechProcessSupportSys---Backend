@@ -5,7 +5,7 @@ namespace TechProcessSupportSys.Models
     public class User : IdentityUser
     {
         public string Name { get; set; } = "";
-        public DateTime CreatedOn { get; set; } = DateTime.Now;
+        public DateTime CreatedOn { get; set; } = DateTime.UtcNow;
         public DateTime? RevokedOn { get; set; }
         public string RevokedBy { get; set; } = "";
         public List<TechProcess> Processs { get; set; } = new List<TechProcess>();

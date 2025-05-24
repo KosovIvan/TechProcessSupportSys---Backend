@@ -105,6 +105,8 @@ namespace TechProcessSupportSys.Repository
             existingTool.Type = tool.Type;
             existingTool.Material = tool.Material;
             existingTool.GOST = tool.GOST;
+            existingTool.UpdatedAt = tool.UpdatedAt;
+            existingTool.UpdatedBy = tool.UpdatedBy;
             existingTool.IsPrivate = tool.IsPrivate;
             await context.SaveChangesAsync();
 

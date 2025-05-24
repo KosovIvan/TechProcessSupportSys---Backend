@@ -4,12 +4,15 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Diagnostics;
 using System.Security.Claims;
 using TechProcessSupportSys.Dtos.User;
 using TechProcessSupportSys.Extentions;
 using TechProcessSupportSys.Interfaces;
 using TechProcessSupportSys.Models;
+using TechProcessSupportSys.QueryObjects;
 using TechProcessSupportSys.Repository;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace TechProcessSupportSys.Controllers
 {
@@ -43,6 +46,7 @@ namespace TechProcessSupportSys.Controllers
             var user = await userManager.Users.FirstOrDefaultAsync(u => u.UserName!.ToLower() == loginDto.Login!.ToLower());
 
             if (user == null) return Unauthorized("Некорректный логин");
+            if (user.RevokedOn != null) return Forbid();
 
             var result = await signinManager.CheckPasswordSignInAsync(user, loginDto.Password!, false);
 
@@ -58,6 +62,7 @@ namespace TechProcessSupportSys.Controllers
                     Token = await tokenService.CreateToken(user)
                 });
         }
+
 
         [HttpPost("create-user")]
         [Authorize(Roles = "Admin")]
@@ -151,12 +156,32 @@ namespace TechProcessSupportSys.Controllers
 
         [HttpGet]
         [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAll([FromQuery] UserQueryObject query)
         {
-            var users = await userManager.Users.ToListAsync();
+            var users = userManager.Users;
+
+            users = query.Revoked ? users.Where(u => u.RevokedOn != null) : users.Where(u => u.RevokedOn == null);
+
+            if (!string.IsNullOrWhiteSpace(query.Login)) users = users.Where(p => p.UserName.Contains(query.Login));
+            if (!string.IsNullOrWhiteSpace(query.Name)) users = users.Where(p => p.Name.Contains(query.Name));
+
+            if (!string.IsNullOrWhiteSpace(query.SortBy))
+            {
+                if (query.SortBy.Equals("Login"))
+                {
+                    users = query.IsDescending ? users.OrderByDescending(p => p.UserName) : users.OrderBy(p => p.UserName);
+                }
+                if (query.SortBy.Equals("Name"))
+                {
+                    users = query.IsDescending ? users.OrderByDescending(p => p.Name) : users.OrderBy(p => p.Name);
+                }
+            }
+
+            var skipNumber = (query.PageNumber - 1) * query.PageSize;
+            var usersResult = await users.Skip(skipNumber).Take(query.PageSize).ToListAsync();
 
             var usersDto = new List<UserOutputDto>();
-            foreach (var u in users)
+            foreach (var u in usersResult)
             {
                 var dto = automapper.Map<UserOutputDto, User>(u);
                 dto.Login = u.UserName!;
@@ -275,7 +300,12 @@ namespace TechProcessSupportSys.Controllers
 
             if (recoveredUser == null) return NotFound();
 
+            var user = await userManager.FindByNameAsync(login);
+
             var userDto = automapper.Map<UserDto, User>(recoveredUser);
+            userDto.Login = user.UserName!;
+            userDto.Role = (await userManager.IsInRoleAsync(user, "Admin")) ? "Admin" : "User";
+
             return Ok(userDto);
         }
     }

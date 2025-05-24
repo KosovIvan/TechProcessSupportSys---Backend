@@ -28,6 +28,11 @@ namespace TechProcessSupportSys.Repository
             return operation;
         }
 
+        public async Task<string?> GetUserId(int id)
+        {
+            return (await context.Processes.FirstOrDefaultAsync(o => o.Id == id)).UserId;
+        }
+
         public string? CreateStepOrder(int id)
         {
             int num = 0;

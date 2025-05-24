@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -6,9 +7,11 @@ using Microsoft.OpenApi.Models;
 using TechProcessSupportSys.Data;
 using TechProcessSupportSys.Dtos.Tool;
 using TechProcessSupportSys.Interfaces;
+using TechProcessSupportSys.Middleware;
 using TechProcessSupportSys.Models;
 using TechProcessSupportSys.Repository;
 using TechProcessSupportSys.Service;
+using TechProcessSupportSys.Util;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -107,6 +110,7 @@ app.UseCors(x => x
      .WithOrigins("https://localhost:7091"));
 
 app.UseAuthentication();
+app.UseMiddleware<BlockRevokedUserMiddleware>();
 app.UseAuthorization();
 
 app.MapControllers();

@@ -10,6 +10,10 @@ namespace TechProcessSupportSys.Models
         public string Description { get; set; } = "";
         public int Duration { get; set; }
         public string StepOrder { get; set; } = "";
+        public string Author { get; set; } = "";
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
+        public string UpdatedBy { get; set; } = "";
         public bool IsPrivate { get; set; } = false;
         public int ProcessId { get; set; }
         public TechProcess Process { get; set; } = null!;

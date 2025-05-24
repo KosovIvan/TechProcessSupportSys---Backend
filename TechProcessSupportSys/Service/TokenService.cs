@@ -24,12 +24,15 @@ namespace TechProcessSupportSys.Service
         public async Task<string> CreateToken(User user)
         {
             string role = await userManager.IsInRoleAsync(user, "Admin") ? "Admin" : "User";
+            var iat = DateTime.UtcNow;
 
             var claims = new List<Claim>() {
                 new Claim(JwtRegisteredClaimNames.GivenName, user.UserName),
                 new Claim(JwtRegisteredClaimNames.Name, user.Name),
                 new Claim(JwtRegisteredClaimNames.Email, user.Email),
-                new Claim(ClaimTypes.Role, role)
+                new Claim(ClaimTypes.Role, role),
+                new Claim(JwtRegisteredClaimNames.Iat, new DateTimeOffset(iat).ToUnixTimeSeconds().ToString(), ClaimValueTypes.Integer64),
+
             };
 
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);

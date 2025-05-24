@@ -1,9 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-
-namespace TechProcessSupportSys.Models
+﻿namespace TechProcessSupportSys.Dtos.Tool
 {
-    [Table("Tools")]
-    public class Tool
+    public class ToolExtendedDto
     {
         public int Id { get; set; }
         public string Name { get; set; } = "";
@@ -12,12 +9,9 @@ namespace TechProcessSupportSys.Models
         public string Material { get; set; } = "";
         public string GOST { get; set; } = "";
         public string Author { get; set; } = "";
-        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
-        public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
         public string UpdatedBy { get; set; } = "";
         public bool IsPrivate { get; set; } = false;
-        public string UserId { get; set; } = "";
-        public User User { get; set; } = null!;
-        public List<Transition> Transition { get; set; } = new List<Transition>();
     }
 }

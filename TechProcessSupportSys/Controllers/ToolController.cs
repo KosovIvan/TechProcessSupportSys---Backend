@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using TechProcessSupportSys.Attributes;
 using TechProcessSupportSys.Dtos.Tool;
 using TechProcessSupportSys.Extentions;
 using TechProcessSupportSys.Interfaces;
@@ -62,7 +63,7 @@ namespace TechProcessSupportSys.Controllers
 
             if (tool == null) return NotFound();
 
-            return Ok(automapper.Map<ToolDto, Tool>(tool));
+            return Ok(automapper.Map<ToolExtendedDto, Tool>(tool));
         }
 
         [HttpPost]
@@ -79,6 +80,9 @@ namespace TechProcessSupportSys.Controllers
 
             var tool = automapper.Map<Tool, CreateToolDto>(createToolDto);
             tool.UserId = user!.Id;
+            tool.Author = username;
+            tool.UpdatedAt = DateTime.UtcNow;
+            tool.UpdatedBy = username;
 
             await toolRepo.CreateAsync(tool);
 
@@ -99,6 +103,8 @@ namespace TechProcessSupportSys.Controllers
             var userId = await userManager.IsInRoleAsync(user, "Admin") ? null : user!.Id;
 
             var tool = automapper.Map<Tool, UpdateToolDto>(updateToolDto);
+            tool.UpdatedAt = DateTime.UtcNow;
+            tool.UpdatedBy = username;
 
             var updated = await toolRepo.UpdateAsync(userId, id, tool);
 

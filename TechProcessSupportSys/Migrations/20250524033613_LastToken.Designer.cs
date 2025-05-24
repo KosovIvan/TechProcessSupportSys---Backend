@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TechProcessSupportSys.Data;
 
@@ -11,9 +12,11 @@ using TechProcessSupportSys.Data;
 namespace TechProcessSupportSys.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250524033613_LastToken")]
+    partial class LastToken
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -51,13 +54,13 @@ namespace TechProcessSupportSys.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "e9716c61-37d5-4769-a36f-443d5a05e970",
+                            Id = "70d021b3-dee0-4cbb-a4f1-660736fe346c",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "cbc6087c-ff94-477b-8bed-110be0d648c8",
+                            Id = "098d477b-05e3-4c3a-b446-6fc44a4130a1",
                             Name = "User",
                             NormalizedName = "USER"
                         });
@@ -435,6 +438,9 @@ namespace TechProcessSupportSys.Migrations
 
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
+
+                    b.Property<DateTime>("LastTokenValidAfter")
+                        .HasColumnType("datetime2");
 
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");

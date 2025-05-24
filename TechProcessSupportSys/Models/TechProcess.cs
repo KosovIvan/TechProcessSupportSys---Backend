@@ -11,7 +11,10 @@ namespace TechProcessSupportSys.Models
         public string ProductName { get; set; } = "";
         public string Description { get; set; } = "";
         public bool IsPrivate { get; set; } = false;
-        public DateTime CreatedAt { get; set; } = DateTime.Now;
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public string Author { get; set; } = "";
+        public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
+        public string UpdatedBy { get; set; } = "";
         public string UserId { get; set; } = "";
         public User User { get; set; } = null!;
         public List<Operation> Operations { get; set; } = new List<Operation>();
