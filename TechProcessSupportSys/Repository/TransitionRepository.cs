@@ -104,6 +104,12 @@ namespace TechProcessSupportSys.Repository
             return transition;
         }
 
+        public async Task<string> GetUserId(int id)
+        {
+            var operations = context.Operations.AsQueryable().Include(o => o.Process);
+            return (await operations.FirstOrDefaultAsync(o => o.Id == id)).Process.UserId;
+        }
+
         public async Task<bool> IsStepOrderDublicate(int id, int? stepOrder)
         {
             return await context.Transitions.Where(t => t.OperationId == id).AnyAsync(t => t.StepOrder == stepOrder);
@@ -127,6 +133,8 @@ namespace TechProcessSupportSys.Repository
             existingTransition.Name = transition.Name;
             existingTransition.Duration = transition.Duration;
             existingTransition.Description = transition.Description;
+            existingTransition.UpdatedAt = transition.UpdatedAt;
+            existingTransition.UpdatedBy = transition.UpdatedBy;
             existingTransition.IsPrivate = transition.IsPrivate;
             existingTransition.ToolId = transition.ToolId;
             existingTransition.EquipmentId = transition.EquipmentId;

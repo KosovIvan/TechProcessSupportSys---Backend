@@ -116,6 +116,8 @@ namespace TechProcessSupportSys.Repository
             existingProcess.Name = process.Name;
             existingProcess.ProductName = process.ProductName;
             existingProcess.Description = process.Description;
+            existingProcess.UpdatedAt = process.UpdatedAt;
+            existingProcess.UpdatedBy = process.UpdatedBy;
             existingProcess.IsPrivate = process.IsPrivate;
             await context.SaveChangesAsync();
 
@@ -129,6 +131,10 @@ namespace TechProcessSupportSys.Repository
 
         public async Task<TechProcess?> CreateCopy(bool isAdmin, string userId, int id)
         {
+            var user = await context.Users.FirstOrDefaultAsync(u => u.Id == userId);
+            if (user == null) return null;
+            var username = user.UserName;
+
             var processes = context.Processes.AsQueryable();
             processes = processes.Include(p => p.Operations).
                     ThenInclude(o => o.Transitions).
@@ -150,6 +156,8 @@ namespace TechProcessSupportSys.Repository
             copy.Name = process.Name;
             copy.ProductName = process.ProductName;
             copy.Description = process.Description;
+            copy.Author = username;
+            copy.UpdatedBy = username;
             copy.IsPrivate = process.IsPrivate;
 
             foreach (var operation in process.Operations)
@@ -162,6 +170,8 @@ namespace TechProcessSupportSys.Repository
                     copyOp.StepOrder = operation.StepOrder;
                     copyOp.Duration = operation.Duration;
                     copyOp.Description = operation.Description;
+                    copy.Author = username;
+                    copy.UpdatedBy = username;
                     copyOp.IsPrivate = operation.IsPrivate;
 
                     copy.Operations.Add(copyOp);
@@ -176,6 +186,8 @@ namespace TechProcessSupportSys.Repository
                             copyTr.StepOrder = transition.StepOrder;
                             copyTr.Duration = transition.Duration;
                             copyTr.Description = transition.Description;
+                            copy.Author = username;
+                            copy.UpdatedBy = username;
                             copyTr.IsPrivate = transition.IsPrivate;
                             copyTr.ToolId = transition.ToolId;
                             copyTr.EquipmentId = transition.EquipmentId;

@@ -64,7 +64,7 @@ namespace TechProcessSupportSys.Controllers
 
             if (equip == null) return NotFound();
 
-            return Ok(automapper.Map<EquipmentDto, Equipment>(equip));
+            return Ok(automapper.Map<EquipmentExtendedDto, Equipment>(equip));
         }
 
         [HttpPost]
@@ -81,6 +81,9 @@ namespace TechProcessSupportSys.Controllers
 
             var equip = automapper.Map<Equipment, CreateEquipmentDto>(createEquipmentDto);
             equip.UserId = user!.Id;
+            equip.Author = username;
+            equip.UpdatedAt = DateTime.UtcNow;
+            equip.UpdatedBy = username;
 
             await equipRepo.CreateAsync(equip);
 
@@ -101,6 +104,8 @@ namespace TechProcessSupportSys.Controllers
             var userId = await userManager.IsInRoleAsync(user, "Admin") ? null : user!.Id;
 
             var equip = automapper.Map<Equipment, UpdateEquipmentDto>(updateEquipmentDto);
+            equip.UpdatedAt = DateTime.UtcNow;
+            equip.UpdatedBy = username;
 
             var updated = await equipRepo.UpdateAsync(userId, id, equip);
 

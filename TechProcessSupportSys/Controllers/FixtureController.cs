@@ -64,7 +64,7 @@ namespace TechProcessSupportSys.Controllers
 
             if (fixture == null) return NotFound();
 
-            return Ok(automapper.Map<FixtureDto, Fixture>(fixture));
+            return Ok(automapper.Map<FixtureExtendedDto, Fixture>(fixture));
         }
 
         [HttpPost]
@@ -81,6 +81,9 @@ namespace TechProcessSupportSys.Controllers
 
             var fixture = automapper.Map<Fixture, CreateFixtureDto>(createFixtureDto);
             fixture.UserId = user!.Id;
+            fixture.Author = username;
+            fixture.UpdatedAt = DateTime.UtcNow;
+            fixture.UpdatedBy = username;
 
             await fixtureRepo.CreateAsync(fixture);
 
@@ -101,6 +104,8 @@ namespace TechProcessSupportSys.Controllers
             var userId = await userManager.IsInRoleAsync(user, "Admin") ? null : user!.Id;
 
             var fixture = automapper.Map<Fixture, UpdateFixtureDto>(updateFixtureDto);
+            fixture.UpdatedAt = DateTime.UtcNow;
+            fixture.UpdatedBy = username;
 
             var updated = await fixtureRepo.UpdateAsync(userId, id, fixture);
 

@@ -95,7 +95,7 @@ namespace TechProcessSupportSys.Controllers
 
             if (process == null) return NotFound();
 
-            return Ok(automapper.Map<TechProcessDto, TechProcess>(process));
+            return Ok(automapper.Map<TechProcessExtendedDto, TechProcess>(process));
         }
 
         [HttpPost("copy/{id:int}")]
@@ -137,6 +137,9 @@ namespace TechProcessSupportSys.Controllers
 
                 var process = automapper.Map<TechProcess, CreateTechProcessDto>(createTechProcessDto);
                 process.UserId = user!.Id;
+                process.Author = username;
+                process.UpdatedAt = DateTime.UtcNow;
+                process.UpdatedBy = username;
 
                 await techRepo.CreateAsync(process);
 
@@ -170,6 +173,8 @@ namespace TechProcessSupportSys.Controllers
                 var userId = await userManager.IsInRoleAsync(user, "Admin") ? null : user!.Id;
 
                 var process = automapper.Map<TechProcess, UpdateTechProcessDto>(updateTechProcessDto);
+                process.UpdatedAt = DateTime.UtcNow;
+                process.UpdatedBy = username;
 
                 var updated = await techRepo.UpdateAsync(userId, id, process);
 

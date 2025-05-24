@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using System;
+using System.Diagnostics;
 using System.Text;
 using System.Text.RegularExpressions;
 using TechProcessSupportSys.Attributes;
@@ -70,7 +72,7 @@ namespace TechProcessSupportSys.Controllers
 
             if (operation == null) return NotFound();
 
-            return Ok(automapper.Map<OperationDto, Operation>(operation));
+            return Ok(automapper.Map<OperationExtendedDto, Operation>(operation));
         }
 
         [HttpPost("{id:int}")]
@@ -102,6 +104,9 @@ namespace TechProcessSupportSys.Controllers
 
                 var operation = automapper.Map<Operation, CreateOperationDto>(createOperationDto);
                 operation.ProcessId = id;
+                operation.Author = username;
+                operation.UpdatedAt = DateTime.UtcNow;
+                operation.UpdatedBy = username;
 
                 await operationRepo.CreateAsync(operation);
 
@@ -142,6 +147,8 @@ namespace TechProcessSupportSys.Controllers
                 var userId = await userManager.IsInRoleAsync(user, "Admin") ? null : user!.Id;
 
                 var operation = automapper.Map<Operation, UpdateOperationDto>(updateOperationDto);
+                operation.UpdatedAt = DateTime.UtcNow;
+                operation.UpdatedBy = username;
 
                 var updated = await operationRepo.UpdateAsync(userId, id, operation);
 

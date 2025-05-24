@@ -105,18 +105,11 @@ namespace TechProcessSupportSys.Repository
 
             var operations = context.Operations.Include(o => o.Process).AsQueryable().Where(o => o.ProcessId == processId);
 
-            if (!((processUserId != userId) && (processIsPrivate || query.IsPrivate))||(isAdmin))
+            if (!((processUserId != userId) && (processIsPrivate))||(isAdmin))
             {
-                if (!query.IsGlobal)
+                if (!isAdmin)
                 {
-                    operations = operations.Where(o => (processUserId == userId) && (!string.IsNullOrWhiteSpace(userId)));
-                }
-                else
-                {
-                    if (!isAdmin)
-                    {
-                        operations = operations.Where(o => !((o.IsPrivate == true) && ((processUserId != userId) || (string.IsNullOrWhiteSpace(userId)))));
-                    }
+                    operations = operations.Where(o => !((o.IsPrivate == true) && ((processUserId != userId) || (string.IsNullOrWhiteSpace(userId)))));
                 }
 
                 return await operations.OrderBy(o => o.StepOrder).ToListAsync();
@@ -159,6 +152,8 @@ namespace TechProcessSupportSys.Repository
             existingOperation.Name = operation.Name;
             existingOperation.Duration = operation.Duration;
             existingOperation.Description = operation.Description;
+            existingOperation.UpdatedAt = operation.UpdatedAt;
+            existingOperation.UpdatedBy = operation.UpdatedBy;
             existingOperation.IsPrivate = operation.IsPrivate;
             await context.SaveChangesAsync();
 

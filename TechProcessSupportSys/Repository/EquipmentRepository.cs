@@ -100,6 +100,8 @@ namespace TechProcessSupportSys.Repository
             existingEquip.Description = equip.Description;
             existingEquip.Model = equip.Model;
             existingEquip.GOST = equip.GOST;
+            existingEquip.UpdatedAt = equip.UpdatedAt;
+            existingEquip.UpdatedBy = equip.UpdatedBy;
             existingEquip.IsPrivate = equip.IsPrivate;
             await context.SaveChangesAsync();
 

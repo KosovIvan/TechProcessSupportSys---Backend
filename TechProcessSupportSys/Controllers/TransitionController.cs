@@ -66,7 +66,7 @@ namespace TechProcessSupportSys.Controllers
 
             if (transition == null) return NotFound();
 
-            return Ok(automapper.Map<TransitionOsnDto, Transition>(transition));
+            return Ok(automapper.Map<TransitionExtendedDto, Transition>(transition));
         }
 
         [HttpPost("{id:int}")]
@@ -81,6 +81,13 @@ namespace TechProcessSupportSys.Controllers
                 }
                 if (await transitionRepo.IsStepOrderDublicate(id, createTransitionDto.StepOrder)) return BadRequest("Такой номер перехода уже есть");
 
+                var username = User.GetUsername();
+                var user = await userManager.FindByNameAsync(username);
+
+                var userId = await transitionRepo.GetUserId(id);
+                if (userId == null) return NotFound();
+                if (userId != user.Id) return Forbid();
+
                 if (createTransitionDto.StepOrder == null)
                 {
                     var result = transitionRepo.CreateStepOrder(id);
@@ -90,6 +97,9 @@ namespace TechProcessSupportSys.Controllers
 
                 var transition = automapper.Map<Transition, CreateTransitionDto>(createTransitionDto);
                 transition.OperationId = id;
+                transition.Author = username;
+                transition.UpdatedAt = DateTime.UtcNow;
+                transition.UpdatedBy = username;
 
                 await transitionRepo.CreateAsync(transition);
 
@@ -119,6 +129,8 @@ namespace TechProcessSupportSys.Controllers
                 var userId = await userManager.IsInRoleAsync(user, "Admin") ? null : user!.Id;
 
                 var transition = automapper.Map<Transition, UpdateTransitionDto>(updateTransitionDto);
+                transition.UpdatedAt = DateTime.UtcNow;
+                transition.UpdatedBy = username;
 
                 var updated = await transitionRepo.UpdateAsync(userId, id, transition);
 

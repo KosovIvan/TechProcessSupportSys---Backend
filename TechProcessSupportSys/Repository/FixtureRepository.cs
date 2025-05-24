@@ -98,6 +98,8 @@ namespace TechProcessSupportSys.Repository
             existingFixture.Description = fixture.Description;
             existingFixture.Type = fixture.Type;
             existingFixture.GOST = fixture.GOST;
+            existingFixture.UpdatedAt = fixture.UpdatedAt;
+            existingFixture.UpdatedBy = fixture.UpdatedBy;
             existingFixture.IsPrivate = fixture.IsPrivate;
             await context.SaveChangesAsync();
 
