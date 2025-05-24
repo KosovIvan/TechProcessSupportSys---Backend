@@ -34,7 +34,7 @@ namespace TechProcessSupportSys.Controllers
         }
 
         [HttpGet("{processId:int}")]
-        public async Task<IActionResult> GetOperations([FromRoute] int processId, [FromQuery] OperationQueryObject query)
+        public async Task<IActionResult> GetOperations([FromRoute] int processId)
         {
             string userId = "";
             bool isAdmin = false;
@@ -46,7 +46,7 @@ namespace TechProcessSupportSys.Controllers
                 isAdmin = await userManager.IsInRoleAsync(user, "Admin");
             }
 
-            var operations = await operationRepo.GetAllAsync(processId, isAdmin, userId, query);
+            var operations = await operationRepo.GetAllAsync(processId, isAdmin, userId);
 
             if (operations == null) return NotFound();
 

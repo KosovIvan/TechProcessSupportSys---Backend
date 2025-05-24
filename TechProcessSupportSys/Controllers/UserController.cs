@@ -244,7 +244,7 @@ namespace TechProcessSupportSys.Controllers
             }
         }
 
-        [HttpPut("update-password/{login}")]
+        [HttpPatch("update-password/{login}")]
         [Authorize]
         public async Task<IActionResult> UpdatePassword([FromRoute] string login, [FromBody] UpdatePasswordUserDto updatePasswordUserDto)
         {
@@ -277,7 +277,7 @@ namespace TechProcessSupportSys.Controllers
             }
         }
 
-        [HttpDelete("{login}")]
+        [HttpPatch("{login}")]
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteUserByLogin([FromRoute] string login)
         {
@@ -292,7 +292,7 @@ namespace TechProcessSupportSys.Controllers
             return Ok();
         }
 
-        [HttpPut("recover-user/{login}")]
+        [HttpPatch("recover-user/{login}")]
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> UpdateRecover([FromRoute] string login)
         {

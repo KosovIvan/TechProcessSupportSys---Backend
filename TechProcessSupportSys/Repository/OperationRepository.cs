@@ -95,7 +95,7 @@ namespace TechProcessSupportSys.Repository
             return operation;
         }
 
-        public async Task<List<Operation>?> GetAllAsync(int processId, bool isAdmin, string? userId, OperationQueryObject query)
+        public async Task<List<Operation>?> GetAllAsync(int processId, bool isAdmin, string? userId)
         {
             var process = await context.Processes.FirstOrDefaultAsync(p => p.Id == processId);
             if (process == null) return null;
@@ -103,9 +103,11 @@ namespace TechProcessSupportSys.Repository
             var processUserId = process.UserId;
             var processIsPrivate = process.IsPrivate;
 
-            var operations = context.Operations.Include(o => o.Process).AsQueryable().Where(o => o.ProcessId == processId);
+            var operations = context.Operations.Include(o => o.Process).ThenInclude(p => p.User).AsQueryable().Where(o => o.ProcessId == processId);
 
-            if (!((processUserId != userId) && (processIsPrivate))||(isAdmin))
+            if (!isAdmin) operations = operations.Where(o => o.Process.User.RevokedOn == null);
+
+            if (!((processUserId != userId) && (processIsPrivate)) || (isAdmin))
             {
                 if (!isAdmin)
                 {
@@ -120,8 +122,8 @@ namespace TechProcessSupportSys.Repository
 
         public async Task<Operation?> GetByIdAsync(bool isAdmin, string? userId, int id)
         {
-            var operations = context.Operations.Include(o => o.Process).AsQueryable();
-            if (!isAdmin) operations = operations.Where(o => !((o.IsPrivate == true) && ((o.Process.UserId != userId) || (string.IsNullOrWhiteSpace(userId)))));
+            var operations = context.Operations.Include(o => o.Process).ThenInclude(p => p.User).AsQueryable();
+            if (!isAdmin) operations = operations.Where(o => !((o.IsPrivate == true) && ((o.Process.UserId != userId) || (string.IsNullOrWhiteSpace(userId))) || (o.Process.User.RevokedOn != null)));
             var operation = await operations.FirstOrDefaultAsync(o => o.Id == id);
 
             if (operation == null) return null;

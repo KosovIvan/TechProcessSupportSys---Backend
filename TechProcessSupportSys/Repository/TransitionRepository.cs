@@ -62,7 +62,7 @@ namespace TechProcessSupportSys.Repository
             return transition;
         }
 
-        public async Task<List<Transition>?> GetAllAsync(int operationId, bool isAdmin, string? userId, TransitionQueryObject query)
+        public async Task<List<Transition>?> GetAllAsync(int operationId, bool isAdmin, string? userId)
         {
             var operation = await context.Operations.Include(o => o.Process).FirstOrDefaultAsync(o => o.Id == operationId);
             if (operation == null) return null;
@@ -71,20 +71,15 @@ namespace TechProcessSupportSys.Repository
             var processUserId = process.UserId;
             var operationIsPrivate = operation.IsPrivate;
 
-            var transitions = context.Transitions.Include(t => t.Operation).AsQueryable().Where(t => t.OperationId == operationId);
+            var transitions = context.Transitions.Include(t => t.Operation).ThenInclude(o => o.Process).ThenInclude(p => p.User).AsQueryable().Where(t => t.OperationId == operationId);
 
-            if (!((processUserId != userId) && (operationIsPrivate || query.IsPrivate)) || (isAdmin))
+            if (!isAdmin) transitions = transitions.Where(t => t.Operation.Process.User.RevokedOn == null);
+
+            if (!((processUserId != userId) && (operationIsPrivate)) || (isAdmin))
             {
-                if (!query.IsGlobal)
+                if (!isAdmin)
                 {
-                    transitions = transitions.Where(t => (processUserId == userId) && (!string.IsNullOrWhiteSpace(userId)));
-                }
-                else
-                {
-                    if (!isAdmin)
-                    {
-                        transitions = transitions.Where(t => !((t.IsPrivate == true) && ((processUserId != userId) || (string.IsNullOrWhiteSpace(userId)))));
-                    }
+                    transitions = transitions.Where(t => !((t.IsPrivate == true) && ((processUserId != userId) || (string.IsNullOrWhiteSpace(userId)))));
                 }
 
                 return await transitions.OrderBy(t => t.StepOrder).ToListAsync();
@@ -95,8 +90,8 @@ namespace TechProcessSupportSys.Repository
 
         public async Task<Transition?> GetByIdAsync(bool isAdmin, string? userId, int id)
         {
-            var transitions = context.Transitions.AsQueryable();
-            if (!isAdmin) transitions = transitions.Where(t => !((t.IsPrivate == true) && ((t.Operation.Process.UserId != userId) || (string.IsNullOrWhiteSpace(userId)))));
+            var transitions = context.Transitions.Include(t => t.Operation).ThenInclude(o => o.Process).ThenInclude(p => p.User).AsQueryable();
+            if (!isAdmin) transitions = transitions.Where(t => !((t.IsPrivate == true) && ((t.Operation.Process.UserId != userId) || (string.IsNullOrWhiteSpace(userId))) || (t.Operation.Process.User.RevokedOn != null)));
             var transition = await transitions.FirstOrDefaultAsync(t => t.Id == id);
 
             if (transition == null) return null;

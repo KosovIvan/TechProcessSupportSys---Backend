@@ -38,7 +38,9 @@ namespace TechProcessSupportSys.Repository
 
         public async Task<List<Equipment>> GetAllAsync(bool isAdmin, string? userId, EquipmentQueryObject query)
         {
-            var equip = context.Equipment.AsQueryable();
+            var equip = context.Equipment.Include(e => e.User).AsQueryable();
+
+            if (!isAdmin) equip = equip.Where(e => e.User.RevokedOn == null);
 
             if (query.IsPrivate) equip = equip.Where(e => e.IsPrivate == true);
 
@@ -80,8 +82,8 @@ namespace TechProcessSupportSys.Repository
 
         public async Task<Equipment?> GetByIdAsync(bool isAdmin, string? userId, int id)
         {
-            var equipQu = context.Equipment.AsQueryable();
-            if (!isAdmin) equipQu = equipQu.Where(e => !((e.IsPrivate == true) && ((e.UserId != userId) || (string.IsNullOrWhiteSpace(userId)))));
+            var equipQu = context.Equipment.Include(e => e.User).AsQueryable();
+            if (!isAdmin) equipQu = equipQu.Where(e => !((e.IsPrivate == true) && ((e.UserId != userId) || (string.IsNullOrWhiteSpace(userId))) || (e.User.RevokedOn != null)));
             var equip = await equipQu.FirstOrDefaultAsync(e => e.Id == id);
 
             if (equip == null) return null;

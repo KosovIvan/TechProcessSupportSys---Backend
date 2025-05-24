@@ -423,20 +423,6 @@
               "type": "integer",
               "format": "int32"
             }
-          },
-          {
-            "name": "IsGlobal",
-            "in": "query",
-            "schema": {
-              "type": "boolean"
-            }
-          },
-          {
-            "name": "IsPrivate",
-            "in": "query",
-            "schema": {
-              "type": "boolean"
-            }
           }
         ],
         "responses": {
@@ -1030,20 +1016,6 @@
               "type": "integer",
               "format": "int32"
             }
-          },
-          {
-            "name": "IsGlobal",
-            "in": "query",
-            "schema": {
-              "type": "boolean"
-            }
-          },
-          {
-            "name": "IsPrivate",
-            "in": "query",
-            "schema": {
-              "type": "boolean"
-            }
           }
         ],
         "responses": {
@@ -1383,7 +1355,7 @@
           }
         }
       },
-      "delete": {
+      "patch": {
         "tags": [
           "User"
         ],
@@ -1451,7 +1423,7 @@
       }
     },
     "/api/User/update-password/{login}": {
-      "put": {
+      "patch": {
         "tags": [
           "User"
         ],
@@ -1497,7 +1469,7 @@
       }
     },
     "/api/User/recover-user/{login}": {
-      "put": {
+      "patch": {
         "tags": [
           "User"
         ],

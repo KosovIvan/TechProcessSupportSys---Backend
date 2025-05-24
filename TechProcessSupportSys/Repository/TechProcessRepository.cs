@@ -41,8 +41,13 @@ namespace TechProcessSupportSys.Repository
 
         public async Task<List<TechProcess>> GetProcessesAsync(bool isAdmin, string? userId, TechProcessQueryObject query)
         {
-            var processes = context.Processes.AsQueryable();
-            if (query.IsExpanded) processes = processes.Include(p => p.Operations).
+            var processes = context.Processes.Include(p => p.User).AsQueryable();
+
+            if (!isAdmin) processes = processes.Where(p => p.User.RevokedOn == null);
+
+            if (query.IsExpanded)
+            {
+                processes = processes.Include(p => p.Operations).
                     ThenInclude(o => o.Transitions).
                         ThenInclude(t => t.Tool).
                     Include(p => p.Operations)
@@ -51,6 +56,7 @@ namespace TechProcessSupportSys.Repository
                     .Include(p => p.Operations)
                         .ThenInclude(o => o.Transitions)
                             .ThenInclude(t => t.Fixture);
+            }
 
             if (query.IsPrivate) processes = processes.Where(p => p.IsPrivate == true);
 
@@ -92,8 +98,8 @@ namespace TechProcessSupportSys.Repository
 
         public async Task<TechProcess?> GetByIdAsync(bool isAdmin, string? userId, int id)
         {
-            var processes = context.Processes.AsQueryable();
-            if (!isAdmin) processes = processes.Where(p => !((p.IsPrivate == true) && ((p.UserId != userId) || (string.IsNullOrWhiteSpace(userId)))));
+            var processes = context.Processes.Include(p => p.User).AsQueryable();
+            if (!isAdmin) processes = processes.Where(p => !((p.IsPrivate == true) && ((p.UserId != userId) || (string.IsNullOrWhiteSpace(userId))) || (p.User.RevokedOn != null)));
             var process = await processes.FirstOrDefaultAsync(p => p.Id == id);
 
             if (process == null) return null;

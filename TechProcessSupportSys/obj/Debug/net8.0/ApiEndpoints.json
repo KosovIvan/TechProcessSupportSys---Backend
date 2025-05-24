@@ -319,16 +319,6 @@
         "Name": "processId",
         "Type": "System.Int32",
         "IsRequired": true
-      },
-      {
-        "Name": "IsGlobal",
-        "Type": "System.Boolean",
-        "IsRequired": false
-      },
-      {
-        "Name": "IsPrivate",
-        "Type": "System.Boolean",
-        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -560,16 +550,6 @@
         "Name": "operationId",
         "Type": "System.Int32",
         "IsRequired": true
-      },
-      {
-        "Name": "IsGlobal",
-        "Type": "System.Boolean",
-        "IsRequired": false
-      },
-      {
-        "Name": "IsPrivate",
-        "Type": "System.Boolean",
-        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -656,7 +636,7 @@
     "ContainingType": "TechProcessSupportSys.Controllers.UserController",
     "Method": "DeleteUserByLogin",
     "RelativePath": "api/User/{login}",
-    "HttpMethod": "DELETE",
+    "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -704,7 +684,7 @@
     "ContainingType": "TechProcessSupportSys.Controllers.UserController",
     "Method": "UpdateRecover",
     "RelativePath": "api/User/recover-user/{login}",
-    "HttpMethod": "PUT",
+    "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -757,7 +737,7 @@
     "ContainingType": "TechProcessSupportSys.Controllers.UserController",
     "Method": "UpdatePassword",
     "RelativePath": "api/User/update-password/{login}",
-    "HttpMethod": "PUT",
+    "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
     "Parameters": [

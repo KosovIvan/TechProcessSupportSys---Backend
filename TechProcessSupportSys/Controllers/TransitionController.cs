@@ -28,7 +28,7 @@ namespace TechProcessSupportSys.Controllers
         }
 
         [HttpGet("{operationId:int}")]
-        public async Task<IActionResult> GetTransitions([FromRoute] int operationId, [FromQuery] TransitionQueryObject query)
+        public async Task<IActionResult> GetTransitions([FromRoute] int operationId)
         {
             string userId = "";
             bool isAdmin = false;
@@ -40,7 +40,7 @@ namespace TechProcessSupportSys.Controllers
                 isAdmin = await userManager.IsInRoleAsync(user, "Admin");
             }
 
-            var transitions = await transitionRepo.GetAllAsync(operationId, isAdmin, userId, query);
+            var transitions = await transitionRepo.GetAllAsync(operationId, isAdmin, userId);
 
             if (transitions == null) return NotFound();
 
