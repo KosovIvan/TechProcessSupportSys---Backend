@@ -206,7 +206,7 @@ namespace TechProcessSupportSys.Controllers
             return Ok(userDto);
         }
 
-        [HttpPut("update-data/{login}")]
+        [HttpPatch("update-data/{login}")]
         [Authorize]
         public async Task<IActionResult> UpdateData([FromRoute] string login, [FromBody] UpdateDataUserDto updateUserDto)
         {
@@ -277,7 +277,7 @@ namespace TechProcessSupportSys.Controllers
             }
         }
 
-        [HttpPatch("{login}")]
+        [HttpDelete("{login}")]
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteUserByLogin([FromRoute] string login)
         {

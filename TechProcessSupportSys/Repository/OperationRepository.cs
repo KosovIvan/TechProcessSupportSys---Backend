@@ -140,6 +140,7 @@ namespace TechProcessSupportSys.Repository
         {
             var operation = await context.Operations.FirstOrDefaultAsync(o => o.Id == id);
             if (operation == null) return false;
+            if (operation.StepOrder == stepOrder) return false;
             return await context.Operations.Where(o => o.ProcessId == operation.ProcessId).AnyAsync(o => o.StepOrder == stepOrder);
         }
 

@@ -12,10 +12,11 @@ namespace TechProcessSupportSys.Interfaces
 
         Task<List<TechProcess>> GetProcessesAsync(bool isAdmin, string? userId, TechProcessQueryObject query);
 
-        Task<TechProcess?> GetByIdAsync(bool isAdmin, string? userId, int id);
+        Task<TechProcess?> GetByIdAsync(bool isAdmin, bool isExpanded, string? userId, int id);
 
         Task<TechProcess?> UpdateAsync(string? userId, int id, TechProcess process);
         Task<bool> IsCodeDublicate(string code);
         Task<TechProcess?> CreateCopy(bool isAdmin, string userId, int id);
+        Task<bool> IsCodeDublicateWithId(int id, string code);
     }
 }

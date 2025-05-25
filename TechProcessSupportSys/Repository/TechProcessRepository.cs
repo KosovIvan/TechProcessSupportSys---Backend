@@ -45,19 +45,6 @@ namespace TechProcessSupportSys.Repository
 
             if (!isAdmin) processes = processes.Where(p => p.User.RevokedOn == null);
 
-            if (query.IsExpanded)
-            {
-                processes = processes.Include(p => p.Operations).
-                    ThenInclude(o => o.Transitions).
-                        ThenInclude(t => t.Tool).
-                    Include(p => p.Operations)
-                        .ThenInclude(o => o.Transitions)
-                            .ThenInclude(t => t.Equipment)
-                    .Include(p => p.Operations)
-                        .ThenInclude(o => o.Transitions)
-                            .ThenInclude(t => t.Fixture);
-            }
-
             if (query.IsPrivate) processes = processes.Where(p => p.IsPrivate == true);
 
             if (!query.IsGlobal)
@@ -91,14 +78,63 @@ namespace TechProcessSupportSys.Repository
                 }
             }
 
+            if (query.IsExpanded)
+            {
+                processes = processes.Include(p => p.Operations).
+                    ThenInclude(o => o.Transitions).
+                        ThenInclude(t => t.Tool).
+                            ThenInclude(t => t.User).
+                    Include(p => p.Operations).
+                        ThenInclude(o => o.Transitions).
+                            ThenInclude(t => t.Equipment).
+                                ThenInclude(e => e.User).
+                    Include(p => p.Operations).
+                        ThenInclude(o => o.Transitions).
+                            ThenInclude(t => t.Fixture).
+                                ThenInclude(f => f.User);
+
+                foreach (var process in processes)
+                {
+                    foreach (var operation in process.Operations)
+                    {
+                        foreach (var transition in operation.Transitions)
+                        {
+                            if (transition.Tool?.User?.RevokedOn != null)
+                                transition.Tool = null;
+
+                            if (transition.Equipment?.User?.RevokedOn != null)
+                                transition.Equipment = null;
+
+                            if (transition.Fixture?.User?.RevokedOn != null)
+                                transition.Fixture = null;
+                        }
+                    }
+                }
+            }
+
             var skipNumber = (query.PageNumber - 1) * query.PageSize;
 
             return await processes.Skip(skipNumber).Take(query.PageSize).ToListAsync();
         }
 
-        public async Task<TechProcess?> GetByIdAsync(bool isAdmin, string? userId, int id)
+        public async Task<TechProcess?> GetByIdAsync(bool isAdmin, bool isExpanded, string? userId, int id)
         {
             var processes = context.Processes.Include(p => p.User).AsQueryable();
+
+            if (isExpanded) processes = context.Processes.
+                    Include(p => p.Operations).
+                        ThenInclude(o => o.Transitions).
+                            ThenInclude(t => t.Tool).
+                                ThenInclude(t => t.User).
+                    Include(p => p.Operations).
+                        ThenInclude(o => o.Transitions).
+                            ThenInclude(t => t.Equipment).
+                                ThenInclude(e => e.User).
+                    Include(p => p.Operations).
+                        ThenInclude(o => o.Transitions).
+                            ThenInclude(t => t.Fixture).
+                                ThenInclude(f => f.User);
+
             if (!isAdmin) processes = processes.Where(p => !((p.IsPrivate == true) && ((p.UserId != userId) || (string.IsNullOrWhiteSpace(userId))) || (p.User.RevokedOn != null)));
             var process = await processes.FirstOrDefaultAsync(p => p.Id == id);
 
@@ -132,6 +168,14 @@ namespace TechProcessSupportSys.Repository
 
         public async Task<bool> IsCodeDublicate(string code)
         {
+            return await context.Processes.AnyAsync(o => o.Code == code);
+        }
+
+        public async Task<bool> IsCodeDublicateWithId(int id, string code)
+        {
+            var process = await context.Processes.FirstOrDefaultAsync(p => p.Id == id);
+            if (process == null) return false;
+            if (process.Code == code) return false;
             return await context.Processes.AnyAsync(o => o.Code == code);
         }
 

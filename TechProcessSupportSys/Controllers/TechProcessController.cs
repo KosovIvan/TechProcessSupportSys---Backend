@@ -91,11 +91,47 @@ namespace TechProcessSupportSys.Controllers
                 isAdmin = await userManager.IsInRoleAsync(user, "Admin");
             }
 
-            var process = await techRepo.GetByIdAsync(isAdmin, userId, id);
+            var process = await techRepo.GetByIdAsync(isAdmin, false, userId, id);
 
             if (process == null) return NotFound();
 
             return Ok(automapper.Map<TechProcessExtendedDto, TechProcess>(process));
+        }
+
+        [HttpGet("list/{id:int}")]
+        public async Task<IActionResult> GetExpandedById([FromRoute] int id)
+        {
+            string userId = "";
+            bool isAdmin = false;
+            var username = User.GetUsername();
+            if (username != null)
+            {
+                var user = await userManager.FindByNameAsync(username);
+                userId = user!.Id;
+                isAdmin = await userManager.IsInRoleAsync(user, "Admin");
+            }
+
+            var process = await techRepo.GetByIdAsync(isAdmin, true, userId, id);
+
+            if (process == null) return NotFound();
+
+            var processDto = automapper.Map<TechProcessExpandedDto, TechProcess>(process);
+            processDto.Operations = process.Operations.Where(o => isAdmin || !o.IsPrivate || process.UserId == userId).Select(o =>
+            {
+                var operation = automapper.Map<OperationExpandedDto, Operation>(o);
+
+                operation.Transitions = o.Transitions.Where(o => isAdmin || !o.IsPrivate || process.UserId == userId).Select(t => {
+                    var transition = automapper.Map<TransitionExpandedDto, Transition>(t);
+                    if ((t.Tool != null) && (isAdmin || !t.Tool.IsPrivate || t.Tool.UserId == userId)) transition.Tool = automapper.Map<ToolDto, Tool>(t.Tool);
+                    if ((t.Equipment != null) && (isAdmin || !t.Equipment.IsPrivate || t.Equipment.UserId == userId)) transition.Equipment = automapper.Map<EquipmentDto, Equipment>(t.Equipment);
+                    if ((t.Fixture != null) && (isAdmin || !t.Fixture.IsPrivate || t.Fixture.UserId == userId)) transition.Fixture = automapper.Map<FixtureDto, Fixture>(t.Fixture);
+                    return transition;
+                }).OrderBy(t => t.StepOrder).ToList();
+
+                return operation;
+            }).OrderBy(o => o.StepOrder).ToList();
+
+            return Ok(processDto);
         }
 
         [HttpPost("copy/{id:int}")]
@@ -167,6 +203,7 @@ namespace TechProcessSupportSys.Controllers
                 {
                     return BadRequest(ModelState);
                 }
+                if (await techRepo.IsCodeDublicateWithId(id, updateTechProcessDto.Code)) return BadRequest("Такой код процесса уже есть");
 
                 var username = User.GetUsername();
                 var user = await userManager.FindByNameAsync(username!);

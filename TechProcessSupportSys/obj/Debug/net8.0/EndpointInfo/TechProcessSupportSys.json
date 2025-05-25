@@ -770,6 +770,29 @@
         }
       }
     },
+    "/api/TechProcess/list/{id}": {
+      "get": {
+        "tags": [
+          "TechProcess"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/TechProcess/copy/{id}": {
       "post": {
         "tags": [
@@ -1355,7 +1378,7 @@
           }
         }
       },
-      "patch": {
+      "delete": {
         "tags": [
           "User"
         ],
@@ -1377,7 +1400,7 @@
       }
     },
     "/api/User/update-data/{login}": {
-      "put": {
+      "patch": {
         "tags": [
           "User"
         ],

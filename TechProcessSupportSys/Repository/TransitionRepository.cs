@@ -28,7 +28,7 @@ namespace TechProcessSupportSys.Repository
         {
             int num = 0;
             var numbers = context.Transitions.Where(t => t.OperationId == id).AsEnumerable().Select(o => o.StepOrder).OrderBy(n => n).ToList();
-            if (numbers.Count == 0) num = 1;
+            if (numbers.Count == 0) return 1;
             else if (numbers.Count < 60)
             {
                 numbers.Insert(0, 0);
@@ -92,9 +92,22 @@ namespace TechProcessSupportSys.Repository
         {
             var transitions = context.Transitions.Include(t => t.Operation).ThenInclude(o => o.Process).ThenInclude(p => p.User).AsQueryable();
             if (!isAdmin) transitions = transitions.Where(t => !((t.IsPrivate == true) && ((t.Operation.Process.UserId != userId) || (string.IsNullOrWhiteSpace(userId))) || (t.Operation.Process.User.RevokedOn != null)));
+
+            transitions = transitions.
+                Include(t => t.Tool).
+                    ThenInclude(tool => tool.User).
+                Include(t => t.Equipment).
+                    ThenInclude(eq => eq.User).
+                Include(t => t.Fixture).
+                    ThenInclude(fx => fx.User);
+
             var transition = await transitions.FirstOrDefaultAsync(t => t.Id == id);
 
             if (transition == null) return null;
+
+            transition.ToolId = transition.Tool?.User?.RevokedOn != null ? null : transition.ToolId;
+            transition.EquipmentId = transition.Equipment?.User?.RevokedOn != null ? null : transition.EquipmentId;
+            transition.FixtureId = transition.Fixture?.User?.RevokedOn != null ? null : transition.FixtureId;
 
             return transition;
         }
@@ -114,12 +127,13 @@ namespace TechProcessSupportSys.Repository
         {
             var transition = await context.Transitions.FirstOrDefaultAsync(t => t.Id == id);
             if (transition == null) return false;
+            if (transition.StepOrder == stepOrder) return false;
             return await context.Transitions.Where(t => t.OperationId == transition.OperationId).AnyAsync(t => t.StepOrder == stepOrder);
         }
 
         public async Task<Transition?> UpdateAsync(string? userId, int id, Transition transition)
         {
-            var existingTransition = await context.Transitions.FirstOrDefaultAsync(o => o.Id == id);
+            var existingTransition = await context.Transitions.Include(t => t.Operation).ThenInclude(o => o.Process).FirstOrDefaultAsync(o => o.Id == id);
 
             if (existingTransition == null) return null;
             if (userId != null && existingTransition.Operation.Process.UserId != userId) return null;

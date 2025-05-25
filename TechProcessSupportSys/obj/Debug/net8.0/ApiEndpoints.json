@@ -481,6 +481,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "TechProcessSupportSys.Controllers.TechProcessController",
+    "Method": "GetExpandedById",
+    "RelativePath": "api/TechProcess/list/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "TechProcessSupportSys.Controllers.TransitionController",
     "Method": "Create",
     "RelativePath": "api/Transition/{id}",
@@ -636,7 +652,7 @@
     "ContainingType": "TechProcessSupportSys.Controllers.UserController",
     "Method": "DeleteUserByLogin",
     "RelativePath": "api/User/{login}",
-    "HttpMethod": "PATCH",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -716,7 +732,7 @@
     "ContainingType": "TechProcessSupportSys.Controllers.UserController",
     "Method": "UpdateData",
     "RelativePath": "api/User/update-data/{login}",
-    "HttpMethod": "PUT",
+    "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
     "Parameters": [

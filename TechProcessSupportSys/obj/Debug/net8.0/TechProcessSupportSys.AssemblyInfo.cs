@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TechProcessSupportSys")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3bc0301f378fc00ae5a8c7faeffd811493eff6ef")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7ed715ecfa1da51ca54c6bb1ac9a0929a0ee774f")]
 [assembly: System.Reflection.AssemblyProductAttribute("TechProcessSupportSys")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TechProcessSupportSys")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
