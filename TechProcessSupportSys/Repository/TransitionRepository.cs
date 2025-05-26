@@ -97,9 +97,9 @@ namespace TechProcessSupportSys.Repository
                 Include(t => t.Tool).
                     ThenInclude(tool => tool.User).
                 Include(t => t.Equipment).
-                    ThenInclude(eq => eq.User).
+                    ThenInclude(e => e.User).
                 Include(t => t.Fixture).
-                    ThenInclude(fx => fx.User);
+                    ThenInclude(f => f.User);
 
             var transition = await transitions.FirstOrDefaultAsync(t => t.Id == id);
 

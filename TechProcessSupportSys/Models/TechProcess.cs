@@ -16,7 +16,9 @@ namespace TechProcessSupportSys.Models
         public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
         public string UpdatedBy { get; set; } = "";
         public string UserId { get; set; } = "";
+        public int? BlankId { get; set; }
         public User User { get; set; } = null!;
+        public Blank? Blank { get; set; }
         public List<Operation> Operations { get; set; } = new List<Operation>();
     }
 }

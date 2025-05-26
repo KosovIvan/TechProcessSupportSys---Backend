@@ -80,10 +80,13 @@ namespace TechProcessSupportSys.Repository
 
             if (query.IsExpanded)
             {
-                processes = processes.Include(p => p.Operations).
-                    ThenInclude(o => o.Transitions).
-                        ThenInclude(t => t.Tool).
-                            ThenInclude(t => t.User).
+                processes = processes.
+                    Include(p => p.Blank).
+                        ThenInclude(b => b.User).
+                    Include(p => p.Operations).
+                        ThenInclude(o => o.Transitions).
+                            ThenInclude(t => t.Tool).
+                                ThenInclude(t => t.User).
                     Include(p => p.Operations).
                         ThenInclude(o => o.Transitions).
                             ThenInclude(t => t.Equipment).
@@ -95,6 +98,9 @@ namespace TechProcessSupportSys.Repository
 
                 foreach (var process in processes)
                 {
+                    if (process.Blank?.User?.RevokedOn != null)
+                        process.Blank = null;
+
                     foreach (var operation in process.Operations)
                     {
                         foreach (var transition in operation.Transitions)
@@ -121,7 +127,11 @@ namespace TechProcessSupportSys.Repository
         {
             var processes = context.Processes.Include(p => p.User).AsQueryable();
 
-            if (isExpanded) processes = context.Processes.
+            if (isExpanded)
+            {
+                processes = context.Processes.
+                    Include(p => p.Blank).
+                        ThenInclude(b => b.User).
                     Include(p => p.Operations).
                         ThenInclude(o => o.Transitions).
                             ThenInclude(t => t.Tool).
@@ -134,18 +144,39 @@ namespace TechProcessSupportSys.Repository
                         ThenInclude(o => o.Transitions).
                             ThenInclude(t => t.Fixture).
                                 ThenInclude(f => f.User);
-
+            }
             if (!isAdmin) processes = processes.Where(p => !((p.IsPrivate == true) && ((p.UserId != userId) || (string.IsNullOrWhiteSpace(userId))) || (p.User.RevokedOn != null)));
             var process = await processes.FirstOrDefaultAsync(p => p.Id == id);
 
             if (process == null) return null;
+
+            if (isExpanded)
+            {
+                if (process.Blank?.User?.RevokedOn != null)
+                    process.Blank = null;
+
+                foreach (var operation in process.Operations)
+                {
+                    foreach (var transition in operation.Transitions)
+                    {
+                        if (transition.Tool?.User?.RevokedOn != null)
+                            transition.Tool = null;
+
+                        if (transition.Equipment?.User?.RevokedOn != null)
+                            transition.Equipment = null;
+
+                        if (transition.Fixture?.User?.RevokedOn != null)
+                            transition.Fixture = null;
+                    }
+                }
+            }
 
             return process;
         }
 
         public async Task<TechProcess?> UpdateAsync(string? userId, int id, TechProcess process)
         {
-            var existingProcess = await context.Processes.FirstOrDefaultAsync(p => p.Id == id);
+            var existingProcess = await context.Processes.Include(p => p.Blank).FirstOrDefaultAsync(p => p.Id == id);
 
             if (existingProcess == null) return null;
             if (userId != null && existingProcess.UserId != userId) return null;
@@ -161,6 +192,7 @@ namespace TechProcessSupportSys.Repository
             existingProcess.UpdatedAt = process.UpdatedAt;
             existingProcess.UpdatedBy = process.UpdatedBy;
             existingProcess.IsPrivate = process.IsPrivate;
+            if (process.BlankId != null) existingProcess.BlankId = process.BlankId;
             await context.SaveChangesAsync();
 
             return existingProcess;
@@ -186,7 +218,9 @@ namespace TechProcessSupportSys.Repository
             var username = user.UserName;
 
             var processes = context.Processes.AsQueryable();
-            processes = processes.Include(p => p.Operations).
+            processes = processes.Include(p => p.User).
+                Include(p => p.Blank).
+                Include(p => p.Operations).
                     ThenInclude(o => o.Transitions).
                         ThenInclude(t => t.Tool).
                     Include(p => p.Operations)
@@ -209,6 +243,7 @@ namespace TechProcessSupportSys.Repository
             copy.Author = username;
             copy.UpdatedBy = username;
             copy.IsPrivate = process.IsPrivate;
+            copy.BlankId = process.BlankId;
 
             foreach (var operation in process.Operations)
             {
@@ -220,8 +255,8 @@ namespace TechProcessSupportSys.Repository
                     copyOp.StepOrder = operation.StepOrder;
                     copyOp.Duration = operation.Duration;
                     copyOp.Description = operation.Description;
-                    copy.Author = username;
-                    copy.UpdatedBy = username;
+                    copyOp.Author = username;
+                    copyOp.UpdatedBy = username;
                     copyOp.IsPrivate = operation.IsPrivate;
 
                     copy.Operations.Add(copyOp);

@@ -1,8 +1,0 @@
-﻿namespace TechProcessSupportSys.QueryObjects
-{
-    public class OperationQueryObject
-    {
-        public bool IsGlobal { get; set; } = true;
-        public bool IsPrivate { get; set; } = false;
-    }
-}

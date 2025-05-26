@@ -83,7 +83,7 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
-builder.Services.AddSingleton<IAutomapper, CustomAutomapper>();
+builder.Services.AddScoped<IAutomapper, CustomAutomapper>();
 builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddScoped<ITechProcessRepository, TechProcessRepository>();
 builder.Services.AddScoped<IOperationRepository, OperationRepository>();
@@ -91,6 +91,7 @@ builder.Services.AddScoped<ITransitionRepository, TransitionRepository>();
 builder.Services.AddScoped<IToolRepository, ToolRepository>();
 builder.Services.AddScoped<IEquipmentRepository, EquipmentRepository>();
 builder.Services.AddScoped<IFixtureRepository, FixtureRepository>();
+builder.Services.AddScoped<IBlankRepository, BlankRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
     
 var app = builder.Build();

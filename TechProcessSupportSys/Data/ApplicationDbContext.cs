@@ -13,6 +13,7 @@ namespace TechProcessSupportSys.Data
             
         }
 
+        public DbSet<Blank> Blanks { get; set; }
         public DbSet<TechProcess> Processes { get; set; }
         public DbSet<Operation> Operations { get; set; }
         public DbSet<Transition> Transitions { get; set; }
@@ -22,7 +23,6 @@ namespace TechProcessSupportSys.Data
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            //builder.Entity<TechProcess>().HasAlternateKey(t => t.Code);
 
             base.OnModelCreating(builder);
 

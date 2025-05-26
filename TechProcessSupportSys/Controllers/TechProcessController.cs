@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TechProcessSupportSys.Attributes;
+using TechProcessSupportSys.Dtos.Blank;
 using TechProcessSupportSys.Dtos.Equipment;
 using TechProcessSupportSys.Dtos.Fixture;
 using TechProcessSupportSys.Dtos.Operation;
@@ -52,6 +53,7 @@ namespace TechProcessSupportSys.Controllers
                 var processesDto = processes.Select(p =>
                 {
                     var process = automapper.Map<TechProcessExpandedDto, TechProcess>(p);
+                    if ((p.Blank != null) && (isAdmin || !p.Blank.IsPrivate || p.Blank.UserId == userId)) process.Blank = automapper.Map<BlankDto, Blank>(p.Blank);
                     process.Operations = p.Operations.Where(o => isAdmin || !o.IsPrivate || p.UserId == userId).Select(o =>
                     {
                         var operation = automapper.Map<OperationExpandedDto, Operation>(o);
@@ -116,6 +118,7 @@ namespace TechProcessSupportSys.Controllers
             if (process == null) return NotFound();
 
             var processDto = automapper.Map<TechProcessExpandedDto, TechProcess>(process);
+            if ((process.Blank != null) && (isAdmin || !process.Blank.IsPrivate || process.Blank.UserId == userId)) processDto.Blank = automapper.Map<BlankDto, Blank>(process.Blank);
             processDto.Operations = process.Operations.Where(o => isAdmin || !o.IsPrivate || process.UserId == userId).Select(o =>
             {
                 var operation = automapper.Map<OperationExpandedDto, Operation>(o);

@@ -5,6 +5,208 @@
     "version": "v1"
   },
   "paths": {
+    "/api/Blank": {
+      "get": {
+        "tags": [
+          "Blank"
+        ],
+        "parameters": [
+          {
+            "name": "Asortment",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Material",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "GOST",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "SortBy",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IsDescending",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "IsGlobal",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "IsPrivate",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "PageNumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Blank"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateBlankDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateBlankDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateBlankDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateBlankDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Blank/{id}": {
+      "get": {
+        "tags": [
+          "Blank"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Blank"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateBlankDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateBlankDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateBlankDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateBlankDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Blank"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Equipment": {
       "get": {
         "tags": [
@@ -1516,6 +1718,61 @@
   },
   "components": {
     "schemas": {
+      "CreateBlankDto": {
+        "required": [
+          "asortment",
+          "length",
+          "material"
+        ],
+        "type": "object",
+        "properties": {
+          "asortment": {
+            "maxLength": 30,
+            "minLength": 1,
+            "type": "string"
+          },
+          "asortmentGOST": {
+            "pattern": "(ГОСТ\\s\\d{1,5}(\\.\\d{1,4}){0,2}-(\\d{4}|\\d{2})|)",
+            "type": "string",
+            "nullable": true
+          },
+          "material": {
+            "maxLength": 30,
+            "minLength": 1,
+            "type": "string"
+          },
+          "materialStateCode": {
+            "pattern": "^([А-ЯЁ]{1,3}|Без ТО)$",
+            "type": "string",
+            "nullable": true
+          },
+          "materialGOST": {
+            "pattern": "(ГОСТ\\s\\d{1,5}(\\.\\d{1,4}){0,2}-(\\d{4}|\\d{2})|)",
+            "type": "string",
+            "nullable": true
+          },
+          "length": {
+            "type": "number",
+            "format": "double"
+          },
+          "width": {
+            "type": "number",
+            "format": "double"
+          },
+          "height": {
+            "type": "number",
+            "format": "double"
+          },
+          "diameter": {
+            "type": "number",
+            "format": "double"
+          },
+          "isPrivate": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
       "CreateEquipmentDto": {
         "required": [
           "name"
@@ -1645,6 +1902,11 @@
           },
           "isPrivate": {
             "type": "boolean"
+          },
+          "blankId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1816,6 +2078,62 @@
           "password": {
             "minLength": 1,
             "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateBlankDto": {
+        "required": [
+          "asortment",
+          "isPrivate",
+          "length",
+          "material"
+        ],
+        "type": "object",
+        "properties": {
+          "asortment": {
+            "maxLength": 30,
+            "minLength": 1,
+            "type": "string"
+          },
+          "asortmentGOST": {
+            "pattern": "(ГОСТ\\s\\d{1,5}(\\.\\d{1,4}){0,2}-(\\d{4}|\\d{2})|)",
+            "type": "string",
+            "nullable": true
+          },
+          "material": {
+            "maxLength": 30,
+            "minLength": 1,
+            "type": "string"
+          },
+          "materialStateCode": {
+            "pattern": "^([А-ЯЁ]{1,3}|Без ТО)$",
+            "type": "string",
+            "nullable": true
+          },
+          "materialGOST": {
+            "pattern": "(ГОСТ\\s\\d{1,5}(\\.\\d{1,4}){0,2}-(\\d{4}|\\d{2})|)",
+            "type": "string",
+            "nullable": true
+          },
+          "length": {
+            "type": "number",
+            "format": "double"
+          },
+          "width": {
+            "type": "number",
+            "format": "double"
+          },
+          "height": {
+            "type": "number",
+            "format": "double"
+          },
+          "diameter": {
+            "type": "number",
+            "format": "double"
+          },
+          "isPrivate": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -2001,6 +2319,11 @@
           },
           "isPrivate": {
             "type": "boolean"
+          },
+          "blankId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
           }
         },
         "additionalProperties": false

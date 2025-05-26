@@ -16,5 +16,6 @@ namespace TechProcessSupportSys.Dtos.TechProcess
         [MaxLength(500)]
         public string Description { get; set; } = "";
         public bool IsPrivate { get; set; } = false;
+        public int? BlankId { get; set; }
     }
 }

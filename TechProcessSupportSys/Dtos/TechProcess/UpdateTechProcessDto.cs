@@ -17,5 +17,6 @@ namespace TechProcessSupportSys.Dtos.TechProcess
         public string Description { get; set; } = "";
         [Required]
         public bool? IsPrivate { get; set; }
+        public int? BlankId { get; set; }
     }
 }
