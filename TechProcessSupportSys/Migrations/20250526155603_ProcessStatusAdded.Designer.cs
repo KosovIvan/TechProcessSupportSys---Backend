@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TechProcessSupportSys.Data;
 
@@ -11,9 +12,11 @@ using TechProcessSupportSys.Data;
 namespace TechProcessSupportSys.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250526155603_ProcessStatusAdded")]
+    partial class ProcessStatusAdded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -51,13 +54,13 @@ namespace TechProcessSupportSys.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "1b815878-e658-430a-bd1a-c2ed0ac005ea",
+                            Id = "62499320-f529-4d0b-9a26-8947ddc227eb",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "16a4d845-74e2-4b65-a0db-5e7f48fa4ed3",
+                            Id = "539c09a1-00ea-4268-85ac-0897fdf217ea",
                             Name = "User",
                             NormalizedName = "USER"
                         });
@@ -148,13 +151,6 @@ namespace TechProcessSupportSys.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("AspNetUserRoles", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            UserId = "dba1ea3f-4be2-4049-989b-3e49d4a8b38f",
-                            RoleId = "1b815878-e658-430a-bd1a-c2ed0ac005ea"
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
@@ -653,27 +649,6 @@ namespace TechProcessSupportSys.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = "dba1ea3f-4be2-4049-989b-3e49d4a8b38f",
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "15508b55-2ed1-491c-8a88-4581c88d8113",
-                            CreatedOn = new DateTime(2025, 5, 26, 19, 37, 36, 850, DateTimeKind.Local).AddTicks(8851),
-                            Email = "admin@gmail.com",
-                            EmailConfirmed = false,
-                            LockoutEnabled = false,
-                            Name = "Admin",
-                            NormalizedEmail = "ADMIN@GMAIL.COM",
-                            NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAIAAYagAAAAEE53Tc2KS8Aj7WJKGFng4WQp4zfzqjwe3VrINvyBJC8oOilhcSvQi6mq8HmC8Gm3ig==",
-                            PhoneNumberConfirmed = false,
-                            RevokedBy = "",
-                            SecurityStamp = "f036ad56-cb93-4476-930a-33e5202bde39",
-                            TwoFactorEnabled = false,
-                            UserName = "Admin"
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using TechProcessSupportSys.Attributes;
 using TechProcessSupportSys.Dtos.Blank;
 using TechProcessSupportSys.Dtos.Equipment;
 using TechProcessSupportSys.Dtos.Fixture;
@@ -97,7 +96,10 @@ namespace TechProcessSupportSys.Controllers
 
             if (process == null) return NotFound();
 
-            return Ok(automapper.Map<TechProcessExtendedDto, TechProcess>(process));
+            var processDto = automapper.Map<TechProcessExtendedDto, TechProcess>(process);
+            processDto.Status = process.Status.ToString();
+
+            return Ok(processDto);
         }
 
         [HttpGet("list/{id:int}")]

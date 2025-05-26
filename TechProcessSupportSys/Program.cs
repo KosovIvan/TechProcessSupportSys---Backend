@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using System.Text.Json.Serialization;
 using TechProcessSupportSys.Data;
 using TechProcessSupportSys.Dtos.Tool;
 using TechProcessSupportSys.Interfaces;
@@ -11,7 +12,6 @@ using TechProcessSupportSys.Middleware;
 using TechProcessSupportSys.Models;
 using TechProcessSupportSys.Repository;
 using TechProcessSupportSys.Service;
-using TechProcessSupportSys.Util;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -50,6 +50,12 @@ builder.Services.AddControllers().AddNewtonsoftJson(options =>
 {
     options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
 });
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+    });
+
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));

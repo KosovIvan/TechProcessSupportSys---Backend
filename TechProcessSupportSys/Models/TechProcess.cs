@@ -10,6 +10,7 @@ namespace TechProcessSupportSys.Models
         public string Code { get; set; } = "";
         public string ProductName { get; set; } = "";
         public string Description { get; set; } = "";
+        public ProcessStatus Status { get; set; } = ProcessStatus.Draft;
         public bool IsPrivate { get; set; } = false;
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         public string Author { get; set; } = "";
@@ -20,5 +21,18 @@ namespace TechProcessSupportSys.Models
         public User User { get; set; } = null!;
         public Blank? Blank { get; set; }
         public List<Operation> Operations { get; set; } = new List<Operation>();
+    }
+
+    public enum ProcessStatus
+    {
+        Draft,
+        InReview,
+        Approved,
+        Rejected,
+        Archived,
+        Active,
+        Deprecated,
+        Published,
+        Pending
     }
 }

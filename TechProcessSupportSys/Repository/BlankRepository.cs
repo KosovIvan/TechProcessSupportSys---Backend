@@ -39,7 +39,7 @@ namespace TechProcessSupportSys.Repository
 
         public async Task<List<Blank>> GetAllAsync(bool isAdmin, string? userId, BlankQueryObject query)
         {
-            var blanks = context.Blanks.Include(b => b.User).AsQueryable();
+            var blanks = context.Blanks.AsNoTracking().Include(b => b.User).AsQueryable();
 
             if (!isAdmin) blanks = blanks.Where(b => b.User.RevokedOn == null);
 
@@ -83,7 +83,7 @@ namespace TechProcessSupportSys.Repository
 
         public async Task<Blank?> GetByIdAsync(bool isAdmin, string? userId, int id)
         {
-            var blanks = context.Blanks.Include(b => b.User).AsQueryable();
+            var blanks = context.Blanks.AsNoTracking().Include(b => b.User).AsQueryable();
             if (!isAdmin) blanks = blanks.Where(b => !((b.IsPrivate == true) && ((b.UserId != userId) || (string.IsNullOrWhiteSpace(userId))) || (b.User.RevokedOn != null)));
             var blank = await blanks.FirstOrDefaultAsync(b => b.Id == id);
 

@@ -37,7 +37,7 @@ namespace TechProcessSupportSys.Repository
 
         public async Task<List<Fixture>> GetAllAsync(bool isAdmin, string? userId, FixtureQueryObject query)
         {
-            var fixtures = context.Fixtures.Include(f => f.User).AsQueryable();
+            var fixtures = context.Fixtures.AsNoTracking().Include(f => f.User).AsQueryable();
 
             if (!isAdmin) fixtures = fixtures.Where(f => f.User.RevokedOn == null);
 
@@ -80,7 +80,7 @@ namespace TechProcessSupportSys.Repository
 
         public async Task<Fixture?> GetByIdAsync(bool isAdmin, string? userId, int id)
         {
-            var fixtures = context.Fixtures.Include(f => f.User).AsQueryable();
+            var fixtures = context.Fixtures.AsNoTracking().Include(f => f.User).AsQueryable();
             if (!isAdmin) fixtures = fixtures.Where(f => !((f.IsPrivate == true) && ((f.UserId != userId) || (string.IsNullOrWhiteSpace(userId))) || (f.User.RevokedOn != null)));
             var fixture = await fixtures.FirstOrDefaultAsync(f => f.Id == id);
 

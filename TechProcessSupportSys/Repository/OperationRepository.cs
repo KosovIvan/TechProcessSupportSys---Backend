@@ -103,7 +103,7 @@ namespace TechProcessSupportSys.Repository
             var processUserId = process.UserId;
             var processIsPrivate = process.IsPrivate;
 
-            var operations = context.Operations.Include(o => o.Process).ThenInclude(p => p.User).AsQueryable().Where(o => o.ProcessId == processId);
+            var operations = context.Operations.AsNoTracking().Include(o => o.Process).ThenInclude(p => p.User).AsQueryable().Where(o => o.ProcessId == processId);
 
             if (!isAdmin) operations = operations.Where(o => o.Process.User.RevokedOn == null);
 
@@ -122,7 +122,7 @@ namespace TechProcessSupportSys.Repository
 
         public async Task<Operation?> GetByIdAsync(bool isAdmin, string? userId, int id)
         {
-            var operations = context.Operations.Include(o => o.Process).ThenInclude(p => p.User).AsQueryable();
+            var operations = context.Operations.AsNoTracking().Include(o => o.Process).ThenInclude(p => p.User).AsQueryable();
             if (!isAdmin) operations = operations.Where(o => !((o.IsPrivate == true) && ((o.Process.UserId != userId) || (string.IsNullOrWhiteSpace(userId))) || (o.Process.User.RevokedOn != null)));
             var operation = await operations.FirstOrDefaultAsync(o => o.Id == id);
 

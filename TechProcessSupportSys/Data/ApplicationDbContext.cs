@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Reflection.Emit;
 using TechProcessSupportSys.Models;
 
 namespace TechProcessSupportSys.Data
@@ -26,6 +28,23 @@ namespace TechProcessSupportSys.Data
 
             base.OnModelCreating(builder);
 
+            builder.Entity<TechProcess>().Property(p => p.Status).HasConversion<string>();
+
+            var hasher = new PasswordHasher<User>();
+            User admin = new User()
+            {
+                UserName = "Admin",
+                NormalizedUserName = "ADMIN",
+                Email = "admin@gmail.com",
+                NormalizedEmail = "ADMIN@GMAIL.COM",
+                EmailConfirmed = false,
+                Name = "Admin",
+                CreatedOn = DateTime.Now,
+                SecurityStamp = Guid.NewGuid().ToString("D"),
+                PasswordHash = hasher.HashPassword(null!, "Admin1234!")
+            };
+            builder.Entity<User>().HasData(admin);
+
             List<IdentityRole> roles = new List<IdentityRole>
             {
                 new IdentityRole
@@ -39,6 +58,13 @@ namespace TechProcessSupportSys.Data
                 }
             };
             builder.Entity<IdentityRole>().HasData(roles);
+
+            builder.Entity<IdentityUserRole<string>>().HasData(
+                new IdentityUserRole<string>
+                {
+                    UserId = admin.Id,
+                    RoleId = roles.FirstOrDefault(r => r.Name == "Admin").Id
+                });
         }
     }
 }

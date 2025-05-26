@@ -64,14 +64,14 @@ namespace TechProcessSupportSys.Repository
 
         public async Task<List<Transition>?> GetAllAsync(int operationId, bool isAdmin, string? userId)
         {
-            var operation = await context.Operations.Include(o => o.Process).FirstOrDefaultAsync(o => o.Id == operationId);
+            var operation = await context.Operations.AsNoTracking().Include(o => o.Process).FirstOrDefaultAsync(o => o.Id == operationId);
             if (operation == null) return null;
 
             var process = operation.Process;
             var processUserId = process.UserId;
             var operationIsPrivate = operation.IsPrivate;
 
-            var transitions = context.Transitions.Include(t => t.Operation).ThenInclude(o => o.Process).ThenInclude(p => p.User).AsQueryable().Where(t => t.OperationId == operationId);
+            var transitions = context.Transitions.AsNoTracking().Include(t => t.Operation).ThenInclude(o => o.Process).ThenInclude(p => p.User).AsQueryable().Where(t => t.OperationId == operationId);
 
             if (!isAdmin) transitions = transitions.Where(t => t.Operation.Process.User.RevokedOn == null);
 
@@ -90,7 +90,7 @@ namespace TechProcessSupportSys.Repository
 
         public async Task<Transition?> GetByIdAsync(bool isAdmin, string? userId, int id)
         {
-            var transitions = context.Transitions.Include(t => t.Operation).ThenInclude(o => o.Process).ThenInclude(p => p.User).AsQueryable();
+            var transitions = context.Transitions.AsNoTracking().Include(t => t.Operation).ThenInclude(o => o.Process).ThenInclude(p => p.User).AsQueryable();
             if (!isAdmin) transitions = transitions.Where(t => !((t.IsPrivate == true) && ((t.Operation.Process.UserId != userId) || (string.IsNullOrWhiteSpace(userId))) || (t.Operation.Process.User.RevokedOn != null)));
 
             transitions = transitions.
@@ -114,7 +114,7 @@ namespace TechProcessSupportSys.Repository
 
         public async Task<string> GetUserId(int id)
         {
-            var operations = context.Operations.AsQueryable().Include(o => o.Process);
+            var operations = context.Operations.AsNoTracking().AsQueryable().Include(o => o.Process);
             return (await operations.FirstOrDefaultAsync(o => o.Id == id)).Process.UserId;
         }
 

@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using TechProcessSupportSys.Models;
 
 namespace TechProcessSupportSys.Dtos.TechProcess
 {
@@ -15,6 +16,7 @@ namespace TechProcessSupportSys.Dtos.TechProcess
         public string ProductName { get; set; } = "";
         [MaxLength(500)]
         public string Description { get; set; } = "";
+        public ProcessStatus? Status { get; set; } = ProcessStatus.Draft;
         [Required]
         public bool? IsPrivate { get; set; }
         public int? BlankId { get; set; }

@@ -41,7 +41,7 @@ namespace TechProcessSupportSys.Repository
 
         public async Task<List<TechProcess>> GetProcessesAsync(bool isAdmin, string? userId, TechProcessQueryObject query)
         {
-            var processes = context.Processes.Include(p => p.User).AsQueryable();
+            var processes = context.Processes.AsNoTracking().Include(p => p.User).AsQueryable();
 
             if (!isAdmin) processes = processes.Where(p => p.User.RevokedOn == null);
 
@@ -125,7 +125,7 @@ namespace TechProcessSupportSys.Repository
 
         public async Task<TechProcess?> GetByIdAsync(bool isAdmin, bool isExpanded, string? userId, int id)
         {
-            var processes = context.Processes.Include(p => p.User).AsQueryable();
+            var processes = context.Processes.AsNoTracking().Include(p => p.User).AsQueryable();
 
             if (isExpanded)
             {
@@ -189,6 +189,7 @@ namespace TechProcessSupportSys.Repository
             existingProcess.Name = process.Name;
             existingProcess.ProductName = process.ProductName;
             existingProcess.Description = process.Description;
+            existingProcess.Status = process.Status;
             existingProcess.UpdatedAt = process.UpdatedAt;
             existingProcess.UpdatedBy = process.UpdatedBy;
             existingProcess.IsPrivate = process.IsPrivate;
@@ -240,6 +241,7 @@ namespace TechProcessSupportSys.Repository
             copy.Name = process.Name;
             copy.ProductName = process.ProductName;
             copy.Description = process.Description;
+            copy.Status = ProcessStatus.Draft;
             copy.Author = username;
             copy.UpdatedBy = username;
             copy.IsPrivate = process.IsPrivate;

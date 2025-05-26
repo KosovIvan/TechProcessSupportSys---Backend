@@ -37,7 +37,7 @@ namespace TechProcessSupportSys.Repository
 
         public async Task<List<Tool>> GetAllAsync(bool isAdmin, string? userId, ToolQueryObject query)
         {
-            var tools = context.Tools.Include(t => t.User).AsQueryable();
+            var tools = context.Tools.AsNoTracking().Include(t => t.User).AsQueryable();
 
             if (!isAdmin) tools = tools.Where(t => t.User.RevokedOn == null);
 
@@ -85,7 +85,7 @@ namespace TechProcessSupportSys.Repository
 
         public async Task<Tool?> GetByIdAsync(bool isAdmin, string? userId, int id)
         {
-            var tools = context.Tools.Include(t => t.User).AsQueryable();
+            var tools = context.Tools.AsNoTracking().Include(t => t.User).AsQueryable();
             if (!isAdmin) tools = tools.Where(t => !((t.IsPrivate == true) && ((t.UserId != userId) || (string.IsNullOrWhiteSpace(userId))) || (t.User.RevokedOn != null)));
             var tool = await tools.FirstOrDefaultAsync(t => t.Id == id);
 
